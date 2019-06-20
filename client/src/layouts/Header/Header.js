@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import logo from '../../../images/logo.svg';
+import logo from '../../assets/images/logo.svg';
 
 const Header = props => {
     const {
@@ -15,11 +15,6 @@ const Header = props => {
                 <img src={logo} className="App-logo" alt="logo"/>
             </a>
             <h1 className="App-title">{title}</h1>
-            <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-      </ul>
         </header>
     );
 };

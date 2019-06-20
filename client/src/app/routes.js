@@ -4,10 +4,10 @@ import { Route, Switch } from 'react-router-dom';
 
 // Components
 import App from './App';
-import Home from './pages/components/Home/Home';
-import About from './pages/components/About/About';
-import Contact from './pages/components/Contact/Contact';
-import Error404 from './pages/components/Error/404';
+import Home from '../pages/Home/Home';
+import About from '../pages/About/About';
+import Contact from '../pages/Contact/Contact';
+import Error404 from '../pages/Error/404';
 
 const AppRoutes = () => (
   <App>
