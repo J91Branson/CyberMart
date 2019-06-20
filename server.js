@@ -20,12 +20,12 @@ app.use(routes);
 // Connect to the Mongo DB
 mongoose
   .connect((process.env.MONGODB_URI || "mongodb://localhost/cyber-mart"), {
-    useNewUrlParser: true,
-    useCreateIndex: true
+    useNewUrlParser: true
+    // useCreateIndex: true
   })
   .then(() => console.log("DB Connected"));
 
 // Start the API server
 app.listen(PORT, function () {
-  console.log(`🌎  ==> API Server now listening on http://localhost:" ${PORT}!`);
+  console.log(`🌎  ==> API Server now listening on http://localhost:${PORT}!`);
 });
