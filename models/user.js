@@ -6,8 +6,6 @@ const userSchema = new Schema({
   lastName: { type: String, required: true },
   email: { type: String, required: true },
   password: { type: String, required: true },
-  dateCreated: { type: Date, default: Date.now },
-  dateUpdated: { type: Date, default: Date.now }
 });
 
 const User = mongoose.model("User", userSchema);
