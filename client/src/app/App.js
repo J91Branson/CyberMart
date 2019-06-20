@@ -9,12 +9,14 @@ import './App.css';
 const App = props => (
   <div className="App">
     <Header title="Cyber Mart" />
-    <Nav />
-<Content>
-  {props.children}
-</Content>
 
-<Footer />
+    <Nav />
+    
+    <Content>
+      {props.children}
+    </Content>
+
+    <Footer />
   </div>
 );
 
