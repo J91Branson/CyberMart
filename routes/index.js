@@ -1,9 +1,13 @@
 const path = require("path");
 const router = require("express").Router();
-const apiRoutes = require("./api");
+const apiUser = require("./apiUser");
+const authLogin = require("./authLogin");
+const authGoogle = require("./authGoogle");
 
 // API Routes
-router.use("/api", apiRoutes);
+router.use("/api", apiUser);
+router.use("/auth", authLogin);
+router.use("/auth", authGoogle);
 
 // If no API routes are hit, send the React app
 router.use(function(req, res) {
@@ -11,3 +15,4 @@ router.use(function(req, res) {
 });
 
 module.exports = router;
+

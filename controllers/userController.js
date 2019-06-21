@@ -1,42 +1,80 @@
-const db = require("../models");
+const User = require("../models");
+const _ = require('lodash');
+const errorHandler = require('../helpers/dbErrorHandler');
 
-// Defining methods for the usersController
+
 module.exports = {
-  findAll: function(req, res) {
-    // console.log("route works")
-    db.User
-      .find(req.query)
-      .sort({ date: -1 })
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+
+  create: function (req, res, next) {
+    const user = new User(req.body)
+    user.save((err, result) => {
+      if (err) {
+        return res.status(400).json({
+          error: errorHandler.getErrorMessage(err)
+        })
+      }
+      res.status(200).json({
+        message: "Successfully signed up!"
+      })
+    })
   },
-  findById: function(req, res) {
-    // console.log("route works")
-    db.User
-      .findById(req.params.id)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+
+  userByID: function (req, res, next, id) {
+    User.findById(id).exec((err, user) => {
+      if (err || !user)
+        return res.status('400').json({
+          error: "User not found"
+        })
+      req.profile = user
+      next()
+    })
   },
-  create: function(req, res) {
-    // console.log("route works")
-    db.User
-      .create(req.body)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+
+  read: function (req, res) {
+    req.profile.hashed_password = undefined
+    req.profile.salt = undefined
+    return res.json(req.profile)
   },
-  update: function(req, res) {
-    // console.log("route works")
-    db.User
-      .findOneAndUpdate({ _id: req.params.id }, req.body)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+
+  list: function (req, res) {
+    User.find((err, users) => {
+      if (err) {
+        return res.status(400).json({
+          error: errorHandler.getErrorMessage(err)
+        })
+      }
+      res.json(users)
+    }).select('name email updated created')
   },
-  remove: function(req, res) {
-    // console.log("route works")
-    db.User
-      .findById({ _id: req.params.id })
-      .then(dbModel => dbModel.remove())
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+
+  update: function (req, res) {
+    let user = req.profile
+    user = _.extend(user, req.body)
+    user.updated = Date.now()
+    user.save((err) => {
+      if (err) {
+        return res.status(400).json({
+          error: errorHandler.getErrorMessage(err)
+        })
+      }
+      user.hashed_password = undefined
+      user.salt = undefined
+      res.json(user)
+    })
+  },
+
+  remove: function (req, res) {
+    let user = req.profile
+    user.remove((err, deletedUser) => {
+      if (err) {
+        return res.status(400).json({
+          error: errorHandler.getErrorMessage(err)
+        })
+      }
+      deletedUser.hashed_password = undefined
+      deletedUser.salt = undefined
+      res.json(deletedUser)
+    })
   }
-};
+
+}
