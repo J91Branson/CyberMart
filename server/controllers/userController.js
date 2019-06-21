@@ -2,10 +2,7 @@ const User = require("../models");
 const _ = require('lodash');
 const errorHandler = require('../helpers/dbErrorHandler');
 
-
-module.exports = {
-
-  create: function (req, res, next) {
+  exports.create = (req, res, next) => {
     const user = new User(req.body)
     user.save((err, result) => {
       if (err) {
@@ -19,24 +16,7 @@ module.exports = {
     })
   },
 
-  userByID: function (req, res, next, id) {
-    User.findById(id).exec((err, user) => {
-      if (err || !user)
-        return res.status('400').json({
-          error: "User not found"
-        })
-      req.profile = user
-      next()
-    })
-  },
-
-  read: function (req, res) {
-    req.profile.hashed_password = undefined
-    req.profile.salt = undefined
-    return res.json(req.profile)
-  },
-
-  list: function (req, res) {
+  exports.list = (req, res) => {
     User.find((err, users) => {
       if (err) {
         return res.status(400).json({
@@ -47,7 +27,24 @@ module.exports = {
     }).select('name email updated created')
   },
 
-  update: function (req, res) {
+  exports.userByID = (req, res, next, id) =>{
+    User.findById(id).exec((err, user) => {
+      if (err || !user)
+        return res.status('400').json({
+          error: "User not found"
+        })
+      req.profile = user
+      next()
+    })
+  },
+
+  exports.read =(req, res) => {
+    req.profile.hashed_password = undefined
+    req.profile.salt = undefined
+    return res.json(req.profile)
+  },
+
+  exports.update =(req, res) => {
     let user = req.profile
     user = _.extend(user, req.body)
     user.updated = Date.now()
@@ -63,7 +60,7 @@ module.exports = {
     })
   },
 
-  remove: function (req, res) {
+  exports.remove = (req, res) => {
     let user = req.profile
     user.remove((err, deletedUser) => {
       if (err) {
@@ -77,4 +74,3 @@ module.exports = {
     })
   }
 
-}

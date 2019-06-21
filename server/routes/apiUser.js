@@ -1,17 +1,16 @@
 const router = require("express").Router();
-const usersController = require("../controllers/userController");
-const authController = require("../controllers/authController");
+const { list, create, userByID, read, update, remove } = require("../controllers/userController");
+const { requireSignin, hasAuthorization} = require("../controllers/authController");
 
 // Matches with "/api/users"
-router.route("/user")
-  .get(usersController.list)
-  .post(usersController.create);
+router.route("/users")
+  .get(list)
+  .post(create);
 
 // Matches with "/api/users/:id"
-router
-  .route("/user/:id")
-  .get(authController.requireSignin, usersController.userByID)
-  .put(authController.requireSignin, authController.hasAuthorization, usersController.update)
-  .delete(authController.requireSignin, authController.hasAuthorization, usersController.remove);
+router.route("/users/:id")
+  .get(requireSignin, userByID)
+  .put(requireSignin, hasAuthorization, update)
+  .delete(requireSignin, hasAuthorization, remove);
 
 module.exports = router;

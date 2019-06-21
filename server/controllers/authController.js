@@ -3,9 +3,7 @@ const jwt = require('jsonwebtoken');
 const expressJwt = require('express-jwt');
 const config = require('../../config/config');
 
-module.exports = {
-
-  signin: function (req, res) {
+  exports.signin =  (req, res) => {
     User.findOne({
       "email": req.body.email
     }, (err, user) => {
@@ -37,14 +35,14 @@ module.exports = {
     })
   },
 
-  signout: function (req, res) {
+  exports.signout = (req, res) => {
     res.clearCookie("t")
     return res.status('200').json({
       message: "signed out"
     })
   },
 
-  hasAuthorization:  function (req, res, next) {
+  exports.hasAuthorization = (req, res, next) => {
     const authorized = req.profile && req.auth && req.profile._id == req.auth._id
     if (!(authorized)) {
       return res.status('403').json({
@@ -54,11 +52,11 @@ module.exports = {
     next()
   },
 
-  requireSignin: expressJwt(
+  exports.requireSignin = expressJwt(
     {
       secret: config.jwtSecret,
       userProperty: 'auth'
     }
   )
 
-}
+
