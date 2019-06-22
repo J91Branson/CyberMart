@@ -1,5 +1,5 @@
-const passport = require ('passport');
-const router = require("express").Router();
+// const passport = require ('passport');
+// const router = require("express").Router();
 
 /* GET Google Authentication API. */
 router.get("/google",
@@ -15,4 +15,4 @@ router.get("/google/callback",
     }
 );
 
-module.exports = router;
+// module.exports = router;

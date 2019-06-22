@@ -1,7 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const routes = require("./server/routes");
 const cookieParser = require('cookie-parser');
+const expressValidator = require("express-validator");
+const cors = require("cors");
+require('dotenv').config();
+
+const routes = require("./server/routes");
 
 const app = express();
 const PORT = process.env.PORT || 8000;
@@ -14,6 +18,8 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 app.use(cookieParser())
+app.use(expressValidator());
+app.use(cors());
 
 
 // Add routes, both API and view
