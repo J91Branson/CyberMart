@@ -7,7 +7,7 @@ import './App.css';
 
 const App = props => (
   <div className="App">
-    <Header title="Cyber Mart" />
+    {/* <Header title="Cyber Mart" /> */}
     <Menu />
       {props.children}
     <Footer />

@@ -1,81 +1,32 @@
 import React from "react";
-import { Link, withRouter } from "react-router-dom";
-import { signout } from "../../auth/index";
 
-const isActive = (history, path) => {
-    if (history.location.pathname === path) {
-        return { color: "#ff9900" };
-    } else {
-        return { color: "#ffffff" };
-    }
-};
+const Menu = () => (
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <a className="navbar-brand" href="/">CyberMart</a>
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
 
-const Menu = ({ history }) => (
-    <div>
-        <ul className="nav nav-tabs bg-primary">
-            <li className="nav-item">
-                <Link
-                    className="nav-link"
-                    style={isActive(history, "/")}
-                    to="/"
-                >
-                    Home
-                </Link>
-            </li>
-            <li className="nav-item">
-                <Link
-                    className="nav-link"
-                    style={isActive(history, "/about")}
-                    to="/"
-                >
-                    About
-                </Link>
-            </li>
-            <li className="nav-item">
-                <Link
-                    className="nav-link"
-                    style={isActive(history, "/contact")}
-                    to="/"
-                >
-                    Contact
-                </Link>
-            </li>
-
-            <li className="nav-item">
-                <Link
-                    className="nav-link"
-                    style={isActive(history, "/signin")}
-                    to="/signin"
-                >
-                    Signin
-                </Link>
-            </li>
-
-            <li className="nav-item">
-                <Link
-                    className="nav-link"
-                    style={isActive(history, "/signup")}
-                    to="/signup"
-                >
-                    Signup
-                </Link>
-            </li>
-
-            <li className="nav-item">
-                <span
-                    className="nav-link"
-                    style={{ cursor: "pointer", color: "#ffffff" }}
-                    onClick={() =>
-                        signout(() => {
-                            history.push("/");
-                        })
-                    }
-                >
-                    Signout
-                </span>
-            </li>
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul className="navbar-nav mr-auto">
+          <li className="nav-item active">
+            <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
+          </li>
+          <li className="nav-item active">
+            <a className="nav-link" href="/about">About <span className="sr-only">(current)</span></a>
+          </li>
+          <li className="nav-item active">
+            <a className="nav-link" href="/contact">Contact <span className="sr-only">(current)</span></a>
+          </li>
+          <li className="nav-item active">
+            <a className="nav-link" href="/signup">Sign Up <span className="sr-only">(current)</span></a>
+          </li>
+          <li className="nav-item active">
+            <a className="nav-link" href="/signin">Sign In <span className="sr-only">(current)</span></a>
+          </li>
         </ul>
-    </div>
+      </div>
+    </nav>
 );
 
-export default withRouter(Menu);
+export default Menu;
