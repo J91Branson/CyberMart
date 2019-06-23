@@ -1,7 +1,7 @@
 import { API } from "../config";
 
 export const signup = user => {
-    return fetch(`${API}/signup`, {
+    return fetch("/api/signup", {
         method: "POST",
         headers: {
             Accept: "application/json",
@@ -18,7 +18,7 @@ export const signup = user => {
 };
 
 export const signin = user => {
-    return fetch(`${API}/signin`, {
+    return fetch(`/api/signin`, {
         method: "POST",
         headers: {
             Accept: "application/json",
@@ -52,16 +52,5 @@ export const signout = next => {
                 console.log("signout", response);
             })
             .catch(err => console.log(err));
-    }
-};
-
-export const isAuthenticated = () => {
-    if (typeof window == "undefined") {
-        return false;
-    }
-    if (localStorage.getItem("jwt")) {
-        return JSON.parse(localStorage.getItem("jwt"));
-    } else {
-        return false;
     }
 };

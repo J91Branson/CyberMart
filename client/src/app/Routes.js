@@ -4,14 +4,14 @@ import {  Switch, Route } from "react-router-dom";
 
 // Components
 import App from './App';
-import Home from './pages/Home/Home';
-import About from './pages/About/About';
-import Contact from './pages/Contact/Contact';
-import Signup from './users/SignUp/SignUp';
-import Signin from './users/SignIn/SignIn';
-import PrivateRoute from "./auth/PrivateRoute";
-import Dashboard from "./users/Dashboard/UserDashboard";
-import Error404 from './pages/Error/404';
+import Home from '../pages/Home/Home';
+import About from '../pages/About/About';
+import Contact from '../pages/Contact/Contact';
+import Signup from '../users/Signup';
+import Signin from '../users/Signin';
+// import PrivateRoute from "./auth/PrivateRoute";
+// import Dashboard from "./users/UserDashboard";
+import Error404 from '../pages/Error/404';
 
 const AppRoutes = () => (
   <App>
@@ -21,7 +21,7 @@ const AppRoutes = () => (
       <Route path="/contact" component={Contact} exact />
       <Route path="/signin" exact component={Signin} />
       <Route path="/signup" exact component={Signup} />
-      <PrivateRoute path="/user/dashboard" exact component={Dashboard}/>
+      {/* <PrivateRoute path="/user/dashboard" exact component={Dashboard}/> */}
       <Route component={Error404} />
     </Switch>
   </App>
