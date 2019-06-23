@@ -6,7 +6,7 @@ const signin = require("./auth");
 
 // API Routes
 router.use("/api", signup);
-router.use("/auth", signin);
+router.use("/api", signin);
 // router.use("/auth", google);
 
 // If no API routes are hit, send the React app

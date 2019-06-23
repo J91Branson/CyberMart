@@ -26,14 +26,14 @@ exports.signin = (req, res) => {
     User.findOne({ email }, (err, user) => {
         if (err || !user) {
             return res.status(400).json({
-                error: "User with that email does not exist. Please signup"
+                error: "User with that email does not exist. Please signup!"
             });
         }
         // if user is found make sure the email and password match
         // create authenticate method in user model
         if (!user.authenticate(password)) {
             return res.status(401).json({
-                error: "Email and password dont match"
+                error: "Email and password do not match"
             });
         }
         // generate a signed token with user id and secret
@@ -48,7 +48,7 @@ exports.signin = (req, res) => {
 
 exports.signout = (req, res) => {
     res.clearCookie("t");
-    res.json({ message: "Signout success" });
+    res.json({ message: "Sign out success" });
 };
 
 exports.requireSignin = expressJwt({
@@ -69,7 +69,7 @@ exports.isAuth = (req, res, next) => {
 exports.isAdmin = (req, res, next) => {
     if (req.profile.role === 0) {
         return res.status(403).json({
-            error: "Admin resourse! Access denied"
+            error: "Admin page! Access denied"
         });
     }
     next();
