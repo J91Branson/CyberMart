@@ -1,18 +1,20 @@
 import React from 'react';
+import Content from "../../layouts/Content/Content";
 
-function About() {
-  return (
-    <div>
-      <h1>About Page</h1>
-      <p>
-        Nunc pharetra finibus est at efficitur. Praesent sed congue diam. Integer gravida dui
-        mauris, ut interdum nunc egestas sed. Aenean sed mollis diam. Nunc aliquet risus ac finibus
-        porta. Nam quis arcu non lectus tincidunt fermentum. Suspendisse aliquet orci porta quam
-        semper imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus in. Sed
-        rhoncus mollis diam, sit amet facilisis lectus blandit at.
-      </p>
-    </div>
-  );
-}
+const About = () => (
+  <Content title="About Page" description="eCommerce">
+  <p>
+  Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis molestie urna.
+  Aliquam semper ultrices varius. Aliquam faucibus sit amet magna a ultrices. Aenean
+  pellentesque placerat lacus imperdiet efficitur. In felis nisl, luctus non ante euismod,
+  tincidunt bibendum mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
+  posuere, eget tristique dui dapibus. Maecenas fermentum elementum faucibus. Quisque nec
+  metus vestibulum, egestas massa eu, sollicitudin ipsum. Nulla facilisi. Sed ut erat ligula.
+  Nam tincidunt nunc in nibh dictum ullamcorper. Class aptent taciti sociosqu ad litora
+  torquent per conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at rhoncus.
+  Etiam vel condimentum magna, quis tempor nulla.
+</p>
+</Content>
+);
 
 export default About;
