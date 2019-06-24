@@ -7,103 +7,61 @@ const styles = {
   textAlign: "center"
 };
 const image1 =
-  "https://d17fnq9dkz9hgj.cloudfront.net/uploads/2018/04/Pomeranian_02.jpg";
+  "https://thehappypuppysite.com/wp-content/uploads/2017/10/Cute-Dog-Names-HP-long.jpg";
 
 const image2 =
-  "http://funnypicture.org/wallpaper/2015/05/funny-cat-playing-34-cool-wallpaper.jpg";
-
+  "http://yesofcorsa.com/wp-content/uploads/2017/01/4K-Cat-Photo.jpg"
 const image3 =
-  "https://wallpaperbro.com/img/270125.jpg";
+  "http://douglassquarepetclinic.com/wp-content/uploads/2017/12/cute-cat-and-dog-sleep-wallpaper.jpg";
 
 const Home = () => (
   <div style={styles}>
-    <Parallax
-      bgImage={image1}
-      strength={300}
-      renderLayer={percentage => (
-        <div>
-          <div
-            style={{
-              position: "absolute",
-              background: `rgba(255,182,182, ${percentage * 1})`,
-              left: "35%",
-              top: "60%",
-              borderRadius: "50%",
-              transform: "translate(-50%, -50%)",
-              width: percentage * 500,
-              height: percentage * 500
-            }}
-          />
-        </div>
-      )}
-    >
+    <Parallax bgImage={image1} strength={500}>
       <div style={{ height: 500 }}>
-        <button type="button" style={{
+        <div className="card" style={{
+          padding: 20,
           position: "absolute",
-          top: "59%",
-          left: "35%",
-          transform: "translate(-50%,-50%)"
-        }} className="btn btn-primary btn-lg">Dog Stuff!</button>
+          top: "29%",
+          left: "2%",
+        }}>
+          <div className="card-body">
+            <h1 className="card-title">Card title</h1>
+            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" className="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
       </div>
     </Parallax>
-    
-    <Parallax
-      bgImage={image2}
-      strength={300}
-      renderLayer={percentage => (
-        <div>
-          <div
-            style={{
-              position: "absolute",
-              background: `rgba(255,182,182, ${percentage * 1})`,
-              left: "70%",
-              top: "60%",
-              borderRadius: "50%",
-              transform: "translate(-50%,-50%)",
-              width: percentage * 500,
-              height: percentage * 500
-            }}
-          />
-        </div>
-      )}
-    >
+    <Parallax bgImage={image2} strength={500}>
       <div style={{ height: 500 }}>
-        <button type="button" style={{
+        <div className="card" style={{
+          padding: 20,
           position: "absolute",
-          top: "59%",
-          left: "70%",
-          transform: "translate(-50%,-50%)"
-        }} className="btn btn-primary btn-lg">Cat Stuff!</button>
-      </div>
-    </Parallax>
-    
-    <Parallax
-      bgImage={image3}
-      strength={300}
-      renderLayer={percentage => (
-        <div>
-          <div
-            style={{
-              position: "absolute",
-              background: `rgba(255,182,182, ${percentage * 1})`,
-              left: "50%",
-              top: "50%",
-              borderRadius: "50%",
-              transform: "translate(-50%,-50%)",
-              width: percentage * 500,
-              height: percentage * 500
-            }}
-          />
-        </div>
-      )}
-    >
-      <div style={{ height: 500 }}>
-        <button type="button" style={{
-          position: "absolute",
-          top: "50%",
+          top: "29%",
           left: "50%",
-          transform: "translate(-50%,-50%)"
-        }} className="btn btn-primary btn-lg">Stuff!</button>
+        }}>
+          <div className="card-body">
+            <h1 className="card-title">Card title</h1>
+            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" className="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </Parallax>
+    <Parallax bgImage={image3} strength={500}>
+      <div style={{ height: 500 }}>
+        <div className="card" style={{
+          padding: 20,
+          position: "absolute",
+          top: "29%",
+          left: "2%",
+        }}>
+          <div className="card-body">
+            <h1 className="card-title">Card title</h1>
+            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" className="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
       </div>
     </Parallax>
   </div>
