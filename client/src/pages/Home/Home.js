@@ -12,7 +12,7 @@ const image1 =
 const image2 =
   "http://yesofcorsa.com/wp-content/uploads/2017/01/4K-Cat-Photo.jpg"
 const image3 =
-  "http://douglassquarepetclinic.com/wp-content/uploads/2017/12/cute-cat-and-dog-sleep-wallpaper.jpg";
+  "http://starkovtattoo.spb.ru/images/700/DSC100766071.jpg";
 
 const Home = () => (
   <div style={styles}>
@@ -25,9 +25,9 @@ const Home = () => (
           left: "2%",
         }}>
           <div className="card-body">
-            <h1 className="card-title">Card title</h1>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" className="btn btn-primary">Go somewhere</a>
+            <h1 className="card-title">Shop for Dogs</h1>
+            <p className="card-text">Need something for your good boy/girl?</p>
+            <a href="#" className="btn btn-primary">Click Here</a>
           </div>
         </div>
       </div>
@@ -41,9 +41,9 @@ const Home = () => (
           left: "50%",
         }}>
           <div className="card-body">
-            <h1 className="card-title">Card title</h1>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" className="btn btn-primary">Go somewhere</a>
+            <h1 className="card-title catHome">Shop for Cats</h1>
+            <p className="card-text catHome">Cats have it all – admiration, an endless sleep, and company only when they want it.</p>
+            <a href="#" className="btn btn-primary">Get Them More</a>
           </div>
         </div>
       </div>
@@ -57,9 +57,9 @@ const Home = () => (
           left: "2%",
         }}>
           <div className="card-body">
-            <h1 className="card-title">Card title</h1>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" className="btn btn-primary">Go somewhere</a>
+            <h1 className="card-title">Something Else In Mind?</h1>
+            <p className="card-text">Shop by catagories instead.</p>
+            <a href="#" className="btn btn-primary">Go to Catagories</a>
           </div>
         </div>
       </div>
