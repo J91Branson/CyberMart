@@ -7,10 +7,12 @@ import App from './App';
 import Home from '../pages/Home/Home';
 import About from '../pages/About/About';
 import Contact from '../pages/Contact/Contact';
-import Signup from '../users/Signup';
-import Signin from '../users/Signin';
-// import PrivateRoute from "./auth/PrivateRoute";
-// import Dashboard from "./users/UserDashboard";
+import Signup from '../user/Signup';
+import Signin from '../user/Signin';
+import PrivateRoute from "../auth/PrivateRoute";
+import Dashboard from "../user/UserDashboard";
+import AdminRoute from "../auth/AdminRoute";
+import AdminDashboard from "../user/AdminDashboard";
 import Error404 from '../pages/Error/404';
 
 const AppRoutes = () => (
@@ -21,7 +23,8 @@ const AppRoutes = () => (
       <Route path="/contact" component={Contact} exact />
       <Route path="/signin" exact component={Signin} />
       <Route path="/signup" exact component={Signup} />
-      {/* <PrivateRoute path="/user/dashboard" exact component={Dashboard}/> */}
+      <PrivateRoute path="/user/dashboard" exact component={Dashboard}/>
+      <AdminRoute path="/admin/dashboard" exact component={AdminDashboard}/>
       <Route component={Error404} />
     </Switch>
   </App>
