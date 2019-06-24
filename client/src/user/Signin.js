@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import Content from "../layouts/Content/Content";
-import { signin, authenticate} from "../auth/index";
+import { signin, authenticate, isAuthenticated } from "../auth";
 
 const Signin = () => {
     const [values, setValues] = useState({
@@ -13,6 +13,7 @@ const Signin = () => {
     });
 
     const { email, password, loading, error, redirectToReferrer } = values;
+    const { user } = isAuthenticated();
 
     const handleChange = name => event => {
         setValues({ ...values, error: false, [name]: event.target.value });
@@ -79,15 +80,24 @@ const Signin = () => {
             </div>
         );
 
+
     const redirectUser = () => {
         if (redirectToReferrer) {
+            if (user && user.role === 1) {
+                return <Redirect to="/admin/dashboard" />;
+            } else {
+                return <Redirect to="/user/dashboard" />;
+            }
+        }
+        if (isAuthenticated()) {
             return <Redirect to="/" />;
         }
     };
 
+
     return (
         <Content
-             // Text on Jumbotron related to this page --layouts/Content.js
+            // Text on Jumbotron related to this page --layouts/Content.js
             title="Signin"
             description="Please sign into your account"
             className="container col-md-8 offset-md-2"
