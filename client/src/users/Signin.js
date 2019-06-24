@@ -36,7 +36,7 @@ const Signin = () => {
         });
     };
 
-    const signUpForm = () => (
+    const signInForm = () => (
         <form>
             <div className="form-group">
                 <label className="text-muted">Email</label>
@@ -87,13 +87,14 @@ const Signin = () => {
 
     return (
         <Content
+             // Text on Jumbotron related to this page --layouts/Content.js
             title="Signin"
-            description="Signin to Node React E-commerce App"
+            description="Please sign into your account"
             className="container col-md-8 offset-md-2"
         >
             {showLoading()}
             {showError()}
-            {signUpForm()}
+            {signInForm()}
             {redirectUser()}
         </Content>
     );
