@@ -56,13 +56,7 @@ const Dashboard = () => {
     };
 
     return (
-        <Content
-
-            // Text on Jumbotron related to this page --layouts/Content.js
-            title="Dashboard"
-            description={`Welcome back ${name}!`}
-            className="container-fluid"
-        >
+        <Content className="container-fluid">
             <div className="row">
                 <div className="col-3">
                     {userLinks()}
