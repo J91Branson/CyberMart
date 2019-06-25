@@ -49,11 +49,11 @@ const Menu = ({ history }) => (
         {!isAuthenticated() && (
           <Fragment>
             <li className="nav-item active">
-              <Link className="nav-link" style={isActive(history, "/signin")} to="/signin"><button>Log In</button></Link>
+              <Link className="nav-link" style={isActive(history, "/signin")} to="/signin"><button className="login_btn btn">Log In</button></Link>
             </li>
 
             <li className="nav-item active">
-              <Link className="nav-link" style={isActive(history, "/signup")} to="/signup"><button>Sign Up</button></Link>
+              <Link className="nav-link" style={isActive(history, "/signup")} to="/signup"><button className="login_btn btn">Sign Up</button></Link>
             </li>
           </Fragment>
         )}
