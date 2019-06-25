@@ -24,7 +24,7 @@ const Home = () => (
           top: "29%",
           left: "2%",
         }}>
-          <div className="card-body">
+          <div className="card-body dogHome">
             <h1 className="card-title">Shop for Dogs</h1>
             <p className="card-text">Need something for your good boy/girl?</p>
             <a href="#" className="btn btn-primary">Click Here</a>
@@ -56,7 +56,7 @@ const Home = () => (
           top: "29%",
           left: "2%",
         }}>
-          <div className="card-body">
+          <div className="card-body dogHome">
             <h1 className="card-title">Something Else In Mind?</h1>
             <p className="card-text">Shop by catagories instead.</p>
             <a href="#" className="btn btn-primary">Go to Catagories</a>
