@@ -48,27 +48,25 @@ const Menu = ({ history }) => (
         {!isAuthenticated() && (
           <Fragment>
             <li className="nav-item active">
-              <Link className="nav-link" style={isActive(history, "/signin")} to="/signin">Signin</Link>
+              <Link className="nav-link" style={isActive(history, "/signin")} to="/signin"><button>Log In</button></Link>
             </li>
 
             <li className="nav-item active">
-              <Link className="nav-link" style={isActive(history, "/signup")} to="/signup">Signup</Link>
+              <Link className="nav-link" style={isActive(history, "/signup")} to="/signup"><button>Sign Up</button></Link>
             </li>
           </Fragment>
         )}
 
         {isAuthenticated() && (
           <li className="nav-item active">
-            <span
+            <button><span
               style={{ cursor: "pointer", color: "#000000" }}
               onClick={() =>
                 signout(() => {
                   history.push("/");
                 })
               }
-            >
-              Signout
-                </span>
+            >Log Out</span></button>
           </li>
         )}
       </ul>

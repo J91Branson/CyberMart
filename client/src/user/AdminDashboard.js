@@ -44,11 +44,7 @@ const AdminDashboard = () => {
     };
 
     return (
-        <Content
-            title="Dashboard"
-            description={`${name}'s Admin Page!`}
-            className="container-fluid"
-        >
+        <Content className="container-fluid">
             <div className="row">
                 <div className="col-3">{adminLinks()}</div>
                 <div className="col-9">{adminInfo()}</div>
