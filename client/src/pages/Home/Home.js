@@ -24,7 +24,7 @@ const Home = () => (
           top: "29%",
           left: "2%",
         }}>
-          <div className="card-body">
+          <div className="card-body dogHome">
             <h1 className="card-title">Shop for Dogs</h1>
             <p className="card-text">Need something for your good boy/girl?</p>
             <a href="#" className="btn btn-primary">Click Here</a>
@@ -40,9 +40,9 @@ const Home = () => (
           top: "29%",
           left: "50%",
         }}>
-          <div className="card-body">
-            <h1 className="card-title catHome">Shop for Cats</h1>
-            <p className="card-text catHome">Cats have it all – admiration, an endless sleep, and company only when they want it.</p>
+          <div className="card-body catHome">
+            <h1 className="card-title">Shop for Cats</h1>
+            <p className="card-text">Cats have it all – admiration, an endless sleep, and company only when they want it.</p>
             <a href="#" className="btn btn-primary">Get Them More</a>
           </div>
         </div>
@@ -56,7 +56,7 @@ const Home = () => (
           top: "29%",
           left: "2%",
         }}>
-          <div className="card-body">
+          <div className="card-body dogHome">
             <h1 className="card-title">Something Else In Mind?</h1>
             <p className="card-text">Shop by catagories instead.</p>
             <a href="#" className="btn btn-primary">Go to Catagories</a>

@@ -4,7 +4,7 @@ import { signout, isAuthenticated } from "../../auth";
 
 const isActive = (history, path) => {
   if (history.location.pathname === path) {
-    return { color: "#ff9900" };
+    return { color: "#FFB6B6" };
   } else {
     return { color: "#000000" };
   }
@@ -44,7 +44,8 @@ const Menu = ({ history }) => (
             <Link className="nav-link" style={isActive(history, "/admin/dashboard")} to="/admin/dashboard">Dashboard</Link>
           </li>
         )}
-
+      </ul>
+      <ul className="navbar-nav ml-auto">
         {!isAuthenticated() && (
           <Fragment>
             <li className="nav-item active">

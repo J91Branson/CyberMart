@@ -6,10 +6,12 @@ import Menu from "../layouts/Menu/Menu";
 import './App.css';
 
 const App = props => (
-  <div className="App">
-    {/* <Header title="Cyber Mart" /> */}
-    <Menu />
+  <div className="App Site">
+    <div className="Site-content">
+      {/* <Header title="Cyber Mart" /> */}
+      <Menu />
       {props.children}
+    </div>
     <Footer />
   </div>
 );

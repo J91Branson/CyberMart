@@ -3,8 +3,7 @@ import './Footer.css';
 
 const Footer = () => (
     <footer >
-        &copy; Gorilla Syndicate 
-        {( new Date()).getFullYear()}
+        &copy; {( new Date()).getFullYear()} Gorilla Syndicate
     </footer>
 );
 

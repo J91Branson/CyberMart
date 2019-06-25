@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import Content from "../layouts/Content/Content";
 import { signin, authenticate, isAuthenticated } from "../auth";
+import './signin.css';
 
 const Signin = () => {
     const [values, setValues] = useState({
-        email: "customer@g.com",   //admin@g.com  
-        password: "password1",
+        email: "nbc@gmail.com",
+        password: "rrrrrr9",
         error: "",
         loading: false,
         redirectToReferrer: false
@@ -60,7 +61,7 @@ const Signin = () => {
             </div>
             <button onClick={clickSubmit} className="btn btn-primary">
                 Submit
-            </button>
+        </button>
         </form>
     );
 
@@ -96,7 +97,12 @@ const Signin = () => {
 
 
     return (
-        <Content className="container col-md-8 offset-md-2">
+        <Content
+            // Text on Jumbotron related to this page --layouts/Content.js
+            title="Signin"
+            description="Please sign into your account"
+            className="container col-md-8 offset-md-2"
+        >
             {showLoading()}
             {showError()}
             {signInForm()}
