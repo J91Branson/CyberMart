@@ -2,9 +2,7 @@ import React from 'react';
 import Content from "../../layouts/Content/Content";
 
 const Contact = () => (
-  <Content
-    // Text on Jumbotron related to this page --layouts/Content.js
-    title="Contact Page" description="eCommerce">
+  <Content>
     <p>
       Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis molestie urna.
       Aliquam semper ultrices varius. Aliquam faucibus sit amet magna a ultrices. Aenean

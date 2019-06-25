@@ -1,8 +1,6 @@
 import React from "react";
 
 const Content = ({
-    title = "Title",
-    description = "Description",
     className,
     children
 }) => (

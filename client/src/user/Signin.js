@@ -6,8 +6,8 @@ import './signin.css';
 
 const Signin = () => {
     const [values, setValues] = useState({
-        email: "nbc@gmail.com",
-        password: "rrrrrr9",
+        email: "customer@g.com",   //admin@g.com  
+        password: "password1",
         error: "",
         loading: false,
         redirectToReferrer: false
@@ -126,7 +126,7 @@ const Signin = () => {
 
 
     return (
-        <Content>
+        <Content className="container col-md-8 offset-md-2">
             {showLoading()}
             {showError()}
             {signInForm()}

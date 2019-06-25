@@ -93,12 +93,7 @@ const Signup = () => {
     );
 
     return (
-        <Content
-        // Text on Jumbotron related to this page --layouts/Content.js
-            title="Signup"
-            description="Sign Up new user"
-            className="container col-md-8 offset-md-2"
-        >
+        <Content className="container col-md-8 offset-md-2">
             {showSuccess()}
             {showError()}
             {signUpForm()}
