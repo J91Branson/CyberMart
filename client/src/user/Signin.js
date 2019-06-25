@@ -6,8 +6,8 @@ import './signin.css';
 
 const Signin = () => {
     const [values, setValues] = useState({
-        email: "customer@g.com",   //admin@g.com  
-        password: "password1",
+        email: "nbc@gmail.com",
+        password: "rrrrrr9",
         error: "",
         loading: false,
         redirectToReferrer: false
@@ -39,59 +39,30 @@ const Signin = () => {
     };
 
     const signInForm = () => (
-        <div className="row signInF">
-            <div className="col-md-2 col-sm-2"></div>
-            <div className="col-md-4 col-sm-4">
-                <div className="card signInC shadow-lg">
-                    <div className="card-header signInH text-center">
-                        <h3>Sign In</h3>
-                    </div>
-                    <div className="card-body">
-                        <form>
-                            <div className="input-group form-group">
-                                <div className="input-group-prepend">
-                                    <span className="input-group-text"><i className="fas fa-paw"> Email</i></span>
-                                </div>
-                                <input
-                                    onChange={handleChange("email")}
-                                    type="email"
-                                    className="form-control"
-                                    value={email}
-                                />
-                            </div>
-                            <div className="input-group form-group">
-                                <div className="input-group-prepend">
-                                    <span className="input-group-text"><i className="fas fa-key"> Password</i></span>
-                                </div>
-                                <input
-                                    onChange={handleChange("password")}
-                                    type="password"
-                                    className="form-control"
-                                    value={password}
-                                />
-                            </div>
-                            <div className="form-group">
-                                <button onClick={clickSubmit} className="btn btn-primary login_btn">
-                                    Submit
-                                 </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+        <form>
+            <div className="form-group">
+                <label className="text-muted">Email</label>
+                <input
+                    onChange={handleChange("email")}
+                    type="email"
+                    className="form-control"
+                    value={email}
+                />
             </div>
-            <div className="col-md-4 col-sm-4">
-                <div className="card signInC shadow-lg">
-                    <div className="card-header signInH text-center">
-                        <h3>New Customer?</h3>
-                    </div>
-                    <div className="card-body">
-                        <p className="card-text">If you are a new customer wishing to create an account click below!</p>
-                        <a href="/signup" className="btn btn-primary login_btn"><i className="far fa-plus-square"></i> Create Account</a>
-                    </div>
-                </div>
+
+            <div className="form-group">
+                <label className="text-muted">Password</label>
+                <input
+                    onChange={handleChange("password")}
+                    type="password"
+                    className="form-control"
+                    value={password}
+                />
             </div>
-            <div className="col-md-2 col-sm-2"></div>
-        </div>
+            <button onClick={clickSubmit} className="btn btn-primary">
+                Submit
+        </button>
+        </form>
     );
 
     const showError = () => (
@@ -126,7 +97,12 @@ const Signin = () => {
 
 
     return (
-        <Content className="container col-md-8 offset-md-2">
+        <Content
+            // Text on Jumbotron related to this page --layouts/Content.js
+            title="Signin"
+            description="Please sign into your account"
+            className="container col-md-8 offset-md-2"
+        >
             {showLoading()}
             {showError()}
             {signInForm()}

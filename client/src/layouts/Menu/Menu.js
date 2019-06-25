@@ -44,7 +44,8 @@ const Menu = ({ history }) => (
             <Link className="nav-link" style={isActive(history, "/admin/dashboard")} to="/admin/dashboard">Dashboard</Link>
           </li>
         )}
-
+      </ul>
+      <ul className="navbar-nav ml-auto">
         {!isAuthenticated() && (
           <Fragment>
             <li className="nav-item active">
