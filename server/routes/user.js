@@ -12,8 +12,11 @@ router.get("/secret/:userId", requireSignin, isAuth, isAdmin,(req, res) => {
     });
 });
 
-// router.get("/user/:userId", requireSignin, isAuth, read);
-// router.put("/user/:userId", requireSignin, isAuth, update);
+//route to display user profile 
+router.get("/user/:userId", requireSignin, isAuth, read);
+
+//route to update user profile 
+router.put("/user/:userId", requireSignin, isAuth, update);
 
 //To find profile for a specific param
 router.param("userId", userById);

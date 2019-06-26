@@ -33,7 +33,7 @@ exports.create = (req, res) => {
         //Variable to create new Product 
         let product = new Product(fields);
 
-              //Photo file size limitation
+        //Photo file size limitation
         if (files.photo) {
             // console.log("FILES PHOTO: ", files.photo);
             // 1kb = 1000
@@ -84,8 +84,8 @@ exports.update = (req, res) => {
     let form = new formidable.IncomingForm();
     form.keepExtensions = true;
     form.parse(req, (err, fields, files) => {
-         //Error handling for image and data field upload
-         if (err) {
+        //Error handling for image and data field upload
+        if (err) {
             return res.status(400).json({
                 error: "Image could not be uploaded"
             });
@@ -142,4 +142,110 @@ exports.remove = (req, res) => {
             message: "Product deleted successfully"
         });
     });
+};
+
+//Displays all products
+exports.list = (req, res) => {
+    let order = req.query.order ? req.query.order : "asc";
+    let sortBy = req.query.sortBy ? req.query.sortBy : "_id";
+    let limit = req.query.limit ? parseInt(req.query.limit) : 6;
+
+    Product.find()
+        .select("-photo")
+        .populate("category")
+        .sort([[sortBy, order]])
+        .limit(limit)
+        .exec((err, products) => {
+            if (err) {
+                return res.status(400).json({
+                    error: "Products not found"
+                });
+            }
+            res.json(products);
+        });
+};
+
+//Displays all product related to this current product (excl. current product)
+exports.listRelated = (req, res) => {
+    let limit = req.query.limit ? parseInt(req.query.limit) : 6;
+
+    // ne - not included
+    Product.find({ _id: { $ne: req.product }, category: req.product.category })
+        .limit(limit)
+        .populate("category", "_id name")
+        .exec((err, products) => {
+            if (err) {
+                return res.status(400).json({
+                    error: "Products not found"
+                });
+            }
+            res.json(products);
+        });
+};
+
+//Displays all products' categories
+exports.listCategories = (req, res) => {
+    Product.distinct("category", {}, (err, categories) => {
+        if (err) {
+            return res.status(400).json({
+                error: "Categories not found"
+            });
+        }
+        res.json(categories);
+    });
+};
+
+
+//Displays products by search
+exports.listBySearch = (req, res) => {
+    let order = req.body.order ? req.body.order : "desc";
+    let sortBy = req.body.sortBy ? req.body.sortBy : "_id";
+    let limit = req.body.limit ? parseInt(req.body.limit) : 100;
+    let skip = parseInt(req.body.skip);
+    let findArgs = {};
+
+    // console.log(order, sortBy, limit, skip, req.body.filters);
+    // console.log("findArgs", findArgs);
+
+    for (let key in req.body.filters) {
+        if (req.body.filters[key].length > 0) {
+            if (key === "price") {
+                // gte -  greater than price [0-10]
+                // lte - less than
+                findArgs[key] = {
+                    $gte: req.body.filters[key][0],
+                    $lte: req.body.filters[key][1]
+                };
+            } else {
+                findArgs[key] = req.body.filters[key];
+            }
+        }
+    }
+
+    Product.find(findArgs)
+        .select("-photo")
+        .populate("category")
+        .sort([[sortBy, order]])
+        .skip(skip)
+        .limit(limit)
+        .exec((err, data) => {
+            if (err) {
+                return res.status(400).json({
+                    error: "Products not found"
+                });
+            }
+            res.json({
+                size: data.length,
+                data
+            });
+        });
+};
+
+//Displays a product photo
+exports.photo = (req, res, next) => {
+    if (req.product.photo.data) {
+        res.set("Content-Type", req.product.photo.contentType);
+        return res.send(req.product.photo.data);
+    }
+    next();
 };

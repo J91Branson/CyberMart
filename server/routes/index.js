@@ -3,11 +3,11 @@ const path = require("path");
 const router = require("express").Router();
 
 //File Imports
-const authRoutes = require("./routes/auth");
-const userRoutes = require("./routes/user");
+const authRoutes = require("./auth");
+const userRoutes = require("./user");
 
-const categoryRoutes = require("./routes/category");
-const productRoutes = require("./routes/product");
+const categoryRoutes = require("./category");
+const productRoutes = require("./product");
 
 
 
@@ -21,11 +21,11 @@ const productRoutes = require("./routes/product");
 
 
 //Routes
-app.use("/api", authRoutes);
-app.use("/api", userRoutes);
+router.use("/api", authRoutes);
+router.use("/api", userRoutes);
 
-app.use("/api", categoryRoutes);
-app.use("/api", productRoutes);
+router.use("/api", categoryRoutes);
+router.use("/api", productRoutes);
 
 
 // router.use("/api", signup);
