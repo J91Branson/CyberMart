@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Content from "../layouts/Content/Content";
-import { isAuthenticated } from "../auth";
+import { isAuthenticated } from "../auth/apiAuth";
 
 
 const Dashboard = () => {

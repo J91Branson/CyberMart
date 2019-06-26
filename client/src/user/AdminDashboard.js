@@ -1,6 +1,6 @@
 import React from "react";
 import Content from "../layouts/Content/Content";
-import { isAuthenticated } from "../auth";
+import { isAuthenticated } from "../auth/apiAuth";
 import { Link } from "react-router-dom";
 
 const AdminDashboard = () => {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Content from "../layouts/Content/Content";
-import { signup } from "../auth";
+import { signup } from "../auth/apiAuth";
 
 const Signup = () => {
     const [values, setValues] = useState({
