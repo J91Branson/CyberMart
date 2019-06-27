@@ -2,7 +2,7 @@
 const router = require("express").Router();
 
 //File Imports
-const { create, productById, read, update, remove, list, listRelated, listCategories, listBySearch, photo } = require("../controllers/product");
+const { create, productById, read, update, remove, list, listRelated, listCategories, listBySearch, image } = require("../controllers/product");
 const { requireSignin, isAuth, isAdmin } = require("../controllers/auth");
 const { userById } = require("../controllers/user");
 
@@ -30,8 +30,8 @@ router.get("/products/categories", listCategories);
 //route to display all products in search
 router.post("/products/by/search", listBySearch);
 
-//route to return product photo
-router.get("/product/photo/:productId", photo);
+//route to return product image
+router.get("/product/image/:productId", image);
 
 //To find profile for a specific param 
 router.param("userId", userById);

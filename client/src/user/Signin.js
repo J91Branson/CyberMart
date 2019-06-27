@@ -1,5 +1,8 @@
+// Import React Packages
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
+
+// Import Files/Components
 import Content from "../layouts/Content/Content";
 import { signin, authenticate, isAuthenticated } from "../auth/apiAuth";
 import './signin.css';

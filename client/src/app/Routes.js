@@ -1,21 +1,31 @@
-// Dependencies
+// Import React Packages
 import React from 'react';
 import {  Switch, Route } from "react-router-dom";
 
-// Components
-import App from './App';
-import Home from '../pages/Home/Home';
-import About from '../pages/About/About';
-import Contact from '../pages/Contact/Contact';
-import Signup from '../user/Signup';
-import Signin from '../user/Signin';
-import PrivateRoute from "../auth/PrivateRoute";
-import Dashboard from "../user/UserDashboard";
-import AdminRoute from "../auth/AdminRoute";
-import AdminDashboard from "../user/AdminDashboard";
-import AddCategory from "../admin/AddCategory";
-import Error404 from '../pages/Error/404';
+// Import Files/Components
+import App from './App'; //Parent route for page rendering and layout 
 
+//Website page routes
+import Home from '../pages/Home/Home';  //Home page
+import About from '../pages/About/About'; //About page
+import Contact from '../pages/Contact/Contact'; //Contact page
+import Error404 from '../pages/Error/404'; //Error page
+
+//User routes
+import Signup from '../user/Signup';  //customer
+import Signin from '../user/Signin';  //customer/admin
+import Dashboard from "../user/UserDashboard"; //customer
+import AdminDashboard from "../user/AdminDashboard"; //admin
+
+//Authentication routes
+import PrivateRoute from "../auth/PrivateRoute";  //customer
+import AdminRoute from "../auth/AdminRoute"; //admin
+
+//Admin routes  (to admin pages to make changes to products and category)
+import AddCategory from "../admin/AddCategory"; //admin
+import AddProduct from "../admin/AddProduct";  //admin
+
+//Links on nav menu and links on dashboards
 const AppRoutes = () => (
   <App>
     <Switch>
@@ -27,6 +37,7 @@ const AppRoutes = () => (
       <PrivateRoute path="/user/dashboard" exact component={Dashboard}/>
       <AdminRoute path="/admin/dashboard" exact component={AdminDashboard}/>
       <AdminRoute path="/create/category" exact component={AddCategory}/>
+      <AdminRoute path="/create/product" exact component={AddProduct}/>
       <Route component={Error404} />
     </Switch>
   </App>

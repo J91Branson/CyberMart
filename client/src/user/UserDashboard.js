@@ -1,5 +1,8 @@
+// Import React Packages
 import React from "react";
 import { Link } from "react-router-dom";
+
+// Import Files/Components
 import Content from "../layouts/Content/Content";
 import { isAuthenticated } from "../auth/apiAuth";
 

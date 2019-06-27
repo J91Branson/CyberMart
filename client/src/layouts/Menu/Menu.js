@@ -1,5 +1,8 @@
+// Import React Packages
 import React, { Fragment } from "react";
 import { Link, withRouter } from "react-router-dom";
+
+// Import Files/Components
 import { signout, isAuthenticated } from "../../auth/apiAuth";
 
 const isActive = (history, path) => {
@@ -23,14 +26,6 @@ const Menu = ({ history }) => (
 
         <li className="nav-item active">
           <Link className="nav-link" style={isActive(history, "/")} to="/">Home</Link>
-        </li>
-
-        <li className="nav-item active">
-          <Link className="nav-link" style={isActive(history, "/contact")} to="/contact">Contact</Link>
-        </li>
-
-        <li className="nav-item active">
-          <Link className="nav-link" style={isActive(history, "/about")} to="/about">About</Link>
         </li>
 
         {isAuthenticated() && isAuthenticated().user.role === 0 && (

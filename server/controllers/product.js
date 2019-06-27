@@ -10,7 +10,7 @@ const { errorHandler } = require("../helpers/dbErrorHandler");
 // To add new product to database
 exports.create = (req, res) => {
 
-    //Handles photo import 
+    //Handles image import 
     let form = new formidable.IncomingForm();
     form.keepExtensions = true;
     form.parse(req, (err, fields, files) => {
@@ -34,17 +34,17 @@ exports.create = (req, res) => {
         let product = new Product(fields);
 
         //Photo file size limitation
-        if (files.photo) {
-            // console.log("FILES PHOTO: ", files.photo);
+        if (files.image) {
+            // console.log("FILES PHOTO: ", files.image);
             // 1kb = 1000
             // 1mb = 1000000
-            if (files.photo.size > 1000000) {
+            if (files.image.size > 1000000) {
                 return res.status(400).json({
                     error: "Image should be less than 1mb in size"
                 });
             }
-            product.photo.data = fs.readFileSync(files.photo.path);
-            product.photo.contentType = files.photo.type;
+            product.image.data = fs.readFileSync(files.image.path);
+            product.image.contentType = files.image.type;
         }
 
         //Save new product to database
@@ -72,9 +72,9 @@ exports.productById = (req, res, next, id) => {
     });
 };
 
-//Takes returned product response above (excl. photo) and display it
+//Takes returned product response above (excl. image) and display it
 exports.read = (req, res) => {
-    req.product.photo = undefined;
+    req.product.image = undefined;
     return res.json(req.product);
 };
 
@@ -104,17 +104,17 @@ exports.update = (req, res) => {
         product = _.extend(product, fields);
 
         //Photo file size limitation
-        if (files.photo) {
-            // console.log("FILES PHOTO: ", files.photo);
+        if (files.image) {
+            // console.log("FILES PHOTO: ", files.image);
             // 1kb = 1000
             // 1mb = 1000000
-            if (files.photo.size > 1000000) {
+            if (files.image.size > 1000000) {
                 return res.status(400).json({
                     error: "Image should be less than 1mb in size"
                 });
             }
-            product.photo.data = fs.readFileSync(files.photo.path);
-            product.photo.contentType = files.photo.type;
+            product.image.data = fs.readFileSync(files.image.path);
+            product.image.contentType = files.image.type;
         }
 
         //Save new product to database
@@ -129,7 +129,7 @@ exports.update = (req, res) => {
     });
 };
 
-//Takes returned product output above (excl. photo) to deletes it
+//Takes returned product output above (excl. image) to deletes it
 exports.remove = (req, res) => {
     let product = req.product;
     product.remove((err, deletedProduct) => {
@@ -151,7 +151,7 @@ exports.list = (req, res) => {
     let limit = req.query.limit ? parseInt(req.query.limit) : 6;
 
     Product.find()
-        .select("-photo")
+        .select("-image")
         .populate("category")
         .sort([[sortBy, order]])
         .limit(limit)
@@ -223,7 +223,7 @@ exports.listBySearch = (req, res) => {
     }
 
     Product.find(findArgs)
-        .select("-photo")
+        .select("-image")
         .populate("category")
         .sort([[sortBy, order]])
         .skip(skip)
@@ -241,11 +241,11 @@ exports.listBySearch = (req, res) => {
         });
 };
 
-//Displays a product photo
-exports.photo = (req, res, next) => {
-    if (req.product.photo.data) {
-        res.set("Content-Type", req.product.photo.contentType);
-        return res.send(req.product.photo.data);
+//Displays a product image
+exports.image = (req, res, next) => {
+    if (req.product.image.data) {
+        res.set("Content-Type", req.product.image.contentType);
+        return res.send(req.product.image.data);
     }
     next();
 };

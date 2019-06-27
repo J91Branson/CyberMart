@@ -19,7 +19,7 @@ const productSchema = new mongoose.Schema(
         price: {
             type: Number,
             trim: true,
-            required: true,
+            required: false,
             maxlength: 32
         },
         category: {
@@ -34,7 +34,7 @@ const productSchema = new mongoose.Schema(
             type: Number,
             default: 0
         },
-        photo: {
+        image: {
             data: Buffer,
             contentType: String
         },
