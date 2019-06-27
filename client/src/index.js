@@ -1,7 +1,9 @@
-/* eslint react/jsx-filename-extension: "off" */
+// Import React Packages
 import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
+
+// Import Files/Components
 import './index.css';
 
 // Routes

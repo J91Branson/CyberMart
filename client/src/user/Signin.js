@@ -1,13 +1,16 @@
+// Import React Packages
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
+
+// Import Files/Components
 import Content from "../layouts/Content/Content";
-import { signin, authenticate, isAuthenticated } from "../auth";
+import { signin, authenticate, isAuthenticated } from "../auth/apiAuth";
 import './signin.css';
 
 const Signin = () => {
     const [values, setValues] = useState({
-        email: "nbc@gmail.com",
-        password: "rrrrrr9",
+        email: "customer@g.com",
+        password: "password1",
         error: "",
         loading: false,
         redirectToReferrer: false

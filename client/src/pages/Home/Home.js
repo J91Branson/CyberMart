@@ -1,5 +1,8 @@
+// Import React Packages
 import React from "react";
 import { Parallax } from "react-parallax";
+
+// Import Files/Components
 import './Home.css';
 
 const styles = {
