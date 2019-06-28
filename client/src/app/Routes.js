@@ -9,6 +9,8 @@ import App from './App'; //Parent route for page rendering and layout
 import Home from '../pages/Home/Home';  //Home page
 import About from '../pages/About/About'; //About page
 import Contact from '../pages/Contact/Contact'; //Contact page
+import Product from '../pages/Product/Product'; //Product page
+import Shop from '../pages/Product/Shop'; //Product page
 import Error404 from '../pages/Error/404'; //Error page
 
 //User routes
@@ -32,6 +34,8 @@ const AppRoutes = () => (
       <Route path="/" component={Home} exact />
       <Route path="/about" component={About} exact />
       <Route path="/contact" component={Contact} exact />
+      <Route path="/product" component={Product} exact />
+      <Route path="/shop" component={Shop} exact />
       <Route path="/signin" exact component={Signin} />
       <Route path="/signup" exact component={Signup} />
       <PrivateRoute path="/user/dashboard" exact component={Dashboard}/>
