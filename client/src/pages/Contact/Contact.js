@@ -12,8 +12,7 @@ const divStyle = {
 
 const Contact = () => (
   <Content>
-    <Container fluid>
-  
+    
   
   <Row>
     
@@ -37,7 +36,6 @@ speak human, contact us or talk to our bot.
 
     </Col>
   </Row>
-</Container>
 <Container fluid>
   
   
