@@ -1,4 +1,7 @@
+// Import React Packages
 import React from 'react';
+
+// Import Files/Components
 import Content from "../../layouts/Content/Content";
 import {Container,Row,Col } from 'react-bootstrap';
 

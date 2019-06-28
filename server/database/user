@@ -1,0 +1,11 @@
+
+//create manually in input form and change admin to role 1 and use "password1" for the password
+
+    "name" : "Admin",
+    "email" : "admin@g.com",
+
+//create manually in input form  "password1" for the password
+
+    "name" : "customer",
+    "email" : "customer@g.com",
+   

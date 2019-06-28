@@ -1,0 +1,449 @@
+/* 1 */
+{
+    "_id" : ObjectId("5d114f5283e7a1859f782859"),
+    "name" : "Alpo Prime Cuts 47lb",
+    "image" : "https://img.chewy.com/is/catalog/100339_MAIN._AC_SS55_V1463520437_.jpg",
+    "description" : "Every bag of ALPO Prime Cuts Savory Beef Flavor Dry Dog Food is packed with the good stuff your dog needs. Once he chomps into these hearty shapes and crunchy textures with savory beef flavor, there’s no stopping him from devouring every last crumb. Bite after bite and bowl after bowl, Prime Cuts is always a favorite. This is no ordinary dry dog food. With high-quality protein and 23 vitamins and minerals — including calcium to help support strong bones and linoleic acid to help support healthy skin and coat — Prime Cuts delivers 100% complete and balanced nutrition for adult dogs. It’s everything your adult dog needs, right in one bag.",
+    "catagory" : "dog"
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("5d1298d79a6d0f7c3ee15142"),
+    "name" : "Taste of the Wild High Prairie",
+    "image" : "https://img.chewy.com/is/image/catalog/154551_MAIN._AC_SS55_V1547648522_.jpg",
+    "description" : "Nourish your canine companion with the balanced diet nature intended with Taste of the Wild High Prairie Grain-Free Dry Dog Food! Formulated with novel proteins including buffalo and bison, this grain-free recipe includes peas and sweet potatoes that deliver the highly-digestible energy your active pup needs, along with natural antioxidant support from real fruits and vegetables and dried chicory root for prebiotic support and healthy digestion. Essential minerals are chelated with amino acids to optimize their absorption and ensure maximum benefit, for complete and balanced nutrition with a taste of the wild your furry friend constantly craves!",
+    "catagory" : "dog"
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("5d1298d79a6d0f7c3ee15145"),
+    "name" : "Taste of the Wild  Pacific Stream",
+    "image" : "https://img.chewy.com/is/image/catalog/154549_MAIN._AC_SS55_V1547648539_.jpg",
+    "description" : "Nourish your furry friend with the balanced diet nature intended when you feed him Taste of the Wild Pacific Stream Grain-Free Dry Dog Food. Formulated with novel proteins including real smoked salmon, this grain-free recipe includes peas and sweet potatoes that deliver the highly-digestible energy your active pup needs, along with natural antioxidant support from real fruits and vegetables and dried chicory root for prebiotic support and healthy digestion. Essential minerals are chelated with amino acids to optimize their absorption and ensure maximum benefit, for complete and balanced nutrition with a taste of the wild your furry pal will crave.",
+    "catagory" : "dog"
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("5d1298d79a6d0f7c3ee15148"),
+    "name" : "Taste of the Wild  Sierra Mountain",
+    "image" : "https://img.chewy.com/is/image/catalog/154553_MAIN._AC_SS55_V1547648847_.jpg",
+    "description" : "Nourish your canine companion with the balanced diet nature intended with Taste of the Wild Sierra Mountain Grain-Free Dry Dog Food! Formulated with novel proteins including lamb and roasted lamb, this grain-free recipe includes peas and sweet potatoes that deliver the highly-digestible energy your pup needs, along with natural antioxidant support from real fruits and vegetables and dried chicory root for prebiotic support and healthy digestion. Essential minerals are chelated with amino acids to optimize their absorption and ensure maximum benefit, for complete and balanced nutrition with a taste of the wild your furry friend constantly craves!",
+    "catagory" : "dog"
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("5d1298d79a6d0f7c3ee1514b"),
+    "name" : "Taste of the Wild High Prairie Puppy",
+    "image" : "https://img.chewy.com/is/image/catalog/154555_MAIN._AC_SS55_V1547648828_.jpg",
+    "description" : "Nourish your puppy pal with the balanced diet nature intended with Taste of the Wild High Prairie Puppy Formula Grain-Free Dry Dog Food! Formulated with novel proteins including buffalo and bison, this grain-free recipe includes peas and sweet potatoes that deliver the highly-digestible energy your growing puppy needs, along with natural antioxidant support from real fruits and vegetables and dried chicory root for prebiotic support and healthy digestion. Essential minerals are chelated with amino acids to optimize their absorption and ensure maximum benefit, for complete and balanced nutrition with a taste of the wild your furry friend constantly craves!",
+    "catagory" : "dog"
+}
+
+/* 6 */
+{
+    "_id" : ObjectId("5d1298d79a6d0f7c3ee1514e"),
+    "name" : "Taste of the Wild  Wetlands",
+    "image" : "https://img.chewy.com/is/image/catalog/154544_MAIN._AC_SS55_V1547648530_.jpg",
+    "description" : "Nourish your canine companion with the balanced diet nature intended with Taste of the Wild Wetlands Grain-Free Dry Dog Food! Formulated with novel proteins including roasted, smoked fowl, this grain-free recipe includes peas and sweet potatoes that deliver the highly-digestible energy your active pup needs, along with natural antioxidant support from real fruits and vegetables and dried chicory root for prebiotic support and healthy digestion. Essential minerals are chelated with amino acids to optimize their absorption and ensure maximum benefit, for complete and balanced nutrition with a taste of the wild your furry friend constantly craves!",
+    "catagory" : "dog"
+}
+
+/* 7 */
+{
+    "_id" : ObjectId("5d1299539a6d0f7c3ee1517b"),
+    "name" : "Taste of the Wild  Southwest Canyon",
+    "image" : "https://img.chewy.com/is/image/catalog/55842_MAIN._AC_SS55_V1524752391_.jpg",
+    "description" : "Nourish your canine companion with the balanced diet nature intended with Taste of the Wild Southwest Canyon Grain-Free Dry Dog Food! Formulated with novel proteins including wild boar, this grain-free recipe includes nutrient-rich legumes like peas and garbanzo beans that deliver the highly-digestible energy your active pup needs, along with natural antioxidant support from real fruits and vegetables and dried chicory root for prebiotic support and healthy digestion. Essential minerals are chelated with amino acids to optimize their absorption and ensure maximum benefit, for complete and balanced nutrition with a taste of the wild your furry friend constantly craves!",
+    "catagory" : "dog"
+}
+
+/* 8 */
+{
+    "_id" : ObjectId("5d1299539a6d0f7c3ee1517e"),
+    "name" : "Taste of the Wild  Pine Forest",
+    "image" : "https://img.chewy.com/is/image/catalog/91471_MAIN._AC_SS55_V1524752410_.jpg",
+    "description" : "Nourish your canine companion with the balanced diet nature intended with Taste of the Wild Pine Forest Grain-Free Dry Dog Food! Formulated with novel proteins including venison, this grain-free recipe includes nutrient-rich legumes like peas and garbanzo beans that deliver the highly-digestible energy your pal needs, along with natural antioxidant support from real fruits and vegetables and dried chicory root for prebiotic support and healthy digestion. Essential minerals are chelated with amino acids to optimize their absorption and ensure maximum benefit, for complete and balanced nutrition with a taste of the wild your furry friend constantly craves!",
+    "catagory" : "dog"
+}
+
+/* 9 */
+{
+    "_id" : ObjectId("5d1299539a6d0f7c3ee15181"),
+    "name" : "Taste of the Wild Pacific Stream Puppy",
+    "image" : "https://img.chewy.com/is/image/catalog/154557_MAIN._AC_SS55_V1547648840_.jpg",
+    "description" : "Nourish your puppy pal with the balanced diet nature intended with Taste of the Wild Pacific Stream Puppy Formula Grain-Free Dry Dog Food! Formulated with novel proteins including salmon, this grain-free recipe includes peas and sweet potatoes that deliver the highly-digestible energy your growing puppy needs, along with natural antioxidant support from real fruits and vegetables and dried chicory root for prebiotic support and healthy digestion. Essential minerals are chelated with amino acids to optimize their absorption and ensure maximum benefit, for complete and balanced nutrition with a taste of the wild your furry friend constantly craves!",
+    "catagory" : "dog"
+}
+
+/* 10 */
+{
+    "_id" : ObjectId("5d1299539a6d0f7c3ee15184"),
+    "name" : "Taste of the Wild Appalachian Valley",
+    "image" : "https://img.chewy.com/is/image/catalog/91467_MAIN._AC_SS55_V1549050120_.jpg",
+    "description" : "Nourish your small breed canine companion with the balanced diet nature intended with Taste of the Wild Appalachian Valley Small Breed Grain-Free Dry Dog Food! Formulated with novel proteins including venison, this grain-free recipe is made into small-size kibble just for your small breed dog’s tummy and teeth. Probiotics and prebiotic fiber help to support healthy digestion, while a blend of venison, lamb, egg, duck and ocean fish proteins provide optimal amino acid nutrition. Rich in proteins and fat, this recipe provides balanced nutrition, the energy that active small dogs need and of course a taste of the wild they constantly crave!",
+    "catagory" : "dog"
+}
+
+/* 11 */
+{
+    "_id" : ObjectId("5d12a0329a6d0f7c3ee152de"),
+    "name" : " Science Diet Adult Sensitive Stomach & Skin Chicken Recipe",
+    "image" : "https://img.chewy.com/is/image/catalog/48856_MAIN._AC_SS55_V1547654516_.jpg",
+    "description" : "Hill's Science Diet Adult Sensitive Stomach & Skin Dry Dog Food provides your pup with precise nutrition for a healthy lifestyle. Made with wholesome ingredients such as savory chicken meal and barley, this nourishing recipe is balanced to meet your pet’s needs and nourish the skin and coat. Manufactured in the United States, every ingredient meets strict requirements for purity and nutrient content which exceed industry standards. Formulated for adult dogs with sensitive stomachs, this Hill’s Science Diet provides your pooch with the nutrition he needs for a lifetime of health and happiness.",
+    "catagory" : "dog"
+}
+
+/* 12 */
+{
+    "_id" : ObjectId("5d12a0329a6d0f7c3ee152e1"),
+    "name" : " Science Diet Adult Perfect Weight Chicken Recipe Dry Dog Food",
+    "image" : "https://img.chewy.com/is/image/catalog/92464_MAIN._AC_SS55_V1547219231_.jpg",
+    "description" : "Provide breakthrough nutrition for your pup with Hill's Science Diet Adult Perfect Weight Dry Dog Food. Just like humans, extra weight can lead to health issues. Excessive weight will reduce play time, impact mobility and affect the lifelong general health of your dog—but now there is a food designed to help your dog achieve a healthy weight and improve his quality of life. This delicious recipe is made with real chicken to maintain lean muscle, and includes prebiotic fibers for gentle digestion. Plus, a clinically proven blend of antioxidants with vitamins C and E helps support a healthy immune system. Proven to work, more than 70% of dogs fed this diet lose weight within just 10 weeks!",
+    "catagory" : "dog"
+}
+
+/* 13 */
+{
+    "_id" : ObjectId("5d12a0329a6d0f7c3ee152e4"),
+    "name" : " Science Diet Adult Healthy Mobility Large Breed Chicken Meal, Brown Rice & Barley Recipe",
+    "image" : "https://img.chewy.com/is/image/catalog/48930_MAIN._AC_SS55_V1548099871_.jpg",
+    "description" : "Hill's Science Diet Adult Healthy Mobility Large Breed Dry Dog Food provides your pup with precise nutrition for a healthy lifestyle. Made with wholesome ingredients such as savory chicken meal and rice, this nourishing recipe is balanced to meet your pet’s needs, improve mobility, and promote healthy cartilage and joints. Manufactured in the United States, every ingredient meets strict requirements for purity and nutrient content which exceed industry standards. Formulated for large dogs weighing 55 to 110 lbs and giant breed dogs weighing 110 lbs and over, this Hill’s Science Diet provides your pooch with the nutrition he needs for a lifetime of health and happiness.",
+    "catagory" : "dog"
+}
+
+/* 14 */
+{
+    "_id" : ObjectId("5d12a0329a6d0f7c3ee152e7"),
+    "name" : "Science Diet Adult Large Breed Lamb Meal & Rice Dry Dog Food, 33-lb bag",
+    "image" : "https://img.chewy.com/is/image/catalog/52696_MAIN._AC_SS55_V1552318622_.jpg",
+    "description" : "Hill's Science Diet Adult Large Breed Lamb Meal & Rice Dry Dog Food provides your pup with precise nutrition for a healthy lifestyle. Made with wholesome ingredients such as savory lamb meal and rice, this nourishing recipe is balanced to meet your pet’s needs and support joints and cartilage. Manufactured in the United States, every ingredient meets strict requirements for purity and nutrient content which exceed industry standards. Formulated for large breed dogs weighing 55 to 110 lbs and giant breed dogs that weight 110 lbs and over, this Hill’s Science Diet provides your pooch with the nutrition he needs for a lifetime of health and happiness.",
+    "catagory" : "dog"
+}
+
+/* 15 */
+{
+    "_id" : ObjectId("5d12a0329a6d0f7c3ee152ea"),
+    "name" : " Science Diet Puppy Large Breed Lamb Meal & Rice Recipe Dry Dog Food",
+    "image" : "https://img.chewy.com/is/image/catalog/53695_MAIN._AC_SS55_V1551968535_.jpg",
+    "description" : "Hill's Science Diet Puppy Large Breed Lamb Meal & Rice Dry Dog Food provides your pup with precise nutrition for a healthy lifestyle. Made with wholesome ingredients such as savory lamb meal and rice, this nourishing recipe is balanced to meet your pet’s needs and control bone growth. Manufactured in the United States, every ingredient meets strict requirements for purity and nutrient content which exceed industry standards. Formulated for puppies up to 1 year of age who will be over 55 lbs when they’re an adult, this Hill’s Science Diet provides your pooch with the nutrition he needs for a lifetime of health and happiness.",
+    "catagory" : "dog"
+}
+
+/* 16 */
+{
+    "_id" : ObjectId("5d12a0329a6d0f7c3ee152ed"),
+    "name" : " Science Diet Adult Oral Care",
+    "image" : "https://img.chewy.com/is/image/catalog/74237_MAIN._AC_SS55_V1550251321_.jpg",
+    "description" : "Hill's Science Diet Adult Oral Care Dry Dog Food provides your pup with precise nutrition for a healthy lifestyle. Made with wholesome ingredients such as savory chicken, rice and barley, this nourishing recipe is balanced to meet your pet’s needs, reduce plaque and tartar build-up and freshen breath. Manufactured in the United States, every ingredient meets strict requirements for purity and nutrient content which exceed industry standards. Formulated for adult dogs, this Hill’s Science Diet provides your pooch with the nutrition he needs for a lifetime of health and happiness.",
+    "catagory" : "dog"
+}
+
+/* 17 */
+{
+    "_id" : ObjectId("5d12a0329a6d0f7c3ee152f0"),
+    "name" : "Science Diet Adult Small Bites Lamb Meal & Brown Rice Recipe",
+    "image" : "https://img.chewy.com/is/image/catalog/52719_MAIN._AC_SS55_V1557439622_.jpg",
+    "description" : "Hill's Science Diet Adult Advanced Fitness Small Bites Lamb Meal & Rice Dry Dog Food provides your pup with precise nutrition for a healthy lifestyle. Made with wholesome ingredients such as lamb meal and rice, this nourishing recipe is balanced to meet your pet’s needs, encourage strong, learn muscles, and promote a healthy skin and coat. Manufactured in the United States, every ingredient meets strict requirements for purity and nutrient content which exceed industry standards. Formulated for adult dogs 1 to 6 years of age, this Hill’s Science Diet provides your pooch with the nutrition he needs for a lifetime of health and happiness.",
+    "catagory" : "dog"
+}
+
+/* 18 */
+{
+    "_id" : ObjectId("5d12a0329a6d0f7c3ee152f3"),
+    "name" : " Science Diet Adult Sensitive Stomach & Skin Grain-Free Chicken & Potato Recipe ",
+    "image" : "https://img.chewy.com/is/image/catalog/157795_MAIN._AC_SS55_V1549474622_.jpg",
+    "description" : "Healthy choices matter for both pets and parents. That’s why Hill’s has great-tasting, nutritious food to help your dog live a long, happy life. Hill’s Science Diet Adult Grain-Free Dry Dog Food is made with the highest quality natural ingredients for precisely balanced nutrition in dogs with grain sensitivities. Highly digestible protein from fresh chicken helps maintain a healthy heart while natural prebiotics from beet pulp nourish the digestive tract and promote nutrient absorption. Antioxidant-rich apples and cranberries are packed with vitamins E and C to promote healthy immune function while flaxseed provides omega 3 and 6 fatty acids for healthy skin and a radiant coat.",
+    "catagory" : "dog"
+}
+
+/* 19 */
+{
+    "_id" : ObjectId("5d12a0329a6d0f7c3ee152f6"),
+    "name" : " Science Diet Adult Lamb Meal & Brown Rice Recipe",
+    "image" : "https://img.chewy.com/is/image/catalog/52687_MAIN._AC_SS55_V1551887218_.jpg",
+    "description" : "Hill's Science Diet Adult Advanced Fitness Lamb Meal & Rice Dry Dog Food provides your pup with precise nutrition for a healthy lifestyle. Made with wholesome ingredients such as savory lamb meal and rice, this nourishing recipe is balanced to meet your pet’s needs, help maintain strong muscles and promote skin and coat health. Manufactured in the United States, every ingredient meets strict requirements for purity and nutrient content which exceed industry standards. Formulated for adult dogs 1 to 6 years of age, this Hill’s Science Diet provides your pooch with the nutrition he needs for a lifetime of health and happiness.",
+    "catagory" : "dog"
+}
+
+/* 20 */
+{
+    "_id" : ObjectId("5d12a0329a6d0f7c3ee152f9"),
+    "name" : " Science Diet Adult Healthy Mobility Small Bites Chicken Meal, Brown Rice & Barley Recipe ",
+    "image" : "https://img.chewy.com/is/image/catalog/48917_MAIN._AC_SS55_V1548453705_.jpg",
+    "description" : "Provide precisely balanced, easy-to-digest nutrition in a smaller kibble with Hill's Science Diet Adult Healthy Mobility Small Bites Dry Dog Food. This special recipe is formulated to improve mobility and joint health for your tiny pooch. Fish oil and natural sources of glucosamine and chondroitin help to build cartilage and strengthen joints while promoting a healthy skin and coat. Plus, the included vitamins, minerals and amino acids add extra immune system benefits to this delicious recipe. Made with natural, high-quality ingredients, Hill’s Science Diet doesn’t include any artificial colors, flavors or preservatives—just a flavorful, nutritious meal.",
+    "catagory" : "dog"
+}
+
+/* 21 */
+{
+    "_id" : ObjectId("5d12a0329a6d0f7c3ee152fc"),
+    "name" : "Science Diet Adult 7+ Youthful Vitality Chicken Recipe",
+    "image" : "https://img.chewy.com/is/image/catalog/109487_MAIN._AC_SS55_V1551733019_.jpg",
+    "description" : "Help keep your pup feeling and acting young with the Hill’s Science Diet Adult 7+ Youthful Vitality Chicken Recipe Dry Dog Food. Because every moment you spend with your pet is special, this delicious kibble recipe is packed with all kinds of youth-preserving goodness. Including powerful antioxidants for a healthy brain, as well as nutrients that support activity and an interest in playing, it’s all made with quality ingredients that are easy to digest. Plus, it’s recommended by veterinarians so you know you’re feeding your dog the very best.",
+    "catagory" : "dog"
+}
+
+/* 22 */
+{
+    "_id" : ObjectId("5d12a0329a6d0f7c3ee152ff"),
+    "name" : " Science Diet Adult Large Breed Chicken & Barley Recipe ",
+    "image" : "https://img.chewy.com/is/image/catalog/114165_MAIN._AC_SS55_V1550244421_.jpg",
+    "description" : "Give your four-legged friend the nutrition he needs for lifelong health and happiness with Hill's Science Diet Adult Large Breed Dry Dog Food. Featuring real chicken as the very first ingredient, it’s scientifically formulated to provide complete and balanced nutrition that’s tailored to deliver a visible difference in large breed dogs. Natural sources of glucosamine and chondroitin provide the building blocks of healthy cartilage and joints for ideal mobility, while the added vitamins, minerals and nutrients deliver clinically-proven antioxidant benefits.",
+    "catagory" : "dog"
+}
+
+/* 23 */
+{
+    "_id" : ObjectId("5d12a0329a6d0f7c3ee15302"),
+    "name" : "Science Diet Adult Chicken & Barley Recipe",
+    "image" : "https://img.chewy.com/is/image/catalog/114164_MAIN._AC_SS55_V1550248037_.jpg",
+    "description" : "Give your dog precisely balanced nutrition for a visible difference with the Hill's Science Diet Adult Chicken & Barley Recipe Dry Dog Food. Made with an exclusive blend of omega 6 fatty acids and other nourishing nutrients, this recipe promotes a noticeably shiny coat in just 30 days. There’s also fresh chicken to maintain strong, lean muscles and an ideal body condition, and a clinically proven blend of antioxidants for a healthy immune system. The natural, high quality ingredients make it easy to digest, making this food an excellent choice for your fit-minded dog.",
+    "catagory" : "dog"
+}
+
+/* 24 */
+{
+    "_id" : ObjectId("5d12a5e29a6d0f7c3ee153ad"),
+    "name" : "Blue Buffalo Life Protection Formula Adult Chicken & Brown Rice Recipe",
+    "image" : "https://img.chewy.com/is/image/catalog/46861_MAIN._AC_SS55_V1529603537_.jpg",
+    "description" : "Blue Buffalo Life Protection Formula was created for the holistic health and well-being of adult dogs. All formulas start with real meat, whole grains, garden veggies and fruit, plus added LifeSource Bits, a precise blend of nutrients that have been enhanced with a Super 7 package of antioxidant-rich ingredients. This Adult Chicken & Brown Rice Recipe features delicious, protein-rich deboned chicken and other natural ingredients for a healthy meal your dog will love.",
+    "catagory" : "dog"
+}
+
+/* 25 */
+{
+    "_id" : ObjectId("5d12a5e29a6d0f7c3ee153b0"),
+    "name" : "Blue Buffalo Life Protection Formula Large Breed Adult Chicken & Brown Rice Recipe",
+    "image" : "https://img.chewy.com/is/image/catalog/46882_MAIN._AC_SS55_V1529603871_.jpg",
+    "description" : "Blue Buffalo Life Protection Formula was created for the health and well-being of dogs. All formulas start with real meat, whole grains, garden veggies and fruit, plus added LifeSource Bits, a precise blend of nutrients that have been enhanced with a Super 7 package of antioxidant-rich ingredients. This Large Breed Adult Chicken & Brown Rice Recipe features delicious, protein-rich deboned chicken and contains glucosamine and chondroitin to help support the special needs of bigger dogs.",
+    "catagory" : "dog"
+}
+
+/* 26 */
+{
+    "_id" : ObjectId("5d12a5e29a6d0f7c3ee153b3"),
+    "name" : "Blue Buffalo Life Protection Formula Adult Lamb & Brown Rice Recipe ",
+    "image" : "https://img.chewy.com/is/image/catalog/49557_MAIN._AC_SS55_V1529604483_.jpg",
+    "description" : "Blue Buffalo Life Protection Formula was created for the health and well-being of dogs. All formulas start with real meat, whole grains, garden veggies and fruit, plus added LifeSource Bits, a precise blend of nutrients that have been enhanced with a Super 7 package of antioxidant-rich ingredients. This Adult Lamb & Brown Rice Recipe features delicious, protein-rich deboned lamb and has all the flavor your four-legged friend will love and all the benefits you will love!",
+    "catagory" : "dog"
+}
+
+/* 27 */
+{
+    "_id" : ObjectId("5d12a5e29a6d0f7c3ee153b6"),
+    "name" : "Blue Buffalo Life Protection Formula Small Breed Adult Chicken & Brown Rice Recipe ",
+    "image" : "https://img.chewy.com/is/image/catalog/46874_MAIN._AC_SS55_V1529603830_.jpg",
+    "description" : "Blue Buffalo Life Protection Formula was created for the health and well-being of dogs. All formulas start with real meat, whole grains, garden veggies and fruit, plus added LifeSource Bits, a precise blend of nutrients that have been enhanced with a Super 7 package of antioxidant-rich ingredients. This Small Breed Adult Chicken & Brown Rice Recipe features delicious, protein-rich deboned chicken and is made with increased protein and carbohydrates to meet higher energy needs of smaller dogs.",
+    "catagory" : "dog"
+}
+
+/* 28 */
+{
+    "_id" : ObjectId("5d12a5e29a6d0f7c3ee153b9"),
+    "name" : "Blue Buffalo Life Protection Formula Senior Chicken & Brown Rice Recipe",
+    "image" : "https://img.chewy.com/is/image/catalog/46880_MAIN._AC_SS55_V1529603846_.jpg",
+    "description" : "Blue Buffalo Life Protection Formula was created for the health and well-being of dogs. All formulas start with real meat, whole grains, garden veggies and fruit, plus added LifeSource Bits, a precise blend of nutrients that have been enhanced with a Super 7 package of antioxidant-rich ingredients. This Senior Chicken & Brown Rice Recipe features delicious, protein-rich deboned chicken and features the ingredients to support the overall health and well-being of senior dogs.",
+    "catagory" : "dog"
+}
+
+/* 29 */
+{
+    "_id" : ObjectId("5d12a5e29a6d0f7c3ee153bc"),
+    "name" : "Blue Buffalo Life Protection Formula Large Breed Puppy Chicken & Brown Rice Recipe ",
+    "image" : "https://img.chewy.com/is/image/catalog/46904_MAIN._AC_SS55_V1529604347_.jpg",
+    "description" : "Blue Buffalo Life Protection Formula was created for the health and well-being of dogs. All formulas start with real meat, whole grains, garden veggies and fruit, plus added LifeSource Bits, a precise blend of nutrients that have been enhanced with a Super 7 package of antioxidant-rich ingredients. This Large Breed Puppy Chicken & Brown Rice Recipe features delicious, protein-rich deboned chicken. And because puppyhood is such an important stage, it features ingredients that support healthy growth and development.",
+    "catagory" : "dog"
+}
+
+/* 30 */
+{
+    "_id" : ObjectId("5d12a5e29a6d0f7c3ee153bf"),
+    "name" : "Blue Buffalo Life Protection Formula Puppy Chicken & Brown Rice Recipe",
+    "image" : "https://img.chewy.com/is/image/catalog/46899_MAIN._AC_SS55_V1529604133_.jpg",
+    "description" : "Blue Buffalo Life Protection Formula was created for the health and well-being of dogs. All formulas start with real meat, whole grains, garden veggies and fruit, plus added LifeSource Bits, a precise blend of nutrients that have been enhanced with a Super 7 package of antioxidant-rich ingredients. This Puppy Chicken & Brown Rice Recipe features delicious, protein-rich deboned chicken. And because puppyhood is such an important stage, it features ingredients that support healthy growth and development.",
+    "catagory" : "dog"
+}
+
+/* 31 */
+{
+    "_id" : ObjectId("5d12a5e29a6d0f7c3ee153c2"),
+    "name" : "Blue Buffalo Life Protection Formula Large Breed Healthy Weight Adult Chicken & Brown Rice Recipe ",
+    "image" : "https://img.chewy.com/is/image/catalog/46892_MAIN._AC_SS55_V1529603893_.jpg",
+    "description" : "Blue Buffalo Life Protection Formula was created for the health and well-being of dogs. All formulas start with real meat, whole grains, garden veggies and fruit, plus added LifeSource Bits, a precise blend of nutrients that have been enhanced with a Super 7 package of antioxidant-rich ingredients. This Large Breed Healthy Weight Adult Chicken & Brown Rice Recipe features delicious, protein-rich deboned chicken and contains glucosamine and chondroitin to help support the special needs of bigger dogs. It is also made without the extra calories to help dogs achieve and maintain a healthy weight.",
+    "catagory" : "dog"
+}
+
+/* 32 */
+{
+    "_id" : ObjectId("5d12a5e29a6d0f7c3ee153c5"),
+    "name" : "Blue Buffalo Life Protection Formula Adult Fish & Brown Rice Recipe",
+    "image" : "https://img.chewy.com/is/image/catalog/46858_MAIN._AC_SS55_V1529603674_.jpg",
+    "description" : "Blue Buffalo Life Protection Formula was created for the health and well-being of dogs. All formulas start with real meat, whole grains, garden veggies and fruit, plus added LifeSource Bits, a precise blend of nutrients that have been enhanced with a Super 7 package of antioxidant-rich ingredients. This Adult Fish & Brown Rice Recipe features delicious, protein-rich deboned whitefish and other natural ingredients for a healthy meal your dog will love.",
+    "catagory" : "dog"
+}
+
+/* 33 */
+{
+    "_id" : ObjectId("5d12a5e29a6d0f7c3ee153c8"),
+    "name" : "Blue Buffalo Life Protection Formula Large Breed Senior Chicken & Brown Rice Recipe",
+    "image" : "https://img.chewy.com/is/image/catalog/46914_MAIN._AC_SS55_V1529604408_.jpg",
+    "description" : "Blue Buffalo Life Protection Formula was created for the health and well-being of dogs. All formulas start with real meat, whole grains, garden veggies and fruit, plus added LifeSource Bits, a precise blend of nutrients that have been enhanced with a Super 7 package of antioxidant-rich ingredients. This Large Breed Senior Chicken & Brown Rice Recipe features delicious, protein-rich deboned chicken and contains the ingredients to support the special needs of large breed senior dogs such as glucosamine and chondroitin.",
+    "catagory" : "dog"
+}
+
+/* 34 */
+{
+    "_id" : ObjectId("5d12a5e29a6d0f7c3ee153cb"),
+    "name" : "Blue Buffalo Life Protection Formula Small Breed Healthy Weight Adult Chicken & Brown Rice Recipe",
+    "image" : "https://img.chewy.com/is/image/catalog/84998_MAIN._AC_SS55_V1529604634_.jpg",
+    "description" : "Blue Buffalo Life Protection Formula was created for the health and well-being of dogs. All formulas start with real meat, whole grains, garden veggies and fruit, plus added LifeSource Bits, a precise blend of nutrients that have been enhanced with a Super 7 package of antioxidant-rich ingredients. This Small Breed Healthy Weight Adult Chicken & Brown Rice Recipe features delicious, protein-rich deboned chicken and is formulated with a precise blend of proteins and carbohydrates to meet a smaller dog's higher energy needs without the extra calories.",
+    "catagory" : "dog"
+}
+
+/* 35 */
+{
+    "_id" : ObjectId("5d12a5e29a6d0f7c3ee153ce"),
+    "name" : "Blue Buffalo Life Protection Formula Small Bite Adult Chicken & Brown Rice Recipe ",
+    "image" : "https://img.chewy.com/is/image/catalog/64682_MAIN._AC_SS55_V1529604560_.jpg",
+    "description" : "Blue Buffalo Life Protection Formula was created for the health and well-being of dogs. All formulas start with real meat, whole grains, garden veggies and fruit, plus added LifeSource Bits, a precise blend of nutrients that have been enhanced with a Super 7 package of antioxidant-rich ingredients. This Small Bite Adult Chicken & Brown Rice Recipe features delicious, protein-rich deboned chicken and is made with a unique smaller kibble that's easier to chew.",
+    "catagory" : "dog"
+}
+
+/* 36 */
+{
+    "_id" : ObjectId("5d12a5e29a6d0f7c3ee153d1"),
+    "name" : "Blue Buffalo Life Protection Formula Large Breed Adult Fish & Oatmeal Recipe",
+    "image" : "https://img.chewy.com/is/image/catalog/46890_MAIN._AC_SS55_V1529603884_.jpg",
+    "description" : "Blue Buffalo Life Protection Formula was created for the health and well-being of dogs. All formulas start with real meat, whole grains, garden veggies and fruit, plus added LifeSource Bits, a precise blend of nutrients that have been enhanced with a Super 7 package of antioxidant-rich ingredients. This Large Breed Adult Fish & Oatmeal Recipe features delicious, protein-rich deboned whitefish and contains glucosamine and chondroitin to help support the special needs of bigger dogs.",
+    "catagory" : "dog"
+}
+
+/* 37 */
+{
+    "_id" : ObjectId("5d12a5e29a6d0f7c3ee153d4"),
+    "name" : "Blue Buffalo Life Protection Formula Small Breed Senior Chicken & Brown Rice Recipe",
+    "image" : "https://img.chewy.com/is/image/catalog/51901_MAIN._AC_SS55_V1529604507_.jpg",
+    "description" : "Blue Buffalo Life Protection Formula was created for the health and well-being of dogs. All formulas start with real meat, whole grains, garden veggies and fruit, plus added LifeSource Bits, a precise blend of nutrients that have been enhanced with a Super 7 package of antioxidant-rich ingredients. This Small Breed Senior Chicken & Brown Rice Recipe features delicious, protein-rich deboned chicken and is formulated to meet the specific needs of small breed senior dogs.",
+    "catagory" : "dog"
+}
+
+/* 38 */
+{
+    "_id" : ObjectId("5d12a5e29a6d0f7c3ee153d7"),
+    "name" : "Blue Buffalo Life Protection Formula Large Breed Adult Lamb & Brown Rice Recipe ",
+    "image" : "https://img.chewy.com/is/image/catalog/84108_MAIN._AC_SS55_V1529604570_.jpg",
+    "description" : "Formulated for the health and well-being of dogs, Life Protection Formula is made with LifeSource Bits, a precise blend of nutrients that have been enhanced with a Super 7 package of antioxidant-rich ingredients. This recipe features delicious, protein-rich, deboned lamb and wholesome whole grains, garden veggies and fruit. It is specially formulated to meet the needs of your large breed adult dog.",
+    "catagory" : "dog"
+}
+
+/* 39 */
+{
+    "_id" : ObjectId("5d12a5e29a6d0f7c3ee153da"),
+    "name" : "Blue Buffalo Life Protection Formula Small Breed Adult Lamb & Brown Rice ",
+    "image" : "https://img.chewy.com/is/image/catalog/84991_MAIN._AC_SS55_V1529604591_.jpg",
+    "description" : "Blue Buffalo Life Protection Formula was created for the health and well-being of dogs. All formulas start with real meat, whole grains, garden veggies and fruit, plus added LifeSource Bits, a precise blend of nutrients that have been enhanced with a Super 7 package of antioxidant-rich ingredients. This Small Breed Adult Lamb & Brown Rice Recipe features delicious, protein-rich deboned lamb and is made with increased protein and carbohydrates to meet higher energy needs.",
+    "catagory" : "dog"
+}
+
+/* 40 */
+{
+    "_id" : ObjectId("5d12a5e29a6d0f7c3ee153dd"),
+    "name" : "Blue Buffalo Life Protection Formula Small Breed Puppy Chicken & Oatmeal Recipe ",
+    "image" : "https://img.chewy.com/is/image/catalog/46906_MAIN._AC_SS55_V1529604388_.jpg",
+    "description" : "Blue Buffalo Life Protection Formula was created for the health and well-being of dogs. All formulas start with real meat, whole grains, garden veggies and fruit, plus added LifeSource Bits, a precise blend of nutrients that have been enhanced with a Super 7 package of antioxidant-rich ingredients. This Small Breed Puppy Chicken & Oatmeal Recipe features delicious, protein-rich deboned chicken. And because puppyhood is such an important stage, it features ingredients that support healthy growth and development.",
+    "catagory" : "dog"
+}
+
+/* 41 */
+{
+    "_id" : ObjectId("5d12a5e29a6d0f7c3ee153e0"),
+    "name" : "Blue Buffalo Life Protection Formula Toy Breed Adult Chicken & Brown Rice Recipe",
+    "image" : "https://img.chewy.com/is/image/catalog/84980_MAIN._AC_SS55_V1529604598_.jpg",
+    "description" : "Blue Buffalo Life Protection Formula was created for the health and well-being of dogs. All formulas start with real meat, whole grains, garden veggies and fruit, plus added LifeSource Bits, a precise blend of nutrients that have been enhanced with a Super 7 package of antioxidant-rich ingredients. This Toy Breed Adult Chicken & Brown Recipe features delicious, protein-rich deboned chicken and is made with increased protein and carbohydrates to support the special needs of smaller dogs.",
+    "catagory" : "dog"
+}
+
+/* 42 */
+{
+    "_id" : ObjectId("5d12a5e29a6d0f7c3ee153e3"),
+    "name" : "Blue Buffalo Life Protection Formula Puppy Lamb & Oatmeal Recipe ",
+    "image" : "https://img.chewy.com/is/image/catalog/46902_MAIN._AC_SS55_V1529604240_.jpg",
+    "description" : "Blue Buffalo Life Protection Formula was created for the health and well-being of dogs. All formulas start with real meat, whole grains, garden veggies and fruit, plus added LifeSource Bits, a precise blend of nutrients that have been enhanced with a Super 7 package of antioxidant-rich ingredients. This Puppy Lamb & Oatmeal Recipe features delicious, protein-rich deboned lamb. And because puppyhood is such an important stage, it features ingredients that support healthy growth and development.",
+    "catagory" : "dog"
+}
+
+/* 43 */
+{
+    "_id" : ObjectId("5d12b1a29a6d0f7c3ee15511"),
+    "name" : "Friskies Shreds Variety Pack Canned Cat Food, 5.5-oz, case of 32",
+    "image" : "https://img.chewy.com/is/image/catalog/76368_MAIN._AC_SS55_V1544036517_.jpg",
+    "description" : "Your kitty loves savory, so satisfy his cravings with the Friskies Savory Shreds Variety Pack Canned Cat Food. This variety pack features whisker-licking recipes with real meat like beef, turkey, tuna, chicken and salmon, and is packed with everything your cat needs to fuel all those furry adventures - like protein, antioxidants and healthy omegas. The formula is also enhanced with vitamins, minerals and essential taurine for nose-to-tail well-being in every bite. Plus, it provides plenty of moisture to help keep your pal hydrated and support urinary health. So open up the easy pull tab and turn mealtime into yum time.",
+    "catagory" : "cat"
+}
+
+/* 44 */
+{
+    "_id" : ObjectId("5d12b1a29a6d0f7c3ee15514"),
+    "name" : "Friskies Tasty Treasures with Cheese Variety Pack ",
+    "image" : "https://img.chewy.com/is/image/catalog/76350_MAIN._AC_SS55_V1560367951_.jpg",
+    "description" : "Your kitty loves cheese, so satisfy his cravings with the Friskies Tasty Treasures Variety Pack Canned Cat Food. This variety pack features whisker-licking cheesy recipes with real meat like chicken and tuna, and is packed with everything your cat needs to fuel all those furry adventures—like protein, antioxidants and healthy omegas. The formula is also enhanced with vitamins, minerals and essential taurine for nose-to-tail well-being in every bite. Plus, it provides plenty of moisture to help keep your pal hydrated and support urinary health. So open up the easy pull tab and turn mealtime into yum time.",
+    "catagory" : "cat"
+}
+
+/* 45 */
+{
+    "_id" : ObjectId("5d12b1a29a6d0f7c3ee15517"),
+    "name" : "Friskies Classic Pate Variety Pack Canned Cat Food, 5.5-oz, case of 24",
+    "image" : "https://img.chewy.com/is/image/catalog/76219_MAIN._AC_SS55_V1544036515_.jpg",
+    "description" : "Give your pal a bowlful of kitty-approved flavor and nutrition with the Friskies Classic Pate Variety Pack Canned Cat Food. This variety pack features a tasty assortment of pates that are packed with everything your cat needs to stay looking and feeling his best, like protein, antioxidants and healthy omegas. Plus, the formula is enhanced with vitamins, minerals and essential taurine for nose-to-tail well-being in every bite. Since it’s made with real broth, it also provides moisture to help keep your pal hydrated and support urinary health. So open up the easy pull tab and turn mealtime into yum time.",
+    "catagory" : "cat"
+}
+
+/* 46 */
+{
+    "_id" : ObjectId("5d12b1a29a6d0f7c3ee1551a"),
+    "name" : "Friskies Classic Pate Seafood Variety Pack Canned Cat Food, 5.5-oz, case of 32",
+    "image" : "https://img.chewy.com/is/image/catalog/76428_MAIN._AC_SS55_V1544036523_.jpg",
+    "description" : "Give your pal a bowlful of kitty-approved flavor and nutrition with the Friskies Classic Pate Seafood Variety Pack Canned Cat Food. This variety pack features a tasty assortment of fish pates that are packed with everything your cat needs to stay looking and feeling his best, like protein, antioxidants and healthy omegas. Plus, the formula is enhanced with vitamins, minerals and essential taurine for nose-to-tail well-being in every bite. Since it’s made with real broth, it also provides moisture to help keep your pal hydrated and support urinary health. So open up the easy pull tab and turn mealtime into yum time.",
+    "catagory" : "cat"
+}
+
+/* 47 */
+{
+    "_id" : ObjectId("5d12b1a29a6d0f7c3ee1551d"),
+    "name" : "Friskies Extra Gravy Chunky Variety Pack Canned Cat Food, 5.5-oz, case of 24",
+    "image" : "https://img.chewy.com/is/image/catalog/142573_MAIN._AC_SS55_V1516834607_.jpg",
+    "description" : "Give your pal a bowlful of kitty-approved flavor and nutrition with the Friskies Extra Gravy Chunky Variety Pack Canned Cat Food. The gravylicious recipes feature tasty and nutritious real meat, and are packed with everything your cat needs to stay looking and feeling his best, like protein, antioxidants and healthy omegas. Plus, the formula is enhanced with vitamins, minerals and essential taurine for nose-to-tail well-being in every bite. Since it’s made with extra gravy, it also provides moisture to help keep your pal hydrated while supporting urinary health. So open up the easy pull tab and turn mealtime into yum time.",
+    "catagory" : "cat"
+}
+
+/* 48 */
+{
+    "_id" : ObjectId("5d12b1a29a6d0f7c3ee15520"),
+    "name" : "Friskies Poultry Variety Pack Canned Cat Food, 5.5-oz, case of 32",
+    "image" : "https://img.chewy.com/is/image/catalog/76426_MAIN._AC_SS55_V1544036521_.jpg",
+    "description" : "Your kitty loves poultry, so satisfy his cravings with the Friskies Poultry Variety Pack Canned Cat Food. This variety pack features whisker-licking recipes with real poultry like turkey and chicken, and is packed with everything your cat needs to fuel all those furry adventures - like protein, antioxidants and healthy omegas. The formula is also enhanced with vitamins, minerals and essential taurine for nose-to-tail well-being in every bite. Plus, it provides plenty of moisture to help keep your pal hydrated and support urinary health. So open up the easy pull tab and turn mealtime into yum time.",
+    "catagory" : "cat"
+}
+
+/* 49 */
+{
+    "_id" : ObjectId("5d12b1a29a6d0f7c3ee15523"),
+    "name" : "Friskies Indoor Variety Pack Canned Cat Food, 5.5-oz, case of 24",
+    "image" : "https://img.chewy.com/is/image/catalog/142571_MAIN._AC_SS55_V1516834589_.jpg",
+    "description" : "Give your pal a bowlful of kitty-approved flavor and nutrition with the Friskies Indoor Variety Pack Canned Cat Food. These tasty recipes feature nutritious real meat, and are packed with everything your cat needs to stay looking and feeling his best, like protein, antioxidants and healthy omegas. Plus, the formula is enhanced with vitamins, minerals and essential taurine for nose-to-tail well-being in every bite. Since it’s made with plenty of moisture, it also provides essential hydration to help support urinary health. So open up the easy pull tab and turn mealtime into yum time.",
+    "catagory" : "cat"
+}
+
+/* 50 */
+{
+    "_id" : ObjectId("5d12b1a29a6d0f7c3ee15526"),
+    "name" : "Friskies Shreds in Gravy Variety Pack Canned Cat Food, 5.5-oz, case of 40",
+    "image" : "https://img.chewy.com/is/image/catalog/148074_MAIN._AC_SS55_V1528919002_.jpg",
+    "description" : "Answer your cat's every flavor craving with Friskies Shreds in Gravy Variety Pack Canned Cat Food. Each pack contains four equally tempting entrees, including Purina Friskies Savory Shreds Chicken & Salmon Dinner in Gravy, Turkey & Cheese Dinner in Gravy, With Ocean Whitefish & Tuna in Sauce, and With Beef in Gravy. Every recipe features real meat, poultry or fish along with other high-quality ingredients you can both appreciate. The thin, tender shreds deliver an irresistible texture, while the savory gravy and sauce pile on the yum in every bowl. She's sure to love the delightful tastes and you can feel good about spoiling your kitty. Stock up on her favorite flavor combinations, and give her meal options that are as delicious as they are nutritious with a variety pack with the tastes she loves.",
+    "catagory" : "cat"
+}
