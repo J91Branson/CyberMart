@@ -1,6 +1,7 @@
+import queryString from "query-string";
 
 export const getProducts = sortBy => {
-    return fetch(`api/products?sortBy=${sortBy}&order=desc&limit=6`, {
+    return fetch(`api/products?sortBy=${sortBy}&order=desc&limit=4`, {
         method: "GET"
     })
         .then(response => {
@@ -39,4 +40,36 @@ export const getFilteredProducts = (skip, limit, filters = {}) => {
         .catch(err => {
             console.log(err);
         });
+};
+
+export const list = params => {
+    const query = queryString.stringify(params);
+    console.log("query", query);
+    return fetch(`/api/products?${query}`, {
+        method: "GET"
+    })
+        .then(response => {
+            return response.json();
+        })
+        .catch(err => console.log(err));
+};
+
+export const read = productId => {
+    return fetch(`/api/product/${productId}`, {
+        method: "GET"
+    })
+        .then(response => {
+            return response.json();
+        })
+        .catch(err => console.log(err));
+};
+
+export const listRelated = productId => {
+    return fetch(`/api/products/related/${productId}`, {
+        method: "GET"
+    })
+        .then(response => {
+            return response.json();
+        })
+        .catch(err => console.log(err));
 };

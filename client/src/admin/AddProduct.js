@@ -224,6 +224,7 @@ const AddProduct = () => {
                     {showSuccess()}
                     {showError()}
                     {newPostForm()}
+                    {goBack()}
                 </div>
             </div>
         </Content>
