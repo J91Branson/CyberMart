@@ -20,7 +20,7 @@
 }
 
 .login_btn {
-    background: linear-gradient(-45deg, #EE7752, #FFB6B6, rgb(253, 209, 209), #EE7752);
+    background: linear-gradient(-45deg, #EE7752, #FFB6B6, rgb(253, 209, 209), #FFB6B6);
     color: #484E5D;
 	background-size: 400% 400%;
 }
