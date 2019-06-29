@@ -51,7 +51,7 @@ const Signup = () => {
                     <form>
                         <div className="input-group form-group">
                             <div className="input-group-prepend">
-                                <span className="input-group-text"><i class="fas fa-tag"> Name</i></span>
+                                <span className="input-group-text"><i className="fas fa-tag"> Name</i></span>
                             </div>
                             <input
                                 onChange={handleChange("name")}
@@ -98,7 +98,7 @@ const Signup = () => {
                 </div>
                 <div className="card-body">
                     <p className="card-text">If you are already a customer wishing to sign into your account click below!</p>
-                    <a href="/signup" className="btn btn-primary login_btn"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+                    <a href="/signup" className="btn btn-primary login_btn"><i className="fas fa-sign-in-alt"></i> Sign In</a>
                 </div>
             </div>
         </div>
