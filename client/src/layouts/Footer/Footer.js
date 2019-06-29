@@ -7,14 +7,13 @@ import './Footer.css';
 
 const Footer = () => (
     <footer >
-        &copy; {( new Date()).getFullYear()} Gorilla Syndicate
         <div className="mt-5">
             <Link to="/contact"> Contact </Link>
             |
             <Link to="/about"> About </Link>
         </div>
-        <br></br>  
         <br></br>
+        &copy; {(new Date()).getFullYear()} Gorilla Syndicate
 
     </footer>
 );

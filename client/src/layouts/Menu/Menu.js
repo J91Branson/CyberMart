@@ -63,8 +63,8 @@ const Menu = ({ history }) => (
         )}
 
         {isAuthenticated() && (
-          <li className="nav-item active">
-            <button><span
+          <li className="nav-item active ml-auto">
+            <button className="login_btn btn"><span
               style={{ cursor: "pointer", color: "#000000" }}
               onClick={() =>
                 signout(() => {
