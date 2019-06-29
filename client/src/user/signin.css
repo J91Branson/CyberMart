@@ -23,9 +23,12 @@
     background: linear-gradient(-45deg, #EE7752, #FFB6B6, rgb(253, 209, 209), #EE7752);
     color: #484E5D;
 	background-size: 400% 400%;
-	-webkit-animation: Gradient 7s ease infinite;
-	-moz-animation: Gradient 7s ease infinite;
-	animation: Gradient 7s ease infinite;
+}
+
+.login_btn:hover {
+	-webkit-animation: Gradient 2.5s ease infinite;
+	-moz-animation: Gradient 2.5s ease infinite;
+	animation: Gradient 2.5s ease infinite;
 }
 
 @-webkit-keyframes Gradient {
