@@ -2,7 +2,7 @@
 const router = require("express").Router();
 
 //File Imports
-const { create, productById, read, update, remove, list, listRelated, listCategories, listBySearch, image } = require("../controllers/product");
+const { create, productById, read, update, remove, list, listRelated, listCategories, listBySearch, image, listSearch} = require("../controllers/product");
 const { requireSignin, isAuth, isAdmin } = require("../controllers/auth");
 const { userById } = require("../controllers/user");
 
@@ -20,6 +20,9 @@ router.delete("/product/:productId/:userId", requireSignin, isAuth, isAdmin, rem
 
 //route to display all products
 router.get("/products", list);
+
+//route to display all products searched
+router.get("/products/search", listSearch);
 
 //route to display all products 
 router.get("/products/related/:productId", listRelated);

@@ -1,58 +1,65 @@
-// Import React Packages
 import React, { useState, useEffect } from "react";
-
-// Import Files/Components
 import Content from "../../layouts/Content/Content";
-import { getProducts } from "./apiProduct";
+import { read, listRelated } from "./apiProduct";
 import Card from "./Card";
 
-const Home = () => {
-    const [productsBySell, setProductsBySell] = useState([]);
-    const [productsByArrival, setProductsByArrival] = useState([]);
+
+const Product = props => {
+    const [product, setProduct] = useState({});
+    const [relatedProduct, setRelatedProduct] = useState([]);
     const [error, setError] = useState(false);
 
-    const loadProductsBySell = () => {
-        getProducts("sold").then(data => {
+    const loadSingleProduct = productId => {
+        read(productId).then(data => {
             if (data.error) {
                 setError(data.error);
             } else {
-                setProductsBySell(data);
-            }
-        });
-    };
-
-    const loadProductsByArrival = () => {
-        getProducts("createdAt").then(data => {
-            if (data.error) {
-                setError(data.error);
-            } else {
-                setProductsByArrival(data);
+                setProduct(data);
+                // fetch related products
+                listRelated(data._id).then(data => {
+                    if (data.error) {
+                        setError(data.error);
+                    } else {
+                        setRelatedProduct(data);
+                    }
+                });
             }
         });
     };
 
     useEffect(() => {
-        loadProductsByArrival();
-        loadProductsBySell();
-    }, []);
+        const productId = props.match.params.productId;
+        loadSingleProduct(productId);
+    }, [props]);
 
     return (
-        <Content className="container-fluid">
-            <h2 className="mb-4">New Arrivals</h2>
+        <Content
+            title={product && product.name}
+            description={
+                product &&
+                product.description &&
+                product.description.substring(0, 100)
+            }
+            className="container-fluid"
+        >
             <div className="row">
-                {productsByArrival.map((product, i) => (
-                    <Card key={i} product={product} />
-                ))}
-            </div>
+                <div className="col-8">
+                    {product && product.description && (
+                        <Card product={product} showViewProductButton={false} />
+                    )}
+                </div>
 
-            <h2 className="mb-4">Best Sellers</h2>
-            <div className="row">
-                {productsBySell.map((product, i) => (
-                    <Card key={i} product={product} />
-                ))}
+                <div className="col-4">
+                    <h4>Related products</h4>
+                    {relatedProduct.map((p, i) => (
+                        <div className="mb-3">
+                            <Card key={i} product={p} />
+                        </div>
+                    ))}
+                </div>
             </div>
         </Content>
     );
 };
 
-export default Home;
+export default Product;
