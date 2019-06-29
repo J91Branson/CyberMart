@@ -7,12 +7,13 @@ import './Footer.css';
 
 const Footer = () => (
     <footer >
-        <div className="mt-5">
-            <Link to="/contact"> Contact </Link>
+        <div>
+            <br></br>
+            <Link to="/contact" style={{color: "#484E5D"}}><i class="far fa-address-book"></i> Contact </Link>
             |
-            <Link to="/about"> About </Link>
+            <Link to="/about" style={{color: "#484E5D"}}> <i class="fas fa-book-reader"></i> About </Link>
         </div>
-        <br></br>
+        <hr className="footerH"/>
         &copy; {(new Date()).getFullYear()} Gorilla Syndicate
 
     </footer>
