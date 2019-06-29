@@ -1,6 +1,9 @@
-const User = require("../models/user");
+//Packages Imports
 const jwt = require("jsonwebtoken"); // to generate signed token
 const expressJwt = require("express-jwt"); // for authorization check
+
+//File Imports
+const User = require("../models/user");
 const { errorHandler } = require("../helpers/dbErrorHandler");
 
 exports.signup = (req, res) => {

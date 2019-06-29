@@ -1,6 +1,9 @@
+// Import React Packages
 import React, { Fragment } from "react";
 import { Link, withRouter } from "react-router-dom";
-import { signout, isAuthenticated } from "../../auth";
+
+// Import Files/Components
+import { signout, isAuthenticated } from "../../auth/apiAuth";
 
 const isActive = (history, path) => {
   if (history.location.pathname === path) {
@@ -21,18 +24,19 @@ const Menu = ({ history }) => (
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav mr-auto">
 
+        {/* page links */}
         <li className="nav-item active">
           <Link className="nav-link" style={isActive(history, "/")} to="/">Home</Link>
         </li>
 
         <li className="nav-item active">
-          <Link className="nav-link" style={isActive(history, "/contact")} to="/contact">Contact</Link>
+          <Link className="nav-link" style={isActive(history, "/shop")} to="/shop">Shop</Link>
         </li>
 
         <li className="nav-item active">
-          <Link className="nav-link" style={isActive(history, "/about")} to="/about">About</Link>
+          <Link className="nav-link" style={isActive(history, "/product")} to="/product">Products</Link>
         </li>
-
+        {/* button links */}
         {isAuthenticated() && isAuthenticated().user.role === 0 && (
           <li className="nav-item active">
             <Link className="nav-link" style={isActive(history, "/user/dashboard")} to="/user/dashboard">Dashboard</Link>

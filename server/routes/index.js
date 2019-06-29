@@ -1,19 +1,22 @@
+//Packages Imports
 const path = require("path");
 const router = require("express").Router();
-const signup = require("./auth");
-const signout = require("./auth");
-const signin = require("./auth");
-const secret = require("./user");
-const userID = require("./user");
-// const google = require("./google");
 
-// API Routes
-router.use("/api", signup);
-router.use("/api", signin);
-router.use("/api", signout);
-router.use("/api", secret);
-router.use("/api", userID);
-// router.use("/auth", google);
+//File Imports
+const authRoutes = require("./auth");
+const userRoutes = require("./user");
+
+const categoryRoutes = require("./category");
+const productRoutes = require("./product");
+
+
+//Routes
+router.use("/api", authRoutes);
+router.use("/api", userRoutes);
+
+router.use("/api", categoryRoutes);
+router.use("/api", productRoutes);
+
 
 // If no API routes are hit, send the React app
 router.use(function(req, res) {

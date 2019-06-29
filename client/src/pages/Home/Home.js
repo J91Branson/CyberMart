@@ -1,5 +1,8 @@
+// Import React Packages
 import React from "react";
 import { Parallax } from "react-parallax";
+
+// Import Files/Components
 import './Home.css';
 
 const styles = {
@@ -18,7 +21,7 @@ const Home = () => (
   <div style={styles}>
     <Parallax bgImage={image1} strength={500}>
       <div style={{ height: 500 }}>
-        <div className="card" style={{
+        <div className="card homeC" style={{
           padding: 20,
           position: "absolute",
           top: "29%",
@@ -34,7 +37,7 @@ const Home = () => (
     </Parallax>
     <Parallax bgImage={image2} strength={500}>
       <div style={{ height: 500 }}>
-        <div className="card" style={{
+        <div className="card homeC" style={{
           padding: 20,
           position: "absolute",
           top: "29%",
@@ -50,7 +53,7 @@ const Home = () => (
     </Parallax>
     <Parallax bgImage={image3} strength={500}>
       <div style={{ height: 500 }}>
-        <div className="card" style={{
+        <div className="card homeC" style={{
           padding: 20,
           position: "absolute",
           top: "29%",
