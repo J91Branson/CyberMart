@@ -1,5 +1,10 @@
 footer {
     background-color: #F3F1E7;
     height: 2.5rem;
+    color: #484E5D;
+}
+
+.footerH {
+    width: 90%;
 }
 
