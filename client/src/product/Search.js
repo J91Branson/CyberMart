@@ -3,6 +3,8 @@ import { getCategories, list } from "./apiProduct";
 import Card from "../layouts/Content/Card";
 
 const Search = () => {
+
+    //State hooks
     const [data, setData] = useState({
         categories: [],
         category: "",
@@ -11,6 +13,7 @@ const Search = () => {
         searched: false
     });
 
+    // sets variables for returned data
     const { categories, category, search, results, searched } = data;
 
     const loadCategories = () => {
@@ -23,34 +26,39 @@ const Search = () => {
         });
     };
 
+    //Mount hook
     useEffect(() => {
         loadCategories();
     }, []);
 
+    //
     const searchData = () => {
-        // console.log(search, category);
         if (search) {
-            list({ search: search || undefined, category: category }).then(
-                response => {
-                    if (response.error) {
-                        console.log(response.error);
-                    } else {
-                        setData({ ...data, results: response, searched: true });
+            list({ search: search || undefined, category: category })
+                .then(
+                    response => {
+                        if (response.error) {
+                            console.log(response.error);
+                        } else {
+                            setData({ ...data, results: response, searched: true });
+                        }
                     }
-                }
-            );
+                );
         }
     };
 
+    //Submits query data
     const searchSubmit = e => {
         e.preventDefault();
         searchData();
     };
 
+    
     const handleChange = name => event => {
         setData({ ...data, [name]: event.target.value, searched: false });
     };
 
+    //Returns message for searched products above returned query
     const searchMessage = (searched, results) => {
         if (searched && results.length > 0) {
             return `Found ${results.length} products`;
@@ -60,6 +68,7 @@ const Search = () => {
         }
     };
 
+    //Returns searched products in a card
     const searchedProducts = (results = []) => {
         return (
             <div>
@@ -75,6 +84,7 @@ const Search = () => {
         );
     };
 
+    //Search form input
     const searchForm = () => (
         <form onSubmit={searchSubmit}>
             <span className="input-group-text">
@@ -110,6 +120,7 @@ const Search = () => {
         </form>
     );
 
+    // Page render
     return (
         <div className="row">
             <div className="container mb-3">{searchForm()}</div>

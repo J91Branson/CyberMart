@@ -6,10 +6,14 @@ import Content from "../layouts/Content/Content";
 import { getProducts } from "./apiProduct";
 import Card from "../layouts/Content/Card";
 
+//Page that shows bestsellers for xxxx
 const Bestseller = () => {
+
+    //State hooks
     const [productsBySell, setProductsBySell] = useState([]);
     const [error, setError] = useState(false);
 
+    // Uses sold count from database to render bestsellers
     const loadProductsBySell = () => {
         getProducts("sold").then(data => {
             if (data.error) {
@@ -20,10 +24,12 @@ const Bestseller = () => {
         });
     };
 
+    //Mount hook
     useEffect(() => {
         loadProductsBySell();
     }, []);
 
+     // Page render
     return (
         <Content className="container-fluid">
             <h2 className="mb-4">Best Sellers for X</h2>

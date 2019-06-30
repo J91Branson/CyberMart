@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 
 // Import Files/Components
 import Content from "../layouts/Content/Content";
-import { getCategories, getFilteredProducts  } from "./apiProduct";
+import { getCategories, getFilteredProducts } from "./apiProduct";
 import { prices } from "./priceRange";
 import Search from "./Search";
 import Card from "../layouts/Content/Card";
@@ -12,6 +12,8 @@ import RadioBox from "../layouts/Content/RadioBox";
 
 
 const Shop = () => {
+
+     //State hooks
     const [myFilters, setMyFilters] = useState({
         filters: { category: [], price: [] }
     });
@@ -23,26 +25,28 @@ const Shop = () => {
     const [filteredResults, setFilteredResults] = useState([]);
 
     const init = () => {
-        getCategories().then(data => {
-            if (data.error) {
-                setError(data.error);
-            } else {
-                setCategories(data);
-            }
-        });
+        getCategories()
+            .then(data => {
+                if (data.error) {
+                    setError(data.error);
+                } else {
+                    setCategories(data);
+                }
+            });
     };
 
     const loadFilteredResults = newFilters => {
         // console.log(newFilters);
-        getFilteredProducts(skip, limit, newFilters).then(data => {
-            if (data.error) {
-                setError(data.error);
-            } else {
-                setFilteredResults(data.data);
-                setSize(data.size);
-                setSkip(0);
-            }
-        });
+        getFilteredProducts(skip, limit, newFilters)
+            .then(data => {
+                if (data.error) {
+                    setError(data.error);
+                } else {
+                    setFilteredResults(data.data);
+                    setSize(data.size);
+                    setSkip(0);
+                }
+            });
     };
 
     const loadMore = () => {
@@ -70,10 +74,12 @@ const Shop = () => {
         );
     };
 
+    //Mount hook
     useEffect(() => {
         init();
         loadFilteredResults(skip, limit, myFilters.filters);
     }, []);
+
 
     const handleFilters = (filters, filterBy) => {
         // console.log("SHOP", filters, filterBy);
@@ -88,6 +94,7 @@ const Shop = () => {
         setMyFilters(newFilters);
     };
 
+
     const handlePrice = value => {
         const data = prices;
         let array = [];
@@ -99,11 +106,12 @@ const Shop = () => {
         }
         return array;
     };
-    
+
+    // Page render
     return (
         <Content className="container-fluid">
-             <Search />
-             <div className="row">
+            <Search />
+            <div className="row">
                 <div className="col-3">
                     <h4>Filter by categories</h4>
                     <ul>

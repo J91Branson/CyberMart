@@ -1,5 +1,5 @@
 // Import React Packages
-import React, { Component } from "react";
+import React from "react";
 import { Route, Redirect } from "react-router-dom";
 
 // Import Files/Components
