@@ -2,7 +2,7 @@
 const router = require("express").Router();
 
 //File Imports
-const { create, productById, read, update, remove, list, listRelated, listCategories, listBySearch, image, listSearch} = require("../controllers/product");
+const { create, productById, read, update, remove, list, listRelated, listCategories, listBySearch,  listSearch} = require("../controllers/product");
 const { requireSignin, isAuth, isAdmin } = require("../controllers/auth");
 const { userById } = require("../controllers/user");
 
@@ -21,9 +21,6 @@ router.get("/products/related/:productId", listRelated);
 
 //route to display all product categories
 router.get("/products/categories", listCategories);
-
-//route to return product image
-router.get("/product/image/:productId", image);
 
 //POST METHODS
 //route to create new product if user is signed in as admin

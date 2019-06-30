@@ -38,15 +38,7 @@ const Product = props => {
 
     // Page render
     return (
-        <Content
-            title={product && product.name}
-            description={
-                product &&
-                product.description &&
-                product.description.substring(0, 100)
-            }
-            className="container-fluid"
-        >
+        <Content className="container-fluid">
             <div className="row">
                 <div className="col-8">
                     {product && product.description && (

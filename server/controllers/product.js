@@ -12,7 +12,7 @@ exports.create = (req, res) => {
 
     //Handles image import 
     let form = new formidable.IncomingForm();
-    form.keepExtensions = true;
+    // form.keepExtensions = true;
     form.parse(req, (err, fields, files) => {
 
         //Error handling for image and data field upload
@@ -23,8 +23,8 @@ exports.create = (req, res) => {
         }
 
         //Variables for each data input for fields
-        const { name, description, price, category, quantity, shipping } = fields;
-        if (!name || !description || !price || !category || !quantity || !shipping) {
+        const { name, description, price, category, quantity, image } = fields;
+        if (!name || !description || !price || !category || !quantity || !image) {
             return res.status(400).json({
                 error: "All fields are required"
             });
@@ -32,20 +32,6 @@ exports.create = (req, res) => {
 
         //Variable to create new Product 
         let product = new Product(fields);
-
-        //Photo file size limitation
-        if (files.image) {
-            // console.log("FILES PHOTO: ", files.image);
-            // 1kb = 1000
-            // 1mb = 1000000
-            if (files.image.size > 1000000) {
-                return res.status(400).json({
-                    error: "Image should be less than 1mb in size"
-                });
-            }
-            product.image.data = fs.readFileSync(files.image.path);
-            product.image.contentType = files.image.type;
-        }
 
         //Save new product to database
         product.save((err, result) => {
@@ -76,7 +62,7 @@ exports.productById = (req, res, next, id) => {
 
 //Takes returned product response above (excl. image) and display it
 exports.read = (req, res) => {
-    req.product.image = undefined;
+    // req.product.image = undefined;
     return res.json(req.product);
 };
 
@@ -84,7 +70,7 @@ exports.read = (req, res) => {
 // To update existing product
 exports.update = (req, res) => {
     let form = new formidable.IncomingForm();
-    form.keepExtensions = true;
+    // form.keepExtensions = true;
     form.parse(req, (err, fields, files) => {
         //Error handling for image and data field upload
         if (err) {
@@ -94,8 +80,8 @@ exports.update = (req, res) => {
         }
 
         //Variables for each data input for fields
-        const { name, description, price, category, quantity, shipping } = fields;
-        if (!name || !description || !price || !category || !quantity || !shipping) {
+        const { name, description, price, category, quantity, image } = fields;
+        if (!name || !description || !price || !category || !quantity || !image) {
             return res.status(400).json({
                 error: "All fields are required"
             });
@@ -104,30 +90,6 @@ exports.update = (req, res) => {
         //Variable for existing product and to replace it with new input
         let product = req.product;
         product = _.extend(product, fields);
-
-        //Photo file size limitation
-        if (files.image) {
-            // console.log("FILES PHOTO: ", files.image);
-            // 1kb = 1000
-            // 1mb = 1000000
-            if (files.image.size > 1000000) {
-                return res.status(400).json({
-                    error: "Image should be less than 1mb in size"
-                });
-            }
-            product.image.data = fs.readFileSync(files.image.path);
-            product.image.contentType = files.image.type;
-        }
-
-        //Save new product to database
-        product.save((err, result) => {
-            if (err) {
-                return res.staus(400).json({
-                    error: errorHandler(err)
-                });
-            }
-            res.json(result);
-        });
     });
 };
 
@@ -165,7 +127,7 @@ exports.listSearch = (req, res) => {
                 });
             }
             res.json(products);
-        }).select("-image");
+        });
     }
 };
 
@@ -176,7 +138,6 @@ exports.list = (req, res) => {
     let limit = req.query.limit ? parseInt(req.query.limit) : 6;
 
     Product.find()
-        .select("-image")
         .populate("category")
         .sort([[sortBy, order]])
         .limit(limit)
@@ -229,9 +190,6 @@ exports.listBySearch = (req, res) => {
     let skip = parseInt(req.body.skip);
     let findArgs = {};
 
-    // console.log(order, sortBy, limit, skip, req.body.filters);
-    // console.log("findArgs", findArgs);
-
     for (let key in req.body.filters) {
         if (req.body.filters[key].length > 0) {
             if (key === "price") {
@@ -248,7 +206,6 @@ exports.listBySearch = (req, res) => {
     }
 
     Product.find(findArgs)
-        .select("-image")
         .populate("category")
         .sort([[sortBy, order]])
         .skip(skip)
@@ -264,13 +221,4 @@ exports.listBySearch = (req, res) => {
                 data
             });
         });
-};
-
-//Displays a product image
-exports.image = (req, res, next) => {
-    if (req.product.image.data) {
-        res.set("Content-Type", req.product.image.contentType);
-        return res.send(req.product.image.data);
-    }
-    next();
 };

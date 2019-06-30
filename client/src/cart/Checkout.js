@@ -4,9 +4,7 @@ import { Link } from "react-router-dom";
 import DropIn from "braintree-web-drop-in-react";
 
 //Import Files/Components
-import Content from "../layouts/Content/Content";
-import Card from "../layouts/Content/Card";
-import { getProducts } from "../product/apiProduct";
+
 import { isAuthenticated } from "../auth/apiAuth";
 import { getBraintreeClientToken, processPayment } from "../cart/apiPayment";
 import { emptyCart } from "../cart/cartStorage";
