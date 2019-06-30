@@ -2,9 +2,9 @@
 import React, { useState, useEffect } from "react";
 
 // Import Files/Components
-import Content from "../../layouts/Content/Content";
+import Content from "../layouts/Content/Content";
 import { getProducts } from "./apiProduct";
-import Card from "./Card";
+import Card from "../layouts/Content/Card";
 
 const Bestseller = () => {
     const [productsBySell, setProductsBySell] = useState([]);

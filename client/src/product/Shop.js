@@ -2,14 +2,13 @@
 import React, { useState, useEffect } from "react";
 
 // Import Files/Components
-import Content from "../../layouts/Content/Content";
+import Content from "../layouts/Content/Content";
 import { getCategories, getFilteredProducts  } from "./apiProduct";
 import { prices } from "./priceRange";
 import Search from "./Search";
-
-import Card from "./Card";
-import Checkbox from "./Checkbox";
-import RadioBox from "./RadioBox";
+import Card from "../layouts/Content/Card";
+import Checkbox from "../layouts/Content/Checkbox";
+import RadioBox from "../layouts/Content/RadioBox";
 
 
 const Shop = () => {
