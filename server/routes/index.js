@@ -7,14 +7,14 @@ const authRoutes = require("./auth");
 const userRoutes = require("./user");
 const categoryRoutes = require("./category");
 const productRoutes = require("./product");
-
+const paymentRoutes = require("./payment");
 
 //Routes
 router.use("/api", authRoutes);
 router.use("/api", userRoutes);
 router.use("/api", categoryRoutes);
 router.use("/api", productRoutes);
-
+router.use("/api", paymentRoutes);
 
 // If no API routes are hit, send the React app
 router.use(function(req, res) {

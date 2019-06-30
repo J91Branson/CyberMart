@@ -17,7 +17,6 @@ const AddProduct = () => {
         price: "",
         categories: [],
         category: "",
-
         shipping: "",
         quantity: "",
         image: "",

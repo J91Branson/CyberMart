@@ -8,17 +8,22 @@ import { getCart } from "./cartStorage";
 import Card from "../layouts/Content/Card";
 import Checkout from "./Checkout";
 
+// Cart page to review selected items on left and checkout on right
 const Cart = () => {
+
+    //State hooks
     const [items, setItems] = useState([]);
 
+    //Mount hook
     useEffect(() => {
         setItems(getCart());
     }, [items]);
 
+    //Returns all items that were added to the cart
     const showItems = items => {
         return (
             <div>
-                <h2>Your cart has {`${items.length}`} items</h2>
+                <h2>You have {`${items.length}`} products in your cart.</h2>
                 <hr />
                 {items.map((product, i) => (
                     <Card
@@ -33,18 +38,16 @@ const Cart = () => {
         );
     };
 
+    //Message if cart is empty
     const noItemsMessage = () => (
         <h2>
             Your cart is empty. <br /> <Link to="/shop">Continue shopping</Link>
         </h2>
     );
 
+    // Page render
     return (
-        <Content 
-            title="Shopping Cart"
-            description="Manage your cart items. Add remove checkout or continue shopping."
-            className="container-fluid"
-        >
+        <Content className="container-fluid">
             <div className="row">
                 <div className="col-6">
                     {items.length > 0 ? showItems(items) : noItemsMessage()}

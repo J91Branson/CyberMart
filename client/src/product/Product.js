@@ -3,12 +3,15 @@ import Content from "../layouts/Content/Content";
 import { read, listRelated } from "./apiProduct";
 import Card from "../layouts/Content/Card";
 
-
+ //Returns data for a selected product on left and related products on the right
 const Product = props => {
+
+    //State hooks
     const [product, setProduct] = useState({});
     const [relatedProduct, setRelatedProduct] = useState([]);
     const [error, setError] = useState(false);
 
+    //returns data for selected product on left and related products on the right
     const loadSingleProduct = productId => {
         read(productId).then(data => {
             if (data.error) {
@@ -27,11 +30,13 @@ const Product = props => {
         });
     };
 
+    //Mount hook
     useEffect(() => {
         const productId = props.match.params.productId;
         loadSingleProduct(productId);
     }, [props]);
 
+    // Page render
     return (
         <Content
             title={product && product.name}
