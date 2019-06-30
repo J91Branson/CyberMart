@@ -4,7 +4,7 @@ import { Parallax } from "react-parallax";
 
 // Import Files/Components
 import './Home.css';
-import Bestseller from "../Product/Bestseller";
+import Bestseller from "../../product/Bestseller";
 
 
 const styles = {

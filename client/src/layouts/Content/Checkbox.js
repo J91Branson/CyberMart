@@ -1,3 +1,4 @@
+// Import Packages
 import React, { useState, useEffect } from "react";
 
 const Checkbox = ({ categories, handleFilters }) => {

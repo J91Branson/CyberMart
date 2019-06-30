@@ -5,12 +5,7 @@ const router = require("express").Router();
 const { signup, signin, signout, requireSignin} = require("../controllers/auth");
 const { userSignupValidator } = require("../validator");
 
-//Route to sign up new user as customer
-router.post("/signup", userSignupValidator, signup);
-
-//Route to sign in current user (admin or customer)
-router.post("/signin", signin);
-
+//GET METHODS
 //Route to sign out current user (admin or customer)
 router.get("/signout", signout);
 
@@ -18,5 +13,13 @@ router.get("/signout", signout);
 // router.get("/test", requireSignin, (req, res) => {
 //     res.setEncoding("unauth-token")
 // })
+
+//POST METHODS
+//Route to sign up new user as customer
+router.post("/signup", userSignupValidator, signup);
+
+//Route to sign in current user (admin or customer)
+router.post("/signin", signin);
+
 
 module.exports = router;

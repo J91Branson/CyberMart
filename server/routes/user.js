@@ -5,6 +5,7 @@ const router = require("express").Router();
 const { requireSignin, isAuth, isAdmin } = require("../controllers/auth");
 const { userById, read, update } = require("../controllers/user");
 
+//GET METHODS
 //Route to find admin user
 router.get("/secret/:userId", requireSignin, isAuth, isAdmin,(req, res) => {
     res.json({
@@ -15,9 +16,11 @@ router.get("/secret/:userId", requireSignin, isAuth, isAdmin,(req, res) => {
 //route to display user profile 
 router.get("/user/:userId", requireSignin, isAuth, read);
 
+//PUT METHODS
 //route to update user profile 
 router.put("/user/:userId", requireSignin, isAuth, update);
 
+//PARAMS pass on
 //To find profile for a specific param
 router.param("userId", userById);
 

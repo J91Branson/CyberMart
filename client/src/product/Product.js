@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Content from "../../layouts/Content/Content";
+import Content from "../layouts/Content/Content";
 import { read, listRelated } from "./apiProduct";
-import Card from "./Card";
+import Card from "../layouts/Content/Card";
 
 
 const Product = props => {

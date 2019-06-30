@@ -1,0 +1,10 @@
+
+.cart-badge,
+.cart-badge:hover {
+    /* border-radius: 20%; */
+    padding: 2px;
+    font-size: 14px;
+    font-style: bold;
+    color: black;
+    /* background: grey; */
+}
