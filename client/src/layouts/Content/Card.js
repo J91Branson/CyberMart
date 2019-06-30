@@ -1,10 +1,8 @@
 // Import Packages
 import React, { useState } from "react";
 import { Link, Redirect } from "react-router-dom";
-import moment from "moment";
 
 // Import Files/Components
-import ShowImage from "./Image";
 import { addItem, updateItem, removeItem } from "../../cart/cartStorage";
 
 const Card = ({
@@ -14,7 +12,6 @@ const Card = ({
     cartUpdate = false,
     showRemoveProductButton = false
 }) => {
-
     const [redirect, setRedirect] = useState(false);
     const [count, setCount] = useState(product.count);
 
@@ -110,16 +107,13 @@ const Card = ({
             <div className="card-header name">{product.name}</div>
             <div className="card-body">
                 {shouldRedirect(redirect)}
-                <ShowImage item={product} url="product" />
+                <img src={product.image} alt="Product Image"></img>
                 <p className="lead mt-2">
                     {product.description.substring(0, 100)}
                 </p>
                 <p className="black-10">${product.price}</p>
                 <p className="black-9">
                     Category: {product.category && product.category.name}
-                </p>
-                <p className="black-8">
-                    Added on {moment(product.createdAt).fromNow()}
                 </p>
                 {showStock(product.quantity)}
                 <br />

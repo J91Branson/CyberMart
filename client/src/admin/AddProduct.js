@@ -1,10 +1,10 @@
 //React Package Imports ...hooks for function components
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 // Import Files/Components
 import Content from "../layouts/Content/Content";
 import { isAuthenticated } from "../auth/apiAuth";
-import { Link } from "react-router-dom";
 import { createProduct, getCategories } from "./apiAdmin";
 
 //Component for admin user to add new products to database 
@@ -13,13 +13,12 @@ const AddProduct = () => {
     //Hook to 
     const [values, setValues] = useState({
         name: "",
+        image: "",
         description: "",
         price: "",
         categories: [],
         category: "",
-        shipping: "",
         quantity: "",
-        image: "",
         loading: false,
         error: "",
         createdProduct: "",
@@ -31,11 +30,11 @@ const AddProduct = () => {
 
     const {
         name,
+        image,
         description,
         price,
         categories,
         category,
-        shipping,
         quantity,
         loading,
         error,
@@ -67,8 +66,7 @@ const AddProduct = () => {
     }, []);
 
     const handleChange = name => event => {
-        const value =
-            name === "image" ? event.target.files[0] : event.target.value;
+        const value = event.target.value;
         formData.set(name, value);
         setValues({ ...values, [name]: value });
     };
@@ -85,8 +83,8 @@ const AddProduct = () => {
                     setValues({
                         ...values,
                         name: "",
-                        description: "",
                         image: "",
+                        description: "",
                         price: "",
                         quantity: "",
                         loading: false,
@@ -106,6 +104,15 @@ const AddProduct = () => {
                     type="text"
                     className="form-control"
                     value={name}
+                />
+            </div>
+
+            <div className="form-group">
+                <label className="text-muted">Image</label>
+                <textarea
+                    onChange={handleChange("image")}
+                    className="form-control"
+                    value={image}
                 />
             </div>
 
@@ -144,7 +151,7 @@ const AddProduct = () => {
                 </select>
             </div>
 
-            <div className="form-group">
+            {/* <div className="form-group">
                 <label className="text-muted">Shipping</label>
                 <select
                     onChange={handleChange("shipping")}
@@ -154,7 +161,7 @@ const AddProduct = () => {
                     <option value="0">No</option>
                     <option value="1">Yes</option>
                 </select>
-            </div>
+            </div> */}
 
             <div className="form-group">
                 <label className="text-muted">Quantity</label>
@@ -166,7 +173,7 @@ const AddProduct = () => {
                 />
             </div>
 
-            <p>Insert Image</p>
+            {/* <p>Insert Image</p>
             <div className="form-group">
                 <label className="btn btn-secondary">
                     <input
@@ -176,7 +183,7 @@ const AddProduct = () => {
                         accept="image/*"
                     />
                 </label>
-            </div>
+            </div> */}
 
             <button className="btn btn-outline-primary">Create Product</button>
         </form>

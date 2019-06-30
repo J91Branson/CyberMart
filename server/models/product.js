@@ -11,6 +11,12 @@ const productSchema = new mongoose.Schema(
             required: true,
             maxlength: 32
         },
+           image: {
+            type: String,
+            trim: true,
+            required: true,
+            maxlength: 150
+        },
         description: {
             type: String,
             trim: true,
@@ -20,7 +26,7 @@ const productSchema = new mongoose.Schema(
         price: {
             type: Number,
             trim: true,
-            required: false,
+            required: true,
             maxlength: 32
         },
         category: {
@@ -30,21 +36,19 @@ const productSchema = new mongoose.Schema(
         },
         quantity: {
             trim: true,
-            type: Number
+            type: Number,
+            default: 0,
+            required: true
         },
         sold: {
             type: Number,
             default: 0
-        },
-        image: {
-            data: Buffer,
-            contentType: String,
-            required: false
-        },
-        shipping: {
-            required: true,
-            type: Boolean
         }
+        // shipping: {
+        //     required: true,
+        //     default: true,
+        //     type: Boolean
+        // }
     },
     { timestamps: true }
 );
