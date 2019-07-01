@@ -16,6 +16,8 @@ const isActive = (history, path) => {
 };
 
 
+
+
 const Menu = ({ history }) => (
   <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <a className="navbar-brand" href="/">CyberMart</a>
@@ -55,7 +57,7 @@ const Menu = ({ history }) => (
             style={isActive(history, "/cart")}
             to="/cart"
           >
-            Cart{" "}
+            <i className="fas fa-shopping-cart" style={{color: "black"}}></i>{" "}
             <sup>
               <small className="cart-badge">{itemTotal()}</small>
             </sup>
