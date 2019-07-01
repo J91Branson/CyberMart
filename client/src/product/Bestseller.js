@@ -32,7 +32,7 @@ const Bestseller = () => {
      // Page render
     return (
         <Content className="container-fluid">
-            <h2 className="mb-4">Best Sellers for X</h2>
+            <h2 className="mb-4">Best Sellers</h2>
             <div className="row">
                 {productsBySell.map((product, i) => (
                     <div key={i} className="col-3 mb-3">
