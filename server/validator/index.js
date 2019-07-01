@@ -1,5 +1,5 @@
+//validates that all sign up requirements are met
 exports.userSignupValidator = (req, res, next) => {
-
     req.check("name", "Name is required").notEmpty();
     req.check("email", "Email must be between 3 to 32 characters")
         .matches(/.+\@.+\..+/)
@@ -19,6 +19,5 @@ exports.userSignupValidator = (req, res, next) => {
         const firstError = errors.map(error => error.msg)[0];
         return res.status(400).json({ error: firstError });
     }
-    next();
-    
+    next(); 
 };

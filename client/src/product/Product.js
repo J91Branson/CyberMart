@@ -1,9 +1,12 @@
+// Import React Packages
 import React, { useState, useEffect } from "react";
+
+// Import Files/Components
 import Content from "../layouts/Content/Content";
 import { read, listRelated } from "./apiProduct";
 import Card from "../layouts/Content/Card";
 
- //Returns data for a selected product on left and related products on the right
+//Returns data for a selected product on left and related products on the right
 const Product = props => {
 
     //State hooks
