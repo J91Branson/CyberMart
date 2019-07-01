@@ -21,6 +21,10 @@ const image3 =
 
 const Home = () => (
   <div style={styles}>
+    {/* wip - need to filter out dog bestsellers only */}
+    <div>
+      <Bestseller />
+    </div>
     <Parallax bgImage={image1} strength={500}>
       <div style={{ height: 500 }}>
         <div className="card homeC" style={{
@@ -37,10 +41,6 @@ const Home = () => (
         </div>
       </div>
     </Parallax>
-    {/* wip - need to filter out dog bestsellers only */}
-    <div>
-      <Bestseller />
-    </div>
     <Parallax bgImage={image2} strength={500}>
       <div style={{ height: 500 }}>
         <div className="card homeC" style={{

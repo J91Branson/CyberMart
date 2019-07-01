@@ -1,5 +1,4 @@
 footer {
-    background-color: #F3F1E7;
     height: 2.5rem;
     color: #484E5D;
 }
@@ -8,3 +7,6 @@ footer {
     width: 90%;
 }
 
+.footerL {
+ padding-bottom: 1%;
+}
