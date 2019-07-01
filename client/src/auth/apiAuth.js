@@ -1,4 +1,25 @@
-// api route to sign up new user
+
+//GET METHODS
+
+//Route to sign out current user (admin or customer)
+//removes token from local storage
+export const signout = next => {
+    if (typeof window !== "undefined") {
+        localStorage.removeItem("jwt");
+        next();
+        return fetch(`/api/signout`, {
+            method: "GET"
+        })
+            .then(response => {
+                // console.log("signout", response);
+            })
+            .catch(err => console.log(err));
+    }
+};
+
+//POST METHODS
+
+//Route to sign up new user as customer
 export const signup = user => {
     return fetch("/api/signup", {
         method: "POST",
@@ -16,7 +37,7 @@ export const signup = user => {
         });
 };
 
-// api route to sign in user
+//Route to sign in current user (admin or customer)
 export const signin = user => {
     return fetch(`/api/signin`, {
         method: "POST",
@@ -34,26 +55,12 @@ export const signin = user => {
         });
 };
 
+//TOKEN related function
 //saves token to local storage
 export const authenticate = (data, next) => {
     if (typeof window !== "undefined") {
         localStorage.setItem("jwt", JSON.stringify(data));
         next();
-    }
-};
-
-//removes token to local storage
-export const signout = next => {
-    if (typeof window !== "undefined") {
-        localStorage.removeItem("jwt");
-        next();
-        return fetch(`/api/signout`, {
-            method: "GET"
-        })
-            .then(response => {
-                console.log("signout", response);
-            })
-            .catch(err => console.log(err));
     }
 };
 

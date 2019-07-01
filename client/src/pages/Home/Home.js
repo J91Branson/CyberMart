@@ -4,6 +4,8 @@ import { Parallax } from "react-parallax";
 
 // Import Files/Components
 import './Home.css';
+import Bestseller from "../../product/Bestseller";
+
 
 const styles = {
   fontFamily: "sans-serif",
@@ -35,6 +37,10 @@ const Home = () => (
         </div>
       </div>
     </Parallax>
+    {/* wip - need to filter out dog bestsellers only */}
+    <div>
+      <Bestseller />
+    </div>
     <Parallax bgImage={image2} strength={500}>
       <div style={{ height: 500 }}>
         <div className="card homeC" style={{
@@ -51,6 +57,9 @@ const Home = () => (
         </div>
       </div>
     </Parallax>
+    {/* <div>
+      <Bestseller />   Cat one goes here
+    </div> */}
     <Parallax bgImage={image3} strength={500}>
       <div style={{ height: 500 }}>
         <div className="card homeC" style={{

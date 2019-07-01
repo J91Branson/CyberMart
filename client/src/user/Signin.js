@@ -25,7 +25,6 @@ const Signin = () => {
 
     const clickSubmit = event => {
         event.preventDefault();
-        console.log("click")
         setValues({ ...values, error: false, loading: true });
         signin({ email, password }).then(data => {
             if (error) {

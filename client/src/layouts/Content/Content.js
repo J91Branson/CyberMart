@@ -1,4 +1,4 @@
-// Import React Packages
+// Import Packages
 import React from "react";
 
 const Content = ({

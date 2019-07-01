@@ -9,7 +9,7 @@ import { isAuthenticated } from "../auth/apiAuth";
 
 const Dashboard = () => {
     const {
-        user: { _id, name, email, role }
+        user: {name, email, role }
     } = isAuthenticated();
 
     const userLinks = () => {
