@@ -1,10 +1,10 @@
-//React Package Imports ...hooks for function components
+//Import Package
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 // Import Files/Components
 import Content from "../layouts/Content/Content";
 import { isAuthenticated } from "../auth/apiAuth";
-import { Link } from "react-router-dom";
 import { createCategory } from "./apiAdmin";
 
 //Component for admin user to add new category to database 

@@ -10,8 +10,8 @@ import Home from '../pages/Home/Home';  //Home page
 import About from '../pages/About/About'; //About page
 import Contact from '../pages/Contact/Contact'; //Contact page
 import Shop from '../product/Shop'; //Product page
-import Product from "../product/Product";
-import Cart from "../cart/Cart";
+import Product from "../product/Product"; //customer
+import Cart from "../cart/Cart"; //customer
 import Error404 from '../pages/Error/404'; //Error page
 
 //User routes
@@ -24,9 +24,10 @@ import AdminDashboard from "../user/AdminDashboard"; //admin
 import PrivateRoute from "../auth/PrivateRoute";  //customer
 import AdminRoute from "../auth/AdminRoute"; //admin
 
-//Admin routes  (to admin pages to make changes to products and category)
+//Admin routes  (to admin pages to view, make changes to products/category/orders)
 import AddCategory from "../admin/AddCategory"; //admin
 import AddProduct from "../admin/AddProduct";  //admin
+import Orders from "../admin/Order"; //admin
 
 //Links on nav menu and links on dashboards
 const AppRoutes = () => (
@@ -44,7 +45,7 @@ const AppRoutes = () => (
       <AdminRoute path="/admin/dashboard" exact component={AdminDashboard}/>
       <AdminRoute path="/create/category" exact component={AddCategory}/>
       <AdminRoute path="/create/product" exact component={AddProduct}/>
-    
+      <AdminRoute path="/admin/order" exact component={Orders}/>
       <Route component={Error404} />
     </Switch>
   </App>
