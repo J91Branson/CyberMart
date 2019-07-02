@@ -28,9 +28,14 @@ const AdminDashboard = () => {
                             <Link className="nav-link" to="/create/product" style={{ color: "white"}}>
                             <u>Create Product</u>
                         </Link>
-                        </li>
-                    </ul>
-                </div>
+                    </li>
+                    <li>
+                        <Link className="nav-link" to="/admin/order">
+                            View Orders
+                        </Link>
+                    </li>
+                </ul>
+            </div>
             </div>
         );
     };
