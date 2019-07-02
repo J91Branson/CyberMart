@@ -33,7 +33,6 @@ exports.listOrders = (req, res) => {
             res.json(orders);
         });
 };
-
 //display order status in drop down form field
 exports.getStatusValues = (req, res) => {
     res.json(Order.schema.path("status").enumValues);

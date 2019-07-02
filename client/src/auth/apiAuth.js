@@ -52,7 +52,7 @@ export const signin = user => {
         });
 };
 
-//TOKEN related middleware
+//TOKEN STORAGE
 //saves token to local storage
 export const authenticate = (data, next) => {
     if (typeof window !== "undefined") {

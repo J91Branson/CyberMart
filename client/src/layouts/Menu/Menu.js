@@ -50,19 +50,22 @@ const Menu = ({ history }) => (
           </li>
         )}
       </ul>
+
       <ul className="navbar-nav ml-auto">
-        <li className="nav-item">
-          <Link
-            className="nav-link"
-            style={isActive(history, "/cart")}
-            to="/cart"
-          >
-            <i className="fas fa-shopping-cart" style={{color: "black"}}></i>{" "}
-            <sup>
-              <small className="cart-badge">{itemTotal()}</small>
-            </sup>
-          </Link>
-        </li>
+        {isAuthenticated() && isAuthenticated().user.role === 0 && (
+          <li className="nav-item">
+            <Link
+              className="nav-link"
+              style={isActive(history, "/cart")}
+              to="/cart"
+            >
+              <i className="fas fa-shopping-cart" style={{ color: "black" }}></i>{" "}
+              <sup>
+                <small className="cart-badge">{itemTotal()}</small>
+              </sup>
+            </Link>
+          </li>
+        )}
 
         {!isAuthenticated() && (
           <Fragment>

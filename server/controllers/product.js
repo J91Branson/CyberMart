@@ -49,18 +49,14 @@ exports.list = (req, res) => {
         });
 };
 
+//displays products searched
 exports.listSearch = (req, res) => {
-    // create query object to hold search value and category value
     const query = {};
-    // assign search value to query.name
     if (req.query.search) {
         query.name = { $regex: req.query.search, $options: "i" };
-        // assigne category value to query.category
         if (req.query.category && req.query.category != "All") {
             query.category = req.query.category;
         }
-        // find the product based on query object with 2 properties
-        // search and category
         Product.find(query, (err, products) => {
             if (err) {
                 return res.status(400).json({
@@ -106,30 +102,23 @@ exports.listCategories = (req, res) => {
 // To add new product to database
 exports.create = (req, res) => {
 
-    //Handles image import 
     let form = new formidable.IncomingForm();
-    // form.keepExtensions = true;
     form.parse(req, (err, fields, files) => {
 
-        //Error handling for image and data field upload
         if (err) {
             return res.status(400).json({
                 error: "Image could not be uploaded"
             });
         }
-
-        //Variables for each data input for fields
-        const { name, description, price, category, quantity, image } = fields;
-        if (!name || !description || !price || !category || !quantity || !image) {
+        const { name, description, image, price, category, quantity } = fields;
+        if (!name || !description || !image|| !price || !category || !quantity ) {
             return res.status(400).json({
                 error: "All fields are required"
             });
         }
 
-        //Variable to create new Product 
         let product = new Product(fields);
 
-        //Save new product to database
         product.save((err, result) => {
             if (err) {
                 return res.staus(400).json({
@@ -182,6 +171,7 @@ exports.listBySearch = (req, res) => {
         });
 };
 
+//decreases inventory stock by ordered quantity
 exports.decreaseQuantity = (req, res, next) => {
     let bulkOps = req.body.order.products.map(item => {
         return {
@@ -207,7 +197,7 @@ exports.decreaseQuantity = (req, res, next) => {
 exports.update = (req, res) => {
     let form = new formidable.IncomingForm();
     // form.keepExtensions = true;
-    form.parse(req, (err, fields, files) => {
+    form.parse(req, (err, fields) => {
         //Error handling for image and data field upload
         if (err) {
             return res.status(400).json({
@@ -215,17 +205,17 @@ exports.update = (req, res) => {
             });
         }
 
-        //Variables for each data input for fields
-        const { name, description, price, category, quantity, image } = fields;
-        if (!name || !description || !price || !category || !quantity || !image) {
-            return res.status(400).json({
-                error: "All fields are required"
-            });
-        }
-
-        //Variable for existing product and to replace it with new input
         let product = req.product;
         product = _.extend(product, fields);
+
+        product.save((err, result) => {
+            if (err) {
+                return res.status(400).json({
+                    error: errorHandler(err)
+                });
+            }
+            res.json(result);
+        });
     });
 };
 

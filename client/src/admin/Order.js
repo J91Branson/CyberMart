@@ -1,6 +1,5 @@
 //Import Package
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import moment from "moment";
 
 // Import Files/Components
@@ -16,6 +15,7 @@ const Orders = () => {
 
     const loadOrders = () => {
         listOrders(user._id, token).then(data => {
+            console.log(data)
             if (data.error) {
                 console.log(data.error);
             } else {
@@ -66,16 +66,15 @@ const Orders = () => {
     );
 
     const handleStatusChange = (e, orderId) => {
-        updateOrderStatus(user._id, token, orderId, e.target.value)
-            .then(
-                data => {
-                    if (data.error) {
-                        console.log("Status update failed");
-                    } else {
-                        loadOrders();
-                    }
+        updateOrderStatus(user._id, token, orderId, e.target.value).then(
+            data => {
+                if (data.error) {
+                    console.log("Status update failed");
+                } else {
+                    loadOrders();
                 }
-            );
+            }
+        );
     };
 
     const showStatus = o => (
@@ -94,26 +93,18 @@ const Orders = () => {
             </select>
         </div>
     );
-    
-    const goBack = () => (
-        <div className="mt-5">
-            <Link to="/admin/dashboard" className="text-warning">
-                Back to Dashboard
-            </Link>
-        </div>
-    );
 
     return (
         <Content>
-            <div className="row">
+             <div className="row">
                 <div className="col-md-8 offset-md-2">
                     {showOrdersLength()}
 
-                    {orders.map((o, oIndex) => {
+                    {orders.map((o, i) => {
                         return (
                             <div
                                 className="mt-5"
-                                key={oIndex}
+                                key={i}
                                 style={{ borderBottom: "5px solid indigo" }}
                             >
                                 <h2 className="mb-5">
@@ -167,7 +158,6 @@ const Orders = () => {
                             </div>
                         );
                     })}
-                    {goBack()}
                 </div>
             </div>
         </Content>

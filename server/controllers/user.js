@@ -1,5 +1,7 @@
 //File Imports
 const User = require("../models/user");
+const { Order } = require("../models/order");
+const { errorHandler } = require("../helpers/dbErrorHandler");
 
 //PARAM ROUTER
 //To finds a specific user 
@@ -23,7 +25,6 @@ exports.read = (req, res) => {
     return res.json(req.profile);
 };
 
-
 //PUT ROUTERS
 //Update user profile
 exports.update = (req, res) => {
@@ -43,7 +44,6 @@ exports.update = (req, res) => {
         }
     );
 };
-
 
 //user order is saved to user table in the history field
 exports.addOrderToUserHistory = (req, res, next) => {
@@ -74,4 +74,18 @@ exports.addOrderToUserHistory = (req, res, next) => {
             next();
         }
     );
+};
+
+exports.purchaseHistory = (req, res) => {
+    Order.find({ user: req.profile._id })
+        .populate("user", "_id name")
+        .sort("-created")
+        .exec((err, orders) => {
+            if (err) {
+                return res.status(400).json({
+                    error: errorHandler(err)
+                });
+            }
+            res.json(orders);
+        });
 };
