@@ -19,8 +19,8 @@ const Card = ({
         return (
             showViewProductButton && (
                 <Link to={`/product/${product._id}`} className="mr-2">
-                    <button className="btn btn-outline-primary mt-2 mb-2">
-                    <i class="fas fa-expand-arrows-alt"></i>
+                    <button className="btn btn-primary mt-2 mb-2">
+                        <i class="fas fa-expand-arrows-alt"></i>
                     </button>
                 </Link>
             )
@@ -44,7 +44,7 @@ const Card = ({
             showAddToCartButton && (
                 <button
                     onClick={addToCart}
-                    className="btn btn-outline-warning mt-2 mb-2"
+                    className="btn btn-warning mt-2 mb-2"
                 >
                  <i class="far fa-shopping-cart"></i>
                 </button>
@@ -104,7 +104,7 @@ const Card = ({
 
     return (
         <div className="card">
-            <div className="card-header name">{product.name}</div>
+            <div className="card-header name badge-primary badge-pill">{product.name}</div>
             <div className="card-body">
                 {shouldRedirect(redirect)}
                 <img src={product.image} alt="Product Image"></img>
