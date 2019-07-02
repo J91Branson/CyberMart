@@ -119,8 +119,6 @@ export const updateOrderStatus = (userId, token, orderId, status) => {
         .catch(err => console.log(err));
 };
 
-<<<<<<< HEAD
-=======
 //update product
 export const updateProduct = (productId, userId, token, product) => {
     return fetch(`/api/product/${productId}/${userId}`, {
@@ -154,4 +152,3 @@ export const deleteProduct = (productId, userId, token) => {
         })
         .catch(err => console.log(err));
 };
->>>>>>> 7b94490353f868aeb5d7b5663b213c5ff14ebe51

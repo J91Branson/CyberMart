@@ -1,3 +1,10 @@
+//I'll go into more detail if anyone wants any, basically we are hooking into google shopping to make it easier/more managable instead of 6 different ajax calls
+// when you go to google shopping and look up a pet project you will get a url like > https://www.google.com/shopping/product/13928493938633545411
+// grab that number after the product and throw it into the scraper with the image url, size (52lb etc), and short description (this is because scraping these is blocked by google)
+//hit the scrape button, boom! - Sean
+
+
+
 //React Package Imports ...hooks for function components
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";

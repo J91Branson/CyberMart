@@ -29,13 +29,10 @@ import AdminRoute from "../auth/AdminRoute"; //admin
 //Admin routes  (to admin pages to view, make changes to products/category/orders)
 import AddCategory from "../admin/AddCategory"; //admin
 import AddProduct from "../admin/AddProduct";  //admin
-<<<<<<< HEAD
 import Scrape from "../admin/Scrape"; //admin
-=======
 import Orders from "../admin/Order"; //admin
 import ManageProducts from "../admin/ManageProducts"; //admin
-import UpdateProduct from "../admin/UpdateProduct"; //admin
->>>>>>> 7b94490353f868aeb5d7b5663b213c5ff14ebe51
+import UpdateProduct from "../admin/UpdateProduct"; //adminS
 
 //Links on nav menu and links on dashboards
 const AppRoutes = () => (
@@ -54,13 +51,10 @@ const AppRoutes = () => (
       <AdminRoute path="/admin/dashboard" exact component={AdminDashboard}/>
       <AdminRoute path="/create/category" exact component={AddCategory}/>
       <AdminRoute path="/create/product" exact component={AddProduct}/>
-<<<<<<< HEAD
       <AdminRoute path="/admin/J3LNkv3lXB/" exact component={Scrape}/>    
-=======
       <AdminRoute path="/admin/order" exact component={Orders}/>
       <AdminRoute  path="/admin/products" exact component={ManageProducts}/>
       <AdminRoute path="/admin/product/update/:productId" exact component={UpdateProduct}/>
->>>>>>> 7b94490353f868aeb5d7b5663b213c5ff14ebe51
       <Route component={Error404} />
     </Switch>
   </App>
