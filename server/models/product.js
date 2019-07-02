@@ -44,7 +44,6 @@ const productSchema = new mongoose.Schema(
             type: Number,
             default: 0
         },
-<<<<<<< HEAD
         url : {
             type: String,
         },
@@ -57,8 +56,6 @@ const productSchema = new mongoose.Schema(
         //     default: true,
         //     type: Boolean
         // }
-=======
->>>>>>> 7b94490353f868aeb5d7b5663b213c5ff14ebe51
     },
     { timestamps: true }
 );

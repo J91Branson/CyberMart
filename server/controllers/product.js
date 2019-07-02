@@ -7,48 +7,7 @@ const fs = require("fs");
 const Product = require("../models/product");
 const { errorHandler } = require("../helpers/dbErrorHandler");
 
-<<<<<<< HEAD
-// To add new product to database
-exports.create = (req, res) => {
-
-    //Handles image import 
-    let form = new formidable.IncomingForm();
-    // form.keepExtensions = true;
-    form.parse(req, (err, fields, files) => {
-
-        //Error handling for image and data field upload
-        if (err) {
-            return res.status(400).json({
-                error: "Image could not be uploaded"
-            });
-        }
-
-        //Variables for each data input for fields
-        // const { name, description, price, category, quantity, image } = fields;
-        // if (!name || !description || !price || !category || !quantity || !image) {
-        //     return res.status(400).json({
-        //         error: "All fields are required"
-        //     });
-        // }
-
-        //Variable to create new Product 
-        let product = new Product(fields);
-
-        //Save new product to database
-        product.save((err, result) => {
-            if (err) {
-                return res.staus(400).json({
-                    error: errorHandler(err)
-                });
-            }
-            res.json(result);
-        });
-    });
-};
-
-=======
 //PARAM ROUTER
->>>>>>> 7b94490353f868aeb5d7b5663b213c5ff14ebe51
 //To finds a specific product
 exports.productById = (req, res, next, id) => {
     Product.findById(id)
@@ -76,45 +35,6 @@ exports.list = (req, res) => {
     let sortBy = req.query.sortBy ? req.query.sortBy : "_id";
     let limit = req.query.limit ? parseInt(req.query.limit) : 6;
 
-<<<<<<< HEAD
-// To update existing product
-exports.update = (req, res) => {
-    let form = new formidable.IncomingForm();
-    // form.keepExtensions = true;
-    form.parse(req, (err, fields, files) => {
-        //Error handling for image and data field upload
-        if (err) {
-            return res.status(400).json({
-                error: "Image could not be uploaded"
-            });
-        }
-
-        //Variables for each data input for fields
-        // const { name, description, price, category, quantity, image } = fields;
-        // if (!name || !description || !price || !category || !quantity || !image) {
-        //     return res.status(400).json({
-        //         error: "All fields are required"
-        //     });
-        // }
-
-        //Variable for existing product and to replace it with new input
-        let product = req.product;
-        product = _.extend(product, fields);
-    });
-};
-
-//Takes returned product output above (excl. image) to deletes it
-exports.remove = (req, res) => {
-    let product = req.product;
-    product.remove((err, deletedProduct) => {
-        if (err) {
-            return res.status(400).json({
-                error: errorHandler(err)
-            });
-        }
-        res.json({
-            message: "Product deleted successfully"
-=======
     Product.find()
         .populate("category")
         .sort([[sortBy, order]])
@@ -126,7 +46,6 @@ exports.remove = (req, res) => {
                 });
             }
             res.json(products);
->>>>>>> 7b94490353f868aeb5d7b5663b213c5ff14ebe51
         });
 };
 
