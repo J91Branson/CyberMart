@@ -5,44 +5,53 @@ import React from "react";
 import Content from "../layouts/Content/Content";
 import { isAuthenticated } from "../auth/apiAuth";
 import { Link } from "react-router-dom";
+import './admin.css';
 
 const AdminDashboard = () => {
     const {
-        user: {name, email, role }
+        user: { name, email, role }
     } = isAuthenticated();
 
     const adminLinks = () => {
         return (
-            <div className="card">
-                <h4 className="card-header">Admin Links</h4>
-                <ul className="list-group">
-                    <li className="list-group-item">
-                        <Link className="nav-link" to="/create/category">
-                            Create Category
+            <div className="card-container2">
+                <div className="cardA card1">
+                    <h4>Admin Links</h4>
+                    <hr className="adminHr1" />
+                    <ul className="list-group">
+                        <li>
+                            <Link className="nav-link" to="/create/category" style={{ color: "white" }}>
+                            <u>Create Category</u>
                         </Link>
-                    </li>
-                    <li className="list-group-item">
-                        <Link className="nav-link" to="/create/product">
-                            Create Product
+                        </li>
+                        <li>
+                            <Link className="nav-link" to="/create/product" style={{ color: "white"}}>
+                            <u>Create Product</u>
                         </Link>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         );
     };
 
     const adminInfo = () => {
         return (
-            <div className="card mb-5">
-                <h3 className="card-header">User Information</h3>
-                <ul className="list-group">
-                    <li className="list-group-item">{name}</li>
-                    <li className="list-group-item">{email}</li>
-                    <li className="list-group-item">
-                        {role === 1 ? "Admin" : "Registered User"}
-                    </li>
-                </ul>
+            <div className="card-container">
+                <div className="cardA card2">
+                    <h3 style={{ color: "white" }}>User Information</h3>
+                    <hr className="adminHr1" />
+                    <ul className="list-group">
+                        <li>{name}</li>
+                        <hr className="adminHr2" />
+                        <li>{email}</li>
+                        <hr className="adminHr2" />
+                        <li>
+                            {role === 1 ? "Admin" : "Registered User"}
+                        </li>
+                    </ul></div>
             </div>
+
         );
     };
 
