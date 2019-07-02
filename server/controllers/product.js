@@ -23,12 +23,12 @@ exports.create = (req, res) => {
         }
 
         //Variables for each data input for fields
-        const { name, description, price, category, quantity, image } = fields;
-        if (!name || !description || !price || !category || !quantity || !image) {
-            return res.status(400).json({
-                error: "All fields are required"
-            });
-        }
+        // const { name, description, price, category, quantity, image } = fields;
+        // if (!name || !description || !price || !category || !quantity || !image) {
+        //     return res.status(400).json({
+        //         error: "All fields are required"
+        //     });
+        // }
 
         //Variable to create new Product 
         let product = new Product(fields);
@@ -80,12 +80,12 @@ exports.update = (req, res) => {
         }
 
         //Variables for each data input for fields
-        const { name, description, price, category, quantity, image } = fields;
-        if (!name || !description || !price || !category || !quantity || !image) {
-            return res.status(400).json({
-                error: "All fields are required"
-            });
-        }
+        // const { name, description, price, category, quantity, image } = fields;
+        // if (!name || !description || !price || !category || !quantity || !image) {
+        //     return res.status(400).json({
+        //         error: "All fields are required"
+        //     });
+        // }
 
         //Variable for existing product and to replace it with new input
         let product = req.product;

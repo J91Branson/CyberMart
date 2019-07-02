@@ -16,17 +16,9 @@ app.get("/scrape/:id", function (req, res) {
       var product = {};
       var arr = [];
       product.name = $("#product-name").text();
-      product.image = $(".sh-div__current").attr("src");
-      product.description = $(".translate-details-content").text();
-      product.size = $(".crbkUb").text();
       product.price = $("#summary-prices")
       .children("span")
       .children("span").text();
-      product.category = $(".Qo4JI")
-      .children()
-      .children()
-      .text();
-      product.url = id;
       product.quantity = getRandomInt(100);
       product.sold = getRandomInt(20);
       $(".os-row").each(function (i, element) {
@@ -44,14 +36,6 @@ app.get("/scrape/:id", function (req, res) {
       });
       product.allPrices = arr;
       return res.json(product);
-      // db.Product.create(product)
-      // .then(function () {
-      //   console.log("posted");
-      // })
-      // .catch(function (err) {
-      //   console.log(err);
-      // });
-      // res.redirect("/");
     });
   });
 

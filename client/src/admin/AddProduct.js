@@ -80,6 +80,10 @@ const AddProduct = () => {
                 if (data.error) {
                     setValues({ ...values, error: data.error });
                 } else {
+                    console.log(formData);
+                    console.log(user._id);
+                    console.log(token);
+                    console.log(data);
                     setValues({
                         ...values,
                         name: "",

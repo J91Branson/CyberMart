@@ -7,8 +7,8 @@ const productSchema = new mongoose.Schema(
     {
         name: {
             type: String,
-            trim: true,
-            required: true,
+            // trim: true,
+            // required: true,
             // maxlength: 32
         },
            image: {
@@ -19,14 +19,14 @@ const productSchema = new mongoose.Schema(
         },
         description: {
             type: String,
-            trim: true,
-            required: true,
+            // trim: true,
+            // required: true,
             // maxlength: 2000
         },
         price: {
             type: String,
-            trim: true,
-            required: true,
+            // trim: true,
+            // required: true,
             maxlength: 32
         },
         category: {

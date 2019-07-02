@@ -11,23 +11,18 @@ import Axios from "axios";
 //Component for admin user to add new products to database 
 const Scraping = () => {
 
-    const { user, token } = isAuthenticated();
-
-    var product = {};
-
     //Hook to 
     const [values, setValues] = useState({
         name: "",
         image: "",
         description: "",
         price: "",
+        size: "",
+        url: "",
+        sold: "",
         categories: [],
         category: "",
         quantity: "",
-        sold: "",
-        url: "",
-        size: "",
-        allPrices: [{}],
         loading: false,
         error: "",
         createdProduct: "",
@@ -35,18 +30,20 @@ const Scraping = () => {
         formData: ""
     });
 
+    const { user, token } = isAuthenticated();
+
     const {
         name,
         image,
         description,
         price,
+        size,
+        sold,
+        url,
+        allPrices,
         categories,
         category,
         quantity,
-        sold,
-        url,
-        size,
-        allPrices,
         loading,
         error,
         createdProduct,
@@ -58,8 +55,8 @@ const Scraping = () => {
     const init = () => {
         getCategories()
             .then(data => {
-                if (data.error) {
-                    setValues({ ...values, error: data.error });
+                if (error) {
+                    setValues({ ...values, error: error });
                 } else {
                     setValues({
                         ...values,
@@ -84,27 +81,23 @@ const Scraping = () => {
 
     const clickSubmit = event => {
         event.preventDefault();
-        var scrape = {};
         Axios.get("/scrape/" + url)
             .then(res => {
-                scrape = res.data;
+                const scrape = res.data;
+                formData.set("price", scrape.price);
+                formData.set("quantity", scrape.quantity);
+                formData.set("sold", scrape.sold);
+                formData.set("allPrices", scrape.allPrices);
+                formData.set("name", res.data.name);
             })
             .catch(function (error) {
                 console.log(error);
             })
             .then(function () {
-                product.name = scrape.name;
-                product.image = values.image;
-                product.description = values.description;
-                product.price = scrape.price;
-                product.category = values.category;
-                product.quantity = scrape.quantity;
-                product.sold = scrape.sold;
-                product.url = values.url;
-                product.allPrices = scrape.allPrices;
+                setValues({ ...values, error: "", loading: true });
             })
             .finally(function () {
-                createProduct(user._id, token, product)
+                createProduct(user._id, token, formData)
                     .then(data => {
                         if (data.error) {
                             setValues({ ...values, error: data.error });
@@ -116,129 +109,126 @@ const Scraping = () => {
                                 description: "",
                                 price: "",
                                 quantity: "",
-                                sold: "",
-                                url: "",
-                                size: "",
                                 loading: false,
-                                createdProduct: data.name,
-                                formData: ""
+                                createdProduct: data.name
                             });
                         }
-                    });
-            });
+                    })
+            })
 
-    };
+        };
 
-    const newPostForm = () => (
-        <form className="mb-3" onSubmit={clickSubmit}>
+        const newPostForm = () => (
 
-            <div className="form-group">
-                <label className="text-muted">Url Code</label>
-                <input
-                    onChange={handleChange("url")}
-                    type="text"
-                    className="form-control"
-                    value={url}
-                />
-            </div>
+            <form className="mb-3" onSubmit={clickSubmit}>
 
-            <div className="form-group">
-                <label className="text-muted">Image Url</label>
-                <input
-                    onChange={handleChange("image")}
-                    type="text"
-                    className="form-control"
-                    value={image}
-                />
-            </div>
+                <div className="form-group">
+                    <label className="text-muted">Url Code</label>
+                    <input
+                        onChange={handleChange("url")}
+                        type="text"
+                        className="form-control"
+                        value={url}
+                    />
+                </div>
 
-            <div className="form-group">
-                <label className="text-muted">Size</label>
-                <input
-                    onChange={handleChange("size")}
-                    type="text"
-                    className="form-control"
-                    value={size}
-                />
-            </div>
+                <div className="form-group">
+                    <label className="text-muted">Image Url</label>
+                    <input
+                        onChange={handleChange("image")}
+                        type="text"
+                        className="form-control"
+                        value={image}
+                    />
+                </div>
 
-            <div className="form-group">
-                <label className="text-muted">Description</label>
-                <input
-                    onChange={handleChange("description")}
-                    type="text"
-                    className="form-control"
-                    value={description}
-                />
-            </div>
+                <div className="form-group">
+                    <label className="text-muted">Size</label>
+                    <input
+                        onChange={handleChange("size")}
+                        type="text"
+                        className="form-control"
+                        value={size}
+                    />
+                </div>
 
-            <div className="form-group">
-                <label className="text-muted">Category</label>
-                <select
-                    onChange={handleChange("category")}
-                    className="form-control"
-                >
-                    <option>Please select ...</option>
-                    {categories &&
-                        categories.map((c, i) => (
-                            <option key={i} value={c._id}>
-                                {c.name}
-                            </option>
-                        ))}
-                </select>
-            </div>
+                <div className="form-group">
+                    <label className="text-muted">Description</label>
+                    <input
+                        onChange={handleChange("description")}
+                        type="text"
+                        className="form-control"
+                        value={description}
+                    />
+                </div>
 
-            <button className="btn btn-outline-primary">Scrape Product</button>
+                <div className="form-group">
+                    <label className="text-muted">Category</label>
+                    <select
+                        onChange={handleChange("category")}
+                        className="form-control"
+                    >
+                        <option>Please select ...</option>
+                        {categories &&
+                            categories.map((c, i) => (
+                                <option key={i} value={c._id}>
+                                    {c.name}
+                                </option>
+                            ))}
+                    </select>
+                </div>
 
-        </form>
-    );
+                <button className="btn btn-outline-primary">Scrape Product</button>
 
-    const showError = () => (
-        <div
-            className="alert alert-danger"
-            style={{ display: error ? "" : "none" }}
-        >
-            {error}
-        </div>
-    );
+            </form>
+        );
 
-    const showSuccess = () => (
-        <div
-            className="alert alert-info"
-            style={{ display: createdProduct ? "" : "none" }}
-        >
-            <h2>{`${createdProduct}`} is created!</h2>
-        </div>
-    );
-
-    const showLoading = () =>
-        loading && (
-            <div className="alert alert-success">
-                <h2>Loading...</h2>
+        const showError = () => (
+            <div
+                className="alert alert-danger"
+                style={{ display: error ? "" : "none" }}
+            >
+                {error}
             </div>
         );
 
-    const goBack = () => (
-        <div className="mt-5">
-            <Link to="/admin/dashboard" className="text-warning">
-                Back to Dashboard
-            </Link>
-        </div>
-    );
-
-    return (
-        <Content>
-            <div className="row">
-                <div className="col-md-8 offset-md-2">
-                    {showLoading()}
-                    {showSuccess()}
-                    {showError()}
-                    {newPostForm()}
-                    {goBack()}
-                </div>
+        const showSuccess = () => (
+            <div
+                className="alert alert-info"
+                style={{ display: createdProduct ? "" : "none" }}
+            >
+                <h2>{`${createdProduct}`} is created!</h2>
             </div>
-        </Content>
-    );
-};
+        );
 
-export default Scraping;
+        const showLoading = () =>
+            loading && (
+                <div className="alert alert-success">
+                    <h2>Loading...</h2>
+                </div>
+            );
+
+        const goBack = () => (
+            <div className="mt-5">
+                <Link to="/admin/dashboard" className="text-warning">
+                    Back to Dashboard
+            </Link>
+            </div>
+        );
+
+        return (
+            <Content>
+                <div className="row">
+                    <div className="col-md-8 offset-md-2">
+                        {showLoading()}
+                        {showSuccess()}
+                        {showError()}
+                        {newPostForm()}
+                        {goBack()}
+                    </div>
+                </div>
+            </Content>
+        );
+    };
+
+    export default Scraping;
