@@ -11,10 +11,7 @@ import { getPurchaseHistory } from "./apiUser";
 
 const Dashboard = () => {
     const [history, setHistory] = useState([]);
-
-    const {
-        user: { _id, name, email, role }
-    } = isAuthenticated();
+    const {user: { _id, name, email, role }} = isAuthenticated();
     const token = isAuthenticated().token;
 
     const init = (userId, token) => {
@@ -34,45 +31,55 @@ const Dashboard = () => {
 
     const userLinks = () => {
         return (
-            <div className="card">
-                <h4 className="card-header">User Links</h4>
-                <ul className="list-group">
-                    <li className="list-group-item">
-                        <Link className="nav-link" to="/cart">
-                            My Cart
+            <div className="card-container3">
+                <div className="cardA card1">
+                    <h4>User Links</h4>
+                    <hr className="adminHr1" />
+                    <ul className="list-group">
+                       <li className="list-group-item">
+                        <Link className="nav-link" to="/cart" style={{ color: "white" }>
+                            <u>My Cart</u>
+                        </Link>
+                      </li>
+                       <li className="list-group-item">
+                        <Link className="nav-link" style={{ color: "white" } to={`/profile/${_id}`}>
+                            <u>Update Profile</u>
                         </Link>
                     </li>
-                    <li className="list-group-item">
-                        <Link className="nav-link" to={`/profile/${_id}`}>
-                            Update Profile
-                        </Link>
-                    </li>
-                </ul>
+                    </ul>
+                </div>
             </div>
         );
     };
 
     const userInfo = () => {
         return (
-            <div className="card mb-5">
-                <h3 className="card-header">User Information</h3>
-                <ul className="list-group">
-                    <li className="list-group-item">{name}</li>
-                    <li className="list-group-item">{email}</li>
-                    <li className="list-group-item">
-                        {role === 1 ? "Admin" : "Registered User"}
-                    </li>
-                </ul>
+            <div className="card-container1">
+                <div className="cardA card2 mb-5">
+                    <h3>User Information</h3>
+                    <hr className="adminHr1" />
+                    <ul className="list-group">
+                        <li>{name}</li>
+                        <hr className="adminHr2" />
+                        <li>{email}</li>
+                        <hr className="adminHr2" />
+                        <li>
+                            {role === 1 ? "Admin" : "Registered User"}
+                        </li>
+                    </ul>
+                </div>
             </div>
         );
     };
 
     const purchaseHistory = history => {
         return (
-            <div className="card mb-5">
-                <h3 className="card-header">Purchase history</h3>
-                <ul className="list-group">
-                    <li className="list-group-item">
+            <div className="card-container4">
+                <div className="cardA card2 mb-5">
+                    <h3>Purchase history</h3>
+                    <hr className="adminHr1" />
+                    <ul className="list-group">
+                      <li className="list-group-item">
                         {history.map((h, i) => {
                             return (
                                 <div>
@@ -94,10 +101,11 @@ const Dashboard = () => {
                                         );
                                     })}
                                 </div>
-                            );
-                        })}
-                    </li>
-                </ul>
+                              );
+                          })}
+                      </li>
+                    </ul>
+                </div>
             </div>
         );
     };

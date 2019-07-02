@@ -70,18 +70,18 @@ const Menu = ({ history }) => (
         {!isAuthenticated() && (
           <Fragment>
             <li className="nav-item active">
-              <Link className="nav-link" style={isActive(history, "/signin")} to="/signin"><button className="login_btn btn">Log In</button></Link>
+              <Link className="nav-link" style={isActive(history, "/signin")} to="/signin"><button className="login_btn btn btn-primary">Log In</button></Link>
             </li>
 
             <li className="nav-item active">
-              <Link className="nav-link" style={isActive(history, "/signup")} to="/signup"><button className="login_btn btn">Sign Up</button></Link>
+              <Link className="nav-link" style={isActive(history, "/signup")} to="/signup"><button className="login_btn btn btn-primary">Sign Up</button></Link>
             </li>
           </Fragment>
         )}
 
         {isAuthenticated() && (
           <li className="nav-item active ml-auto">
-            <button className="login_btn btn"><span
+            <button className="login_btn btn btn-primary"><span
               style={{ cursor: "pointer", color: "#000000" }}
               onClick={() =>
                 signout(() => {
