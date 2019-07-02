@@ -21,26 +21,26 @@ const AdminDashboard = () => {
                     <ul className="list-group">
                         <li>
                             <Link className="nav-link" to="/create/category" style={{ color: "white" }}>
-                            <u>Create Category</u>
-                        </Link>
+                                <u>Create Category</u>
+                            </Link>
                         </li>
                         <li>
-                            <Link className="nav-link" to="/create/product" style={{ color: "white"}}>
-                            <u>Create Product</u>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link className="nav-link" to="/admin/order">
-                            View Orders
-                        </Link>
-                    </li>
-                    <li className="list-group-item">
-                        <Link className="nav-link" to="/admin/products">
-                            Manage Products
-                        </Link>
-                    </li>
-                </ul>
-            </div>
+                            <Link className="nav-link" to="/create/product" style={{ color: "white" }}>
+                                <u>Create Product</u>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link className="nav-link" to="/admin/order" style={{ color: "white" }}>
+                                <u>View Orders</u>
+                            </Link>
+                        </li>
+                        <li className="list-group-item">
+                            <Link className="nav-link" to="/admin/products" style={{ color: "white" }}>
+                                <u>Manage Products</u>
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
             </div>
         );
     };
