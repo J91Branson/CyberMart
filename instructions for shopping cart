@@ -1,6 +1,0 @@
-after the cart has an item added the scrape will run and get the highest price and lowest price, the highest price will be displayed and get
-a line through it then the lowest price will be shown in red and that is the price they will pay, they can add or remove items with the
-pus and minus buttons or remove all of an item with the x. After changes happen the price will be calculated, in summary it will display
-the amount of products in their order , calculate the fee for using the site, and show a total. they can then pay with any payment method
-on  the checkout . After they submit payment they will be asked where to ship the products they have in their cart. After this they will be
-given a receipt.

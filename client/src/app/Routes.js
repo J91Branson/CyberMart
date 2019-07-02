@@ -10,8 +10,8 @@ import Home from '../pages/Home/Home';  //Home page
 import About from '../pages/About/About'; //About page
 import Contact from '../pages/Contact/Contact'; //Contact page
 import Shop from '../product/Shop'; //Product page
-import Product from "../product/Product";
-import Cart from "../cart/Cart";
+import Product from "../product/Product"; //customer
+import Cart from "../cart/Cart"; //customer
 import Error404 from '../pages/Error/404'; //Error page
 
 //User routes
@@ -19,15 +19,23 @@ import Signup from '../user/Signup';  //customer
 import Signin from '../user/Signin';  //customer/admin
 import Dashboard from "../user/UserDashboard"; //customer
 import AdminDashboard from "../user/AdminDashboard"; //admin
+import Profile from "../user/Profile"; //customer
+
 
 //Authentication routes
 import PrivateRoute from "../auth/PrivateRoute";  //customer
 import AdminRoute from "../auth/AdminRoute"; //admin
 
-//Admin routes  (to admin pages to make changes to products and category)
+//Admin routes  (to admin pages to view, make changes to products/category/orders)
 import AddCategory from "../admin/AddCategory"; //admin
 import AddProduct from "../admin/AddProduct";  //admin
+<<<<<<< HEAD
 import Scrape from "../admin/Scrape"; //admin
+=======
+import Orders from "../admin/Order"; //admin
+import ManageProducts from "../admin/ManageProducts"; //admin
+import UpdateProduct from "../admin/UpdateProduct"; //admin
+>>>>>>> 7b94490353f868aeb5d7b5663b213c5ff14ebe51
 
 //Links on nav menu and links on dashboards
 const AppRoutes = () => (
@@ -42,10 +50,17 @@ const AppRoutes = () => (
       <Route path="/signin" exact component={Signin} />
       <Route path="/signup" exact component={Signup} />
       <PrivateRoute path="/user/dashboard" exact component={Dashboard}/>
+      <PrivateRoute path="/profile/:userId" exact component={Profile}/>
       <AdminRoute path="/admin/dashboard" exact component={AdminDashboard}/>
       <AdminRoute path="/create/category" exact component={AddCategory}/>
       <AdminRoute path="/create/product" exact component={AddProduct}/>
+<<<<<<< HEAD
       <AdminRoute path="/admin/J3LNkv3lXB/" exact component={Scrape}/>    
+=======
+      <AdminRoute path="/admin/order" exact component={Orders}/>
+      <AdminRoute  path="/admin/products" exact component={ManageProducts}/>
+      <AdminRoute path="/admin/product/update/:productId" exact component={UpdateProduct}/>
+>>>>>>> 7b94490353f868aeb5d7b5663b213c5ff14ebe51
       <Route component={Error404} />
     </Switch>
   </App>

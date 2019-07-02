@@ -2,8 +2,9 @@
 import queryString from "query-string";
 
 //GET METHODS
+//route to display all products
 export const getProducts = sortBy => {
-    return fetch(`api/products?sortBy=${sortBy}&order=desc&limit=4`, {
+    return fetch(`/api/products?sortBy=${sortBy}&order=desc&limit=4`, {
         method: "GET"
     })
         .then(response => {

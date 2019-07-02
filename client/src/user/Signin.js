@@ -43,8 +43,8 @@ const Signin = () => {
     const signInForm = () => (
         <div className="row signInF">
         <div className="col-md-6 col-sm-6">
-            <div className="card signInC  swing-in-left-bck">
-                <div className="card-header signInH text-center">
+            <div className="cardA card2 signInC  swing-in-left-bck">
+                <div className="signInH text-center">
                     <h3>Sign In</h3>
                 </div>
                 <div className="card-body">
@@ -81,8 +81,8 @@ const Signin = () => {
             </div>
         </div>
         <div className="col-md-6 col-sm-6">
-            <div className="card signInC  swing-in-right-bck">
-                <div className="card-header signInH text-center">
+            <div className="cardA card2 signInC  swing-in-right-bck">
+                <div className="signInH text-center">
                     <h3>New Customer?</h3>
                 </div>
                 <div className="card-body">
@@ -117,7 +117,7 @@ const Signin = () => {
             if (user && user.role === 1) {
                 return <Redirect to="/admin/dashboard" />;
             } else {
-                return <Redirect to="/user/dashboard" />;
+                return <Redirect to="/shop" />;
             }
         }
         if (isAuthenticated()) {

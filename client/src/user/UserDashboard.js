@@ -1,72 +1,123 @@
 // Import React Packages
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import moment from "moment";
 
 // Import Files/Components
 import Content from "../layouts/Content/Content";
 import { isAuthenticated } from "../auth/apiAuth";
+import { getPurchaseHistory } from "./apiUser";
 
 
 const Dashboard = () => {
-    const {
-        user: {name, email, role }
-    } = isAuthenticated();
+    const [history, setHistory] = useState([]);
+    const {user: { _id, name, email, role }} = isAuthenticated();
+    const token = isAuthenticated().token;
+
+    const init = (userId, token) => {
+        getPurchaseHistory(userId, token).then(data => {
+            if (data.error) {
+                console.log(data.error);
+            } else {
+                setHistory(data);
+            }
+        });
+    };
+
+    useEffect(() => {
+        init(_id, token);
+    }, []);
+
 
     const userLinks = () => {
         return (
-            <div className="card">
-                <h4 className="card-header">User Links</h4>
-                <ul className="list-group">
-                    <li className="list-group-item">
-                        <Link className="nav-link" to="/cart">
-                            My Cart
+            <div className="card-container3">
+                <div className="cardA card1">
+                    <h4>User Links</h4>
+                    <hr className="adminHr1" />
+                    <ul className="list-group">
+                       <li className="list-group-item">
+                        <Link className="nav-link" to="/cart" style={{ color: "white" }>
+                            <u>My Cart</u>
+                        </Link>
+                      </li>
+                       <li className="list-group-item">
+                        <Link className="nav-link" style={{ color: "white" } to={`/profile/${_id}`}>
+                            <u>Update Profile</u>
                         </Link>
                     </li>
-                    <li className="list-group-item">
-                        <Link className="nav-link" to="/profile/update">
-                            Update Profile
-                        </Link>
-                    </li>
-                </ul>
+                    </ul>
+                </div>
             </div>
         );
     };
 
     const userInfo = () => {
         return (
-            <div className="card mb-5">
-                <h3 className="card-header">User Information</h3>
-                <ul className="list-group">
-                    <li className="list-group-item">{name}</li>
-                    <li className="list-group-item">{email}</li>
-                    <li className="list-group-item">
-                        {role === 1 ? "Admin" : "Registered User"}
-                    </li>
-                </ul>
+            <div className="card-container1">
+                <div className="cardA card2 mb-5">
+                    <h3>User Information</h3>
+                    <hr className="adminHr1" />
+                    <ul className="list-group">
+                        <li>{name}</li>
+                        <hr className="adminHr2" />
+                        <li>{email}</li>
+                        <hr className="adminHr2" />
+                        <li>
+                            {role === 1 ? "Admin" : "Registered User"}
+                        </li>
+                    </ul>
+                </div>
             </div>
         );
     };
 
-    const purchaseHistory = () => {
+    const purchaseHistory = history => {
         return (
-            <div className="card mb-5">
-                <h3 className="card-header">Purchase history</h3>
-                <ul className="list-group">
-                    <li className="list-group-item">history</li>
-                </ul>
+            <div className="card-container4">
+                <div className="cardA card2 mb-5">
+                    <h3>Purchase history</h3>
+                    <hr className="adminHr1" />
+                    <ul className="list-group">
+                      <li className="list-group-item">
+                        {history.map((h, i) => {
+                            return (
+                                <div>
+                                    <hr />
+                                    {h.products.map((p, i) => {
+                                        return (
+                                            <div key={i}>
+                                                <h6>Product name: {p.name}</h6>
+                                                <h6>
+                                                    Product price: ${p.price}
+                                                </h6>
+                                                <h6>
+                                                    Purchased date:{" "}
+                                                    {moment(
+                                                        p.createdAt
+                                                    ).fromNow()}
+                                                </h6>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                              );
+                          })}
+                      </li>
+                    </ul>
+                </div>
             </div>
         );
     };
+
 
     return (
         <Content className="container-fluid">
             <div className="row">
-                <div className="col-3">
-                    {userLinks()}
-                </div>
+                <div className="col-3">{userLinks()}</div>
                 <div className="col-9">
                     {userInfo()}
-                    {purchaseHistory()}
+                    {purchaseHistory(history)}
                 </div>
             </div>
         </Content>

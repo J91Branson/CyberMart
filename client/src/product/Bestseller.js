@@ -15,13 +15,14 @@ const Bestseller = () => {
 
     // Uses sold count from database to render bestsellers
     const loadProductsBySell = () => {
-        getProducts("sold").then(data => {
-            if (data.error) {
-                setError(data.error);
-            } else {
-                setProductsBySell(data);
-            }
-        });
+        getProducts("sold")
+            .then(data => {
+                if (data.error) {
+                    setError(data.error);
+                } else {
+                    setProductsBySell(data);
+                }
+            });
     };
 
     //Mount hook
@@ -29,10 +30,10 @@ const Bestseller = () => {
         loadProductsBySell();
     }, []);
 
-     // Page render
+    // Page render
     return (
         <Content className="container-fluid">
-            <h2 className="mb-4">Best Sellers for X</h2>
+            <h2 className="mb-4">Best Sellers</h2>
             <div className="row">
                 {productsBySell.map((product, i) => (
                     <div key={i} className="col-3 mb-3">

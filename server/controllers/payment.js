@@ -2,9 +2,6 @@
 const braintree = require("braintree");
 require("dotenv").config();
 
-//File Imports
-// const User = require("../models/user");
-
 //Connect to Braintree gateway using API keys
 const gateway = braintree.connect({
     environment: braintree.Environment.Sandbox,
@@ -13,6 +10,7 @@ const gateway = braintree.connect({
     privateKey: process.env.BRAINTREE_PRIVATE_KEY
 });
 
+//GET ROUTERS
 //Create token using Braintree gateway
 exports.generateToken = (req, res) => {
     gateway.clientToken.generate({}, function (err, response) {
@@ -24,12 +22,13 @@ exports.generateToken = (req, res) => {
     });
 };
 
+//POST ROUTERS
 //process payment using Braintree gateway
 exports.processPayment = (req, res) => {
     let nonceFromTheClient = req.body.paymentMethodNonce;
     let amountFromTheClient = req.body.amount;
     // charge
-    let newTransaction = gateway.transaction.sale(
+    gateway.transaction.sale(
         {
             amount: amountFromTheClient,
             paymentMethodNonce: nonceFromTheClient,

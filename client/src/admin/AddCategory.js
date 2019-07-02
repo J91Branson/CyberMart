@@ -1,10 +1,10 @@
-//React Package Imports ...hooks for function components
+//Import Package
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 // Import Files/Components
 import Content from "../layouts/Content/Content";
 import { isAuthenticated } from "../auth/apiAuth";
-import { Link } from "react-router-dom";
 import { createCategory } from "./apiAdmin";
 
 //Component for admin user to add new category to database 
@@ -34,7 +34,7 @@ const AddCategory = () => {
         });
     };
 
-    const newCategoryFom = () => (
+    const newCategoryForm = () => (
         <form onSubmit={clickSubmit}>
             <div className="form-group">
                 <label className="text-muted">Please enter new Category Name</label>
@@ -77,7 +77,7 @@ const AddCategory = () => {
                 <div className="col-md-8 offset-md-2">
                     {showSuccess()}
                     {showError()}
-                    {newCategoryFom()}
+                    {newCategoryForm()}
                     {goBack()}
                 </div>
             </div>

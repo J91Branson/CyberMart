@@ -45,6 +45,14 @@ const Cart = () => {
         </h2>
     );
 
+    const goBack = () => (
+        <div className="mt-5">
+            <Link to="/shop" className="text-warning">
+                Back to shopping page
+            </Link>
+        </div>
+    );
+
     // Page render
     return (
         <Content className="container-fluid">
@@ -59,6 +67,7 @@ const Cart = () => {
                     <Checkout products={items} />
                 </div>
             </div>
+            {goBack()}
         </Content >
     );
 };

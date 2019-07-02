@@ -1,6 +1,4 @@
-
 //GET METHODS
-
 //Route to sign out current user (admin or customer)
 //removes token from local storage
 export const signout = next => {
@@ -18,7 +16,6 @@ export const signout = next => {
 };
 
 //POST METHODS
-
 //Route to sign up new user as customer
 export const signup = user => {
     return fetch("/api/signup", {
@@ -55,7 +52,7 @@ export const signin = user => {
         });
 };
 
-//TOKEN related function
+//TOKEN STORAGE
 //saves token to local storage
 export const authenticate = (data, next) => {
     if (typeof window !== "undefined") {

@@ -43,8 +43,8 @@ const Signup = () => {
     const signUpForm = () => (
         <div className="row signInF">
         <div className="col-md-6 col-sm-6">
-            <div className="card signInC  swing-in-left-bck">
-                <div className="card-header signInH text-center">
+            <div className="cardA card2 signInC swing-in-left-bck">
+                <div className="text-center">
                     <h3>Sign Up</h3>
                 </div>
                 <div className="card-body">
@@ -92,8 +92,8 @@ const Signup = () => {
             </div>
         </div>
         <div className="col-md-6 col-sm-6">
-            <div className="card signInC  swing-in-right-bck">
-                <div className="card-header signInH text-center">
+            <div className="cardA card2 signInC swing-in-right-bck">
+                <div className="text-center">
                     <h3>Already a Customer?</h3>
                 </div>
                 <div className="card-body">

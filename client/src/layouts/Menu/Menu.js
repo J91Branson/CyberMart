@@ -16,6 +16,8 @@ const isActive = (history, path) => {
 };
 
 
+
+
 const Menu = ({ history }) => (
   <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <a className="navbar-brand" href="/">CyberMart</a>
@@ -35,19 +37,6 @@ const Menu = ({ history }) => (
           <Link className="nav-link" style={isActive(history, "/shop")} to="/shop">Shop</Link>
         </li>
 
-        <li className="nav-item">
-                <Link
-                    className="nav-link"
-                    style={isActive(history, "/cart")}
-                    to="/cart"
-                >
-                    Cart{" "}
-                    <sup>
-                        <small className="cart-badge">{itemTotal()}</small>
-                    </sup>
-                </Link>
-            </li>
-      
         {/* button links */}
         {isAuthenticated() && isAuthenticated().user.role === 0 && (
           <li className="nav-item active">
@@ -61,22 +50,38 @@ const Menu = ({ history }) => (
           </li>
         )}
       </ul>
+
       <ul className="navbar-nav ml-auto">
+        {isAuthenticated() && isAuthenticated().user.role === 0 && (
+          <li className="nav-item">
+            <Link
+              className="nav-link"
+              style={isActive(history, "/cart")}
+              to="/cart"
+            >
+              <i className="fas fa-shopping-cart" style={{ color: "black" }}></i>{" "}
+              <sup>
+                <small className="cart-badge">{itemTotal()}</small>
+              </sup>
+            </Link>
+          </li>
+        )}
+
         {!isAuthenticated() && (
           <Fragment>
             <li className="nav-item active">
-              <Link className="nav-link" style={isActive(history, "/signin")} to="/signin"><button className="login_btn btn">Log In</button></Link>
+              <Link className="nav-link" style={isActive(history, "/signin")} to="/signin"><button className="login_btn btn btn-primary">Log In</button></Link>
             </li>
 
             <li className="nav-item active">
-              <Link className="nav-link" style={isActive(history, "/signup")} to="/signup"><button className="login_btn btn">Sign Up</button></Link>
+              <Link className="nav-link" style={isActive(history, "/signup")} to="/signup"><button className="login_btn btn btn-primary">Sign Up</button></Link>
             </li>
           </Fragment>
         )}
 
         {isAuthenticated() && (
           <li className="nav-item active ml-auto">
-            <button className="login_btn btn"><span
+            <button className="login_btn btn btn-primary"><span
               style={{ cursor: "pointer", color: "#000000" }}
               onClick={() =>
                 signout(() => {
