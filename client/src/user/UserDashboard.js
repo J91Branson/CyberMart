@@ -11,7 +11,7 @@ import { getPurchaseHistory } from "./apiUser";
 
 const Dashboard = () => {
     const [history, setHistory] = useState([]);
-    const {user: { _id, name, email, role }} = isAuthenticated();
+    const { user: { _id, name, email, role } } = isAuthenticated();
     const token = isAuthenticated().token;
 
     const init = (userId, token) => {
@@ -31,21 +31,21 @@ const Dashboard = () => {
 
     const userLinks = () => {
         return (
-            <div className="card-container3">
+            <div className="card-container2">
                 <div className="cardA card1">
-                    <h4>User Links</h4>
+                    <h4>Admin Links</h4>
                     <hr className="adminHr1" />
                     <ul className="list-group">
-                       <li className="list-group-item">
-                        <Link className="nav-link" to="/cart" style={{ color: "white" }>
-                            <u>My Cart</u>
-                        </Link>
-                      </li>
-                       <li className="list-group-item">
-                        <Link className="nav-link" style={{ color: "white" } to={`/profile/${_id}`}>
-                            <u>Update Profile</u>
-                        </Link>
-                    </li>
+                        <li>
+                            <Link className="nav-link" to="/cart" style={{ color: "white" }}>
+                                <u>My Cart</u>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link className="nav-link" style={{ color: "white" }} to={`/profile/${_id}`}>
+                                <u>Update Profile</u>
+                            </Link>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -79,31 +79,31 @@ const Dashboard = () => {
                     <h3>Purchase history</h3>
                     <hr className="adminHr1" />
                     <ul className="list-group">
-                      <li className="list-group-item">
-                        {history.map((h, i) => {
-                            return (
-                                <div>
-                                    <hr />
-                                    {h.products.map((p, i) => {
-                                        return (
-                                            <div key={i}>
-                                                <h6>Product name: {p.name}</h6>
-                                                <h6>
-                                                    Product price: ${p.price}
-                                                </h6>
-                                                <h6>
-                                                    Purchased date:{" "}
-                                                    {moment(
-                                                        p.createdAt
-                                                    ).fromNow()}
-                                                </h6>
-                                            </div>
-                                        );
-                                    })}
-                                </div>
-                              );
-                          })}
-                      </li>
+                        <li>
+                            {history.map((h, i) => {
+                                return (
+                                    <div>
+                                        <hr />
+                                        {h.products.map((p, i) => {
+                                            return (
+                                                <div key={i}>
+                                                    <h6>Product name: {p.name}</h6>
+                                                    <h6>
+                                                        Product price: ${p.price}
+                                                    </h6>
+                                                    <h6>
+                                                        Purchased date:{" "}
+                                                        {moment(
+                                                            p.createdAt
+                                                        ).fromNow()}
+                                                    </h6>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                );
+                            })}
+                        </li>
                     </ul>
                 </div>
             </div>
