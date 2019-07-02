@@ -10,11 +10,11 @@ import { createProduct, getCategories } from "./apiAdmin";
 //Component for admin user to add new products to database 
 const AddProduct = () => {
 
-    //Hook to 
+    // Status Hooks
     const [values, setValues] = useState({
         name: "",
-        image: "",
         description: "",
+        image: "",
         price: "",
         categories: [],
         category: "",
@@ -30,8 +30,8 @@ const AddProduct = () => {
 
     const {
         name,
-        image,
         description,
+        image,
         price,
         categories,
         category,
@@ -59,8 +59,7 @@ const AddProduct = () => {
             });
     };
 
-    //Using react hook to send all form input to server 
-    //The above FormData() object will be populated with the form's current keys/values using the name property of each element for the keys and their submitted value for the values.
+   //Mount Hook
     useEffect(() => {
         init();
     }, []);
@@ -83,8 +82,8 @@ const AddProduct = () => {
                     setValues({
                         ...values,
                         name: "",
-                        image: "",
                         description: "",
+                        image: "",
                         price: "",
                         quantity: "",
                         loading: false,
@@ -94,7 +93,7 @@ const AddProduct = () => {
             });
     };
 
-    const newPostForm = () => (
+    const newProductForm = () => (
         <form className="mb-3" onSubmit={clickSubmit}>
 
             <div className="form-group">
@@ -151,18 +150,6 @@ const AddProduct = () => {
                 </select>
             </div>
 
-            {/* <div className="form-group">
-                <label className="text-muted">Shipping</label>
-                <select
-                    onChange={handleChange("shipping")}
-                    className="form-control"
-                >
-                    <option>Please select ...</option>
-                    <option value="0">No</option>
-                    <option value="1">Yes</option>
-                </select>
-            </div> */}
-
             <div className="form-group">
                 <label className="text-muted">Quantity</label>
                 <input
@@ -172,18 +159,6 @@ const AddProduct = () => {
                     value={quantity}
                 />
             </div>
-
-            {/* <p>Insert Image</p>
-            <div className="form-group">
-                <label className="btn btn-secondary">
-                    <input
-                        onChange={handleChange("image")}
-                        type="file"
-                        name="image"
-                        accept="image/*"
-                    />
-                </label>
-            </div> */}
 
             <button className="btn btn-outline-primary">Create Product</button>
         </form>
@@ -229,7 +204,7 @@ const AddProduct = () => {
                     {showLoading()}
                     {showSuccess()}
                     {showError()}
-                    {newPostForm()}
+                    {newProductForm()}
                     {goBack()}
                 </div>
             </div>

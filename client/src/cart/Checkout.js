@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import DropIn from "braintree-web-drop-in-react";
 
 //Import Files/Components
-
 import { isAuthenticated } from "../auth/apiAuth";
 import { getBraintreeClientToken, processPayment, createOrder } from "../cart/apiCheckout";
 import { emptyCart } from "../cart/cartStorage";
@@ -53,7 +52,7 @@ const Checkout = ({ products }) => {
             <div>{showDropIn()}</div>
         ) : (
             <Link to="/signin">
-                <button className="btn btn-primary login_btn">Sign in to checkout</button>
+                <button className="btn btn-primary">Sign in to checkout</button>
             </Link>
         );
     };
@@ -84,6 +83,8 @@ const Checkout = ({ products }) => {
 
                 processPayment(userId, token, paymentData)
                     .then(response => {
+                        console.log(response);
+     
                         const createOrderData = {
                             products: products,
                             transaction_id: response.transaction.id,
@@ -94,8 +95,13 @@ const Checkout = ({ products }) => {
                         createOrder(userId, token, createOrderData)
                             .then(response => {
                                 emptyCart(() => {
-                                    console.log("payment success and empty cart");
-                                    setData({ loading: false, success: true });
+                                    console.log(
+                                        "payment success and empty cart"
+                                    );
+                                    setData({
+                                        loading: false,
+                                        success: true
+                                    });
                                 });
                             })
                             .catch(error => {
@@ -118,7 +124,7 @@ const Checkout = ({ products }) => {
         <div onBlur={() => setData({ ...data, error: "" })}>
             {data.clientToken !== null && products.length > 0 ? (
                 <div>
-                    <div className="gorm-group mb-3">
+                    <div className="form-group mb-3">
                         <label className="text-muted">Delivery address:</label>
                         <textarea
                             onChange={handleAddress}

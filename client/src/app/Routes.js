@@ -19,6 +19,8 @@ import Signup from '../user/Signup';  //customer
 import Signin from '../user/Signin';  //customer/admin
 import Dashboard from "../user/UserDashboard"; //customer
 import AdminDashboard from "../user/AdminDashboard"; //admin
+import Profile from "../user/Profile"; //customer
+
 
 //Authentication routes
 import PrivateRoute from "../auth/PrivateRoute";  //customer
@@ -28,6 +30,8 @@ import AdminRoute from "../auth/AdminRoute"; //admin
 import AddCategory from "../admin/AddCategory"; //admin
 import AddProduct from "../admin/AddProduct";  //admin
 import Orders from "../admin/Order"; //admin
+import ManageProducts from "../admin/ManageProducts"; //admin
+import UpdateProduct from "../admin/UpdateProduct"; //admin
 
 //Links on nav menu and links on dashboards
 const AppRoutes = () => (
@@ -42,10 +46,13 @@ const AppRoutes = () => (
       <Route path="/signin" exact component={Signin} />
       <Route path="/signup" exact component={Signup} />
       <PrivateRoute path="/user/dashboard" exact component={Dashboard}/>
+      <PrivateRoute path="/profile/:userId" exact component={Profile}/>
       <AdminRoute path="/admin/dashboard" exact component={AdminDashboard}/>
       <AdminRoute path="/create/category" exact component={AddCategory}/>
       <AdminRoute path="/create/product" exact component={AddProduct}/>
       <AdminRoute path="/admin/order" exact component={Orders}/>
+      <AdminRoute  path="/admin/products" exact component={ManageProducts}/>
+      <AdminRoute path="/admin/product/update/:productId" exact component={UpdateProduct}/>
       <Route component={Error404} />
     </Switch>
   </App>
