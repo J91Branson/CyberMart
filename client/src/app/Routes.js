@@ -27,6 +27,7 @@ import AdminRoute from "../auth/AdminRoute"; //admin
 //Admin routes  (to admin pages to make changes to products and category)
 import AddCategory from "../admin/AddCategory"; //admin
 import AddProduct from "../admin/AddProduct";  //admin
+import Scrape from "../admin/Scrape"; //admin
 
 //Links on nav menu and links on dashboards
 const AppRoutes = () => (
@@ -44,7 +45,7 @@ const AppRoutes = () => (
       <AdminRoute path="/admin/dashboard" exact component={AdminDashboard}/>
       <AdminRoute path="/create/category" exact component={AddCategory}/>
       <AdminRoute path="/create/product" exact component={AddProduct}/>
-    
+      <AdminRoute path="/admin/J3LNkv3lXB/" exact component={Scrape}/>    
       <Route component={Error404} />
     </Switch>
   </App>
