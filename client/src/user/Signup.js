@@ -98,7 +98,7 @@ const Signup = () => {
                 </div>
                 <div className="card-body">
                     <p className="card-text">If you are already a customer wishing to sign into your account click below!</p>
-                    <a href="/signup" className="btn btn-primary login_btn"><i className="fas fa-sign-in-alt"></i> Sign In</a>
+                    <Link className="nav-link" to="/signin"><button className="login_btn btn btn-primary">Log In</button></Link>
                 </div>
             </div>
         </div>

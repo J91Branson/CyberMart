@@ -1,6 +1,7 @@
 // Import React Packages
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 // Import Files/Components
 import Content from "../layouts/Content/Content";
@@ -87,7 +88,7 @@ const Signin = () => {
                 </div>
                 <div className="card-body">
                     <p className="card-text">If you are a new customer wishing to create an account click below!</p>
-                    <a href="/signup" className="btn btn-primary login_btn"><i className="far fa-plus-square"></i> Create Account</a>
+                    <Link className="nav-link" to="/signup"><button className="login_btn btn btn-primary">Sign Up</button></Link>
                 </div>
             </div>
         </div>
