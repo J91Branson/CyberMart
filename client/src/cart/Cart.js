@@ -23,7 +23,7 @@ const Cart = () => {
     const showItems = items => {
         return (
             <div>
-                <h2>You have {`${items.length}`} products in your cart.</h2>
+                <h2>You have {`${items.length}`} product(s) in your cart.</h2>
                 <hr />
                 {items.map((product, i) => (
                     <Card
