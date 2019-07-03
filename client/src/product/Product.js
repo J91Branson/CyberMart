@@ -45,7 +45,7 @@ const Product = props => {
             <div className="row">
                 <div className="col-8">
                     {product && product.description && (
-                        <Card product={product} showViewProductButton={false} />
+                        <Card product={product} showViewProductButton={false} showProductDescription={true} />
                     )}
                 </div>
 
