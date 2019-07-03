@@ -27,8 +27,8 @@ const Signin = () => {
         event.preventDefault();
         setValues({ ...values, error: false, loading: true });
         signin({ email, password }).then(data => {
-            if (data.error) {
-                setValues({ ...values, error: data.error, loading: false });
+            if (error) {
+                setValues({ ...values, error: error, loading: false });
             } else {
                 authenticate(data, () => {
                     setValues({

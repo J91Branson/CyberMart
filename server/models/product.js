@@ -7,26 +7,26 @@ const productSchema = new mongoose.Schema(
     {
         name: {
             type: String,
-            trim: true,
-            required: true,
-            maxlength: 32
+            // trim: true,
+            // required: true,
+            // maxlength: 32
         },
            image: {
             type: String,
-            trim: true,
-            required: true,
-            maxlength: 150
+            // trim: true,
+            // required: true,
+            // maxlength: 150
         },
         description: {
             type: String,
-            trim: true,
-            required: true,
-            maxlength: 2000
+            // trim: true,
+            // required: true,
+            // maxlength: 2000
         },
         price: {
-            type: Number,
-            trim: true,
-            required: true,
+            type: String,
+            // trim: true,
+            // required: true,
             maxlength: 32
         },
         category: {
@@ -44,6 +44,18 @@ const productSchema = new mongoose.Schema(
             type: Number,
             default: 0
         },
+        url : {
+            type: String,
+        },
+        size: {
+            type: String,
+        },
+        allPrices: [{}]
+        // shipping: {
+        //     required: true,
+        //     default: true,
+        //     type: Boolean
+        // }
     },
     { timestamps: true }
 );

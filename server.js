@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const cookieParser = require('cookie-parser');
 const expressValidator = require("express-validator");
 const morgan = require("morgan");
+const scrape = require("./server/controllers/api");
 require('dotenv').config();
 
 //File Imports
@@ -18,7 +19,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(expressValidator());
-app.use(cookieParser())
+app.use(cookieParser());
+app.use(scrape);
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
