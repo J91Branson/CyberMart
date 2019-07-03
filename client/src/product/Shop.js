@@ -67,7 +67,7 @@ const Shop = () => {
         return (
             size > 0 &&
             size >= limit && (
-                <button onClick={loadMore} className="btn btn-warning mb-5">
+                <button onClick={loadMore} className="btn btn-warning mb-5" style={{float: "left", margin: "0px 0px 0px 30%"}}>
                     Load more
                 </button>
             )
@@ -143,7 +143,7 @@ const Shop = () => {
                             </div>
                         ))}
                     </div>
-                    <hr />
+                    <hr/>
                     {loadMoreButton()}
                 </div>
             </div>

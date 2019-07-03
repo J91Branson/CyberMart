@@ -25,7 +25,7 @@ const Card = ({
             showViewProductButton && (
                 <Link to={`/product/${product._id}`} className="mr-2">
                     <button className="btn btn-primary mt-2 mb-2">
-                        <i class="fas fa-expand-arrows-alt"></i>
+                        <i className="fas fa-expand-arrows-alt"></i>
                     </button>
                 </Link>
             )
@@ -51,7 +51,7 @@ const Card = ({
                     onClick={addToCart}
                     className="btn btn-warning mt-2 mb-2"
                 >
-                    <i class="far fa-shopping-cart"></i>
+                    <i className="far fa-shopping-cart"></i>
                 </button>
             )
         );
