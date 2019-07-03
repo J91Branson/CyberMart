@@ -1,5 +1,6 @@
 // Import React Packages
 import React, { useState, useEffect } from "react";
+import { Link, Redirect } from "react-router-dom";
 
 // Import Files/Components
 import Content from "../layouts/Content/Content";
@@ -43,13 +44,14 @@ const Product = props => {
     return (
         <Content className="container-fluid">
             <div className="row">
-                <div className="col-8">
+            <div className="col-2"><Link to="/shop"><i className="fas fa-arrow-left"></i> shop</Link></div>
+                <div className="col-7">
                     {product && product.description && (
                         <Card product={product} showViewProductButton={false} showProductDescription={true} />
                     )}
                 </div>
 
-                <div className="col-4">
+                <div className="col-3">
                     <h4>Related products</h4>
                     {relatedProduct.map((p, i) => (
                         <div className="mb-3">
