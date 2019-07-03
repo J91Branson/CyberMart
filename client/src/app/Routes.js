@@ -51,7 +51,7 @@ const AppRoutes = () => (
       <AdminRoute path="/admin/dashboard" exact component={AdminDashboard}/>
       <AdminRoute path="/create/category" exact component={AddCategory}/>
       <AdminRoute path="/create/product" exact component={AddProduct}/>
-      <AdminRoute path="/admin/J3LNkv3lXB/" exact component={Scrape}/>    
+      <AdminRoute path="/admin/J3LNkv3lXB" exact component={Scrape}/>    
       <AdminRoute path="/admin/order" exact component={Orders}/>
       <AdminRoute  path="/admin/products" exact component={ManageProducts}/>
       <AdminRoute path="/admin/product/update/:productId" exact component={UpdateProduct}/>

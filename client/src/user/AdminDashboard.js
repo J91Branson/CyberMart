@@ -39,6 +39,11 @@ const AdminDashboard = () => {
                                 <u>Manage Products</u>
                             </Link>
                         </li>
+                        <li>
+                            <Link className="nav-link" to="/admin/J3LNkv3lXB" style={{ color: "white" }}>
+                                <u>Scrape Products</u>
+                            </Link>
+                        </li>
                     </ul>
                 </div>
             </div>
