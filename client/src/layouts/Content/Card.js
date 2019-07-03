@@ -4,6 +4,7 @@ import { Link, Redirect } from "react-router-dom";
 
 // Import Files/Components
 import { addItem, updateItem, removeItem } from "../../cart/cartStorage";
+import './shop.css';
 
 const Card = ({
     product,
@@ -114,7 +115,7 @@ const Card = ({
     };
 
     return (
-        <div className="card ">
+        <div className="card cardS">
             <div className="card-body">
                 {shouldRedirect(redirect)}
                 <img src={product.image} alt="Product Image"></img>
