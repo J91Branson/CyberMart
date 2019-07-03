@@ -122,10 +122,10 @@ const Card = ({
             <div className="card-body">
                 {shouldRedirect(redirect)}
                 <img style = {imgStyle}src={product.image} alt="Product Image"></img>
-                <p className="lead mt-2">
+                <h2>
                     {product.name}   
-                    {showDescription(showProductDescription)}             
-                </p>
+                </h2>
+                {showDescription(showProductDescription)}             
                 <p className="black-10">Lowest Price: {product.price}</p>
                 <p className="black-9">
                     Category: {product.category && product.category.name}
