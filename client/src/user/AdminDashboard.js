@@ -34,7 +34,7 @@ const AdminDashboard = () => {
                                 <u>View Orders</u>
                             </Link>
                         </li>
-                        <li className="list-group-item">
+                        <li>
                             <Link className="nav-link" to="/admin/products" style={{ color: "white" }}>
                                 <u>Manage Products</u>
                             </Link>
