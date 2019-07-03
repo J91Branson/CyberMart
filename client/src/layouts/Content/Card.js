@@ -9,6 +9,7 @@ const Card = ({
     product,
     showViewProductButton = true,
     showAddToCartButton = true,
+    showProductDescription = false,
     cartUpdate = false,
     showRemoveProductButton = false
 }) => {
@@ -46,7 +47,7 @@ const Card = ({
                     onClick={addToCart}
                     className="btn btn-warning mt-2 mb-2"
                 >
-                 <i class="far fa-shopping-cart"></i>
+                    <i class="far fa-shopping-cart"></i>
                 </button>
             )
         );
@@ -102,14 +103,24 @@ const Card = ({
         );
     };
 
+    const showDescription = showProductDescription => {
+        return (
+            showProductDescription && (
+                <p className="lead mt-2">
+                    {product.description.substring(0, 100)}
+                </p>
+            )
+        );
+    };
+
     return (
-        <div className="card">
-            <div className="card-header name badge-primary badge-pill">{product.name}</div>
+        <div className="card ">
             <div className="card-body">
                 {shouldRedirect(redirect)}
                 <img src={product.image} alt="Product Image"></img>
                 <p className="lead mt-2">
-                    {product.description.substring(0, 100)}
+                    {product.name}   
+                    {showDescription(showProductDescription)}             
                 </p>
                 <p className="black-10">${product.price}</p>
                 <p className="black-9">
