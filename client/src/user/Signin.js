@@ -1,11 +1,12 @@
 // Import React Packages
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
-import { Link, withRouter } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 // Import Files/Components
 import Content from "../layouts/Content/Content";
 import { signin, authenticate, isAuthenticated } from "../auth/apiAuth";
+import SocialLogin from "../auth/SocialLogin";
 import './signin.css';
 
 const Signin = () => {
@@ -78,6 +79,7 @@ const Signin = () => {
                              </button>
                         </div>
                     </form>
+                    <SocialLogin />
                 </div>
             </div>
         </div>
@@ -95,6 +97,7 @@ const Signin = () => {
     </div>
 
     );
+
 
     const showError = () => (
         <div
