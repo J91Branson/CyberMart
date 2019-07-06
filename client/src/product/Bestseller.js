@@ -33,11 +33,14 @@ const Bestseller = () => {
     // Page render
     return (
         <Content className="container-fluid">
-            <h2 className="mb-4">Best Sellers</h2>
+            <div><img src="https://playnstaypetcamp.com/wp-content/uploads/2017/05/iStock-dogs-hanging-over-edge.jpg"></img></div>
+            <h2 className="mb-4 bestSellerH">Best Sellers</h2>
             <div className="row">
                 {productsBySell.map((product, i) => (
-                    <div key={i} className="col-3 mb-3">
+                    <div key={i} className="col-md-3 col-sm-3 mb-3">
+                        <hr className="shopHr" />
                         <Card product={product} />
+                        <hr className="shopHr" />
                     </div>
                 ))}
             </div>

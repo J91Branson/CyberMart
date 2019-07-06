@@ -44,7 +44,7 @@ const Signin = () => {
     const signInForm = () => (
         <div className="row signInF">
         <div className="col-md-6 col-sm-6">
-            <div className="cardA card2 signInC  swing-in-left-bck">
+            <div className="cardA card2 signInC signInc1 swing-in-left-bck">
                 <div className="signInH text-center">
                     <h3>Sign In</h3>
                 </div>

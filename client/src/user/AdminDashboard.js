@@ -73,8 +73,8 @@ const AdminDashboard = () => {
     return (
         <Content className="container-fluid">
             <div className="row">
-                <div className="col-3">{adminLinks()}</div>
-                <div className="col-9">{adminInfo()}</div>
+                <div className="col-md-3 col-sm-3">{adminLinks()}</div>
+                <div className="col-md-9 col-sm-9">{adminInfo()}</div>
             </div>
         </Content>
     );

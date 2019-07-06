@@ -9,6 +9,7 @@ import Search from "./Search";
 import Card from "../layouts/Content/Card";
 import Checkbox from "../layouts/Content/Checkbox";
 import RadioBox from "../layouts/Content/RadioBox";
+import './shop.css';
 
 
 const Shop = () => {
@@ -138,8 +139,10 @@ const Shop = () => {
                     <h2 className="mb-4">Products</h2>
                     <div className="row">
                         {filteredResults.map((product, i) => (
-                            <div key={i} className="col-3 mb-3">
+                            <div key={i} className="col-md-3 col-sm-3 mb-3">
+                                <hr className="shopHr" />
                                 <Card product={product} showProductDescription={false} />
+                                <hr className="shopHr" />
                             </div>
                         ))}
                     </div>

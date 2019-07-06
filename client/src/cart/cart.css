@@ -1,21 +1,21 @@
-.contactC {
-    background-color: rgba(72, 78, 93, 0.5);
+.cartB {
+    display: none;
 }
 
 /* This is the start of media queries. */
-
 /* This media querie will keep the website the same for slightly smaller screens */
+@media screen and (max-width: 980px) {
 
-@media screen and (max-width: 980px) {}
+}
 
 /* This media querie will alter the website for screens 641-768px wide. */
+@media screen and (max-width: 768px) {
 
-@media screen and (max-width: 768px) {}
+}
 
 /* This media querie will alter the website for screens 640px and below. */
-
 @media screen and (max-width: 640px) {
-    .contactBg {
-        object-fit: contain;
+    .cartB {
+        display: block;
     }
 }
