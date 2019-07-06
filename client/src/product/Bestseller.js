@@ -33,7 +33,7 @@ const Bestseller = () => {
     // Page render
     return (
         <Content className="container-fluid">
-            <div className="row"><div className="col-md-12 col-sm-12" style={{zIndex: '-1'}}><img style={{maxWidth: '490px'}} src="https://playnstaypetcamp.com/wp-content/uploads/2017/05/iStock-dogs-hanging-over-edge.jpg"></img></div></div>
+            <div className="row"><div className="col-md-12 col-sm-12" style={{zIndex: '-1'}}><img style={{maxWidth: '480px'}} src="https://playnstaypetcamp.com/wp-content/uploads/2017/05/iStock-dogs-hanging-over-edge.jpg"></img></div></div>
             <h2 className="mb-4 bestSellerH">Best Sellers</h2>
             <div className="row">
                 {productsBySell.map((product, i) => (
