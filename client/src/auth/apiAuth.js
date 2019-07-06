@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 //GET METHODS
 //Route to sign out current user (admin or customer)
 //removes token from local storage
@@ -50,6 +52,23 @@ export const signin = user => {
         .catch(err => {
             console.log(err);
         });
+};
+
+//Route to sign in with google
+export const socialLogin = user => {
+    return fetch(`/api/social-login/`, {
+        method: "POST",
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(user)
+    })
+        .then(response => {
+            console.log("signin response: ", response);
+            return response.json();
+        })
+        .catch(err => console.log(err));
 };
 
 //TOKEN STORAGE
