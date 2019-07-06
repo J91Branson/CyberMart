@@ -3,7 +3,7 @@
 }
 
 .bestSellerH {
-    margin-top: -8%;
+    margin-top: -7%;
 }
 
 /* This is the start of media queries. */
@@ -23,6 +23,6 @@
         display: block;
     }
     .bestSellerH {
-        margin-top: -15%;
+        margin-top: -17%;
     }
 }
