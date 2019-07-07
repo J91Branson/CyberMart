@@ -11,11 +11,19 @@ import Checkbox from "../layouts/Content/Checkbox";
 import RadioBox from "../layouts/Content/RadioBox";
 
 const Shop = () => {
-     //State hooks
+    //State hooks
     const [myFilters, setMyFilters] = useState({
-        filters: { category: [], price: [] }
+        filters: { category: [], price: [], animal: [] }
     });
     const [categories, setCategories] = useState([]);
+    const [animalCat, setAnimalCat] = useState([{
+        "_id" : "5d2186fd60c170bf8de79896",
+        "name" : "Dog"
+    },
+    {
+        "_id" : "5d2186e860c170bf8de79881",
+        "name" : "Cat"
+    }]);
     const [error, setError] = useState(false);
     const [limit, setLimit] = useState(6);
     const [skip, setSkip] = useState(0);
@@ -66,7 +74,7 @@ const Shop = () => {
         return (
             size > 0 &&
             size >= limit && (
-                <button onClick={loadMore} className="btn btn-warning mb-5" style={{float: "left", margin: "0px 0px 0px 30%"}}>
+                <button onClick={loadMore} className="btn btn-warning mb-5" style={{ float: "left", margin: "0px 0px 0px 30%" }}>
                     Load more
                 </button>
             )
@@ -112,6 +120,15 @@ const Shop = () => {
             <Search />
             <div className="row">
                 <div className="col-3">
+                    <h4>Filter by Animal</h4>
+                    <ul>
+                        <Checkbox
+                            categories={animalCat}
+                            handleFilters={filters =>
+                                handleFilters(filters, "animal")
+                            }
+                        />
+                    </ul>
                     <h4>Filter by categories</h4>
                     <ul>
                         <Checkbox
@@ -142,7 +159,7 @@ const Shop = () => {
                             </div>
                         ))}
                     </div>
-                    <hr/>
+                    <hr />
                     {loadMoreButton()}
                 </div>
             </div>

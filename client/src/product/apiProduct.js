@@ -94,3 +94,27 @@ export const getFilteredProducts = (skip, limit, filters = {}) => {
             console.log(err);
         });
 };
+
+export const getFilteredAnProducts = (animal, skip, limit, filters = {}) => {
+    const data = {
+        limit,
+        skip,
+        filters,
+        animal
+    };
+    console.log(JSON.stringify(data));
+    return fetch(`/api/products/by/searchAn`, {
+        method: "POST",
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)        
+    })
+        .then(response => {
+            return response.json();
+        })
+        .catch(err => {
+            console.log(err);
+        });
+};
