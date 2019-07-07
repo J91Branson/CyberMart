@@ -1,6 +1,7 @@
 // Import React Packages
 import React from 'react';
 import {  Switch, Route } from "react-router-dom";
+import { PropsRoute, PublicRoute} from 'react-router-with-props';
 
 // Import Files/Components
 import App from './App'; //Parent route for page rendering and layout 
@@ -10,6 +11,7 @@ import Home from '../pages/Home/Home';  //Home page
 import About from '../pages/About/About'; //About page
 import Contact from '../pages/Contact/Contact'; //Contact page
 import Shop from '../product/Shop'; //Product page
+import ShopAn from "../product/ShopAn"; //Product page specified animal
 import Product from "../product/Product"; //customer
 import Cart from "../cart/Cart"; //customer
 import Error404 from '../pages/Error/404'; //Error page
@@ -42,6 +44,8 @@ const AppRoutes = () => (
       <Route path="/about" component={About} exact />
       <Route path="/contact" component={Contact} exact />
       <Route path="/shop" component={Shop} exact />
+      <PropsRoute path="/shop/dog" component={ShopAn} animal="Dog" code = "5d2186fd60c170bf8de79896" exact />
+      <PropsRoute path="/shop/cat" component={ShopAn}  animal="Cat" code = "5d2186e860c170bf8de79881" exact />
       <Route path="/cart" exact component={Cart} />
       <Route path="/product/:productId" exact component={Product} />
       <Route path="/signin" exact component={Signin} />

@@ -10,6 +10,17 @@ export const getCategories = () => {
         .catch(err => console.log(err));
 };
 
+// API route to receive all animal categories
+export const getAnimals = () => {
+    return fetch(`/api/animals`, {
+        method: "GET"
+    })
+        .then(response => {
+            return response.json();
+        })
+        .catch(err => console.log(err));
+};
+
 // API route to receive all products
 export const getProducts = () => {
     return fetch(`/api/products?limit=undefined`, {

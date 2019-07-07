@@ -9,11 +9,13 @@ const categoryRoutes = require("./category");
 const productRoutes = require("./product");
 const paymentRoutes = require("./payment");
 const orderRoutes = require("./order");
+const animalRoutes = require("./animals");
 
 //Routes
 router.use("/api", authRoutes);
 router.use("/api", userRoutes);
 router.use("/api", categoryRoutes);
+router.use("/api", animalRoutes);
 router.use("/api", productRoutes);
 router.use("/api", paymentRoutes);
 router.use("/api", orderRoutes);

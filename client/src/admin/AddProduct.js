@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // Import Files/Components
 import Content from "../layouts/Content/Content";
 import { isAuthenticated } from "../auth/apiAuth";
-import { createProduct, getCategories } from "./apiAdmin";
+import { createProduct, getCategories, getAnimals} from "./apiAdmin";
 
 //Component for admin user to add new products to database 
 const AddProduct = () => {
@@ -17,6 +17,7 @@ const AddProduct = () => {
         image: "",
         price: "",
         categories: [],
+        animal: [],
         category: "",
         quantity: "",
         loading: false,
@@ -33,6 +34,7 @@ const AddProduct = () => {
         description,
         image,
         price,
+        animal,
         categories,
         category,
         quantity,
@@ -45,7 +47,7 @@ const AddProduct = () => {
 
     // Imports all categories from database to insert into form drop down
     const init = () => {
-        getCategories()
+       getCategories()
             .then(data => {
                 if (data.error) {
                     setValues({ ...values, error: data.error });
@@ -56,14 +58,28 @@ const AddProduct = () => {
                         formData: new FormData()
                     });
                 }
-            });
+        });
+    };
+
+    const initAn = () => {
+        getAnimals()
+            .then(data => {
+                if (data.error) {
+                    setValues({ ...values, error: data.error });
+                } else {
+                    setValues({
+                        ...values,
+                        categories: data,
+                        formData: new FormData()
+                    });
+                }
+        });
     };
 
    //Mount Hook
     useEffect(() => {
         init();
     }, []);
-
     const handleChange = name => event => {
         const value = event.target.value;
         formData.set(name, value);
@@ -136,6 +152,17 @@ const AddProduct = () => {
                     className="form-control"
                     value={price}
                 />
+            </div>
+            <div className="form-group">
+                <label className="text-muted">Animal</label>
+                <select
+                    onChange={handleChange("animal")}
+                    className="form-control"
+                >
+                    <option>Please select ...</option>
+                    <option value="5d2186e860c170bf8de79881">Cat</option>
+                    <option value="5d2186fd60c170bf8de79896">Dog</option>
+                </select>
             </div>
 
             <div className="form-group">

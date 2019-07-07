@@ -10,9 +10,7 @@ import Card from "../layouts/Content/Card";
 import Checkbox from "../layouts/Content/Checkbox";
 import RadioBox from "../layouts/Content/RadioBox";
 
-
 const Shop = () => {
-
      //State hooks
     const [myFilters, setMyFilters] = useState({
         filters: { category: [], price: [] }
@@ -23,6 +21,7 @@ const Shop = () => {
     const [skip, setSkip] = useState(0);
     const [size, setSize] = useState(0);
     const [filteredResults, setFilteredResults] = useState([]);
+    const [searched, setSearched] = useState(false);
 
     const init = () => {
         getCategories()
@@ -109,7 +108,7 @@ const Shop = () => {
 
     // Page render
     return (
-        <Content className="container-fluid">
+        <Content className="container-fluid" >
             <Search />
             <div className="row">
                 <div className="col-3">
@@ -135,7 +134,7 @@ const Shop = () => {
                 </div>
 
                 <div className="col-9">
-                    <h2 className="mb-4">Products</h2>
+                    <h2 className="mb-4">Products</h2><hr />
                     <div className="row">
                         {filteredResults.map((product, i) => (
                             <div key={i} className="col-3 mb-3">

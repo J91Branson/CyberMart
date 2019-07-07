@@ -27,8 +27,19 @@ export const getCategories = () => {
 //route to display all products searched
 export const list = params => {
     const query = queryString.stringify(params);
-    // console.log("query", query);
+    console.log("query", query);
     return fetch(`/api/products?${query}`, {
+        method: "GET"
+    })
+        .then(response => {
+            return response.json();
+        })
+        .catch(err => console.log(err));
+};
+
+//route to display all products under designated animal category
+export const getProductsbyAn = (animal, sortBy) => {
+    return fetch(`/api/products/${animal}?&sortBy=${sortBy}&order=desc&limit=4`, {
         method: "GET"
     })
         .then(response => {

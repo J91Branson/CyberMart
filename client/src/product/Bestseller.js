@@ -3,11 +3,11 @@ import React, { useState, useEffect } from "react";
 
 // Import Files/Components
 import Content from "../layouts/Content/Content";
-import { getProducts } from "./apiProduct";
+import { getProductsbyAn } from "./apiProduct";
 import Card from "../layouts/Content/Card";
 
 //Page that shows bestsellers for xxxx
-const Bestseller = () => {
+const Bestseller = (props) => {
 
     //State hooks
     const [productsBySell, setProductsBySell] = useState([]);
@@ -15,10 +15,12 @@ const Bestseller = () => {
 
     // Uses sold count from database to render bestsellers
     const loadProductsBySell = () => {
-        getProducts("sold")
+        getProductsbyAn(props.code, "sold")
             .then(data => {
+                console.log(data);
                 if (data.error) {
                     setError(data.error);
+                    console.log(error);
                 } else {
                     setProductsBySell(data);
                 }
@@ -33,7 +35,7 @@ const Bestseller = () => {
     // Page render
     return (
         <Content className="container-fluid">
-            <h2 className="mb-4">Best Sellers</h2>
+            <h2 className="mb-4">Most Popular {props.animal} Items</h2>
             <div className="row">
                 {productsBySell.map((product, i) => (
                     <div key={i} className="col-3 mb-3">
