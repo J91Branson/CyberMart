@@ -102,7 +102,6 @@ export const getFilteredAnProducts = (animal, skip, limit, filters = {}) => {
         filters,
         animal
     };
-    console.log(JSON.stringify(data));
     return fetch(`/api/products/by/searchAn`, {
         method: "POST",
         headers: {

@@ -200,7 +200,7 @@ exports.listBySearchAn = (req, res) => {
     let sortBy = req.body.sortBy ? req.body.sortBy : "_id";
     let limit = req.body.limit ? parseInt(req.body.limit) : 100;
     let skip = parseInt(req.body.skip);
-    let animal = req.body.animal;
+    let animal = req.body.animal ? req.body.animal : "5d2186e860c170bf8de79881";
     let findArgs = {};
 
     for (let key in req.body.filters) {
