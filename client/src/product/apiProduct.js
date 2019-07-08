@@ -102,7 +102,7 @@ export const getFilteredAnProducts = (animal, skip, limit, filters = {}) => {
         filters,
         animal
     };
-    return fetch(`/api/products/by/searchAn`, {
+    return fetch(`/api/products/by/Ansearch`, {
         method: "POST",
         headers: {
             Accept: "application/json",

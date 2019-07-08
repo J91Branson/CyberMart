@@ -36,7 +36,7 @@ router.post("/product/create/:userId", requireSignin, isAuth, isAdmin, create);
 router.post("/products/by/search", listBySearch);
 
 //route to display all products in search by animal
-router.get("/products/by/searchAn", listBySearchAn);
+// router.post("/products/by/Ansearch", listBySearchAn);
 
 //PUT METHODS
 //route to update new product if user is signed in as admin
