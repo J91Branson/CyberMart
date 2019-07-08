@@ -27,8 +27,19 @@ export const getCategories = () => {
 //route to display all products searched
 export const list = params => {
     const query = queryString.stringify(params);
-    // console.log("query", query);
+    console.log("query", query);
     return fetch(`/api/products?${query}`, {
+        method: "GET"
+    })
+        .then(response => {
+            return response.json();
+        })
+        .catch(err => console.log(err));
+};
+
+//route to display all products under designated animal category
+export const getProductsbyAn = (animal, sortBy) => {
+    return fetch(`/api/products/${animal}?&sortBy=${sortBy}&order=desc&limit=4`, {
         method: "GET"
     })
         .then(response => {
@@ -69,6 +80,29 @@ export const getFilteredProducts = (skip, limit, filters = {}) => {
         filters
     };
     return fetch(`/api/products/by/search`, {
+        method: "POST",
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)        
+    })
+        .then(response => {
+            return response.json();
+        })
+        .catch(err => {
+            console.log(err);
+        });
+};
+
+export const getFilteredAnProducts = (animal, skip, limit, filters = {}) => {
+    const data = {
+        limit,
+        skip,
+        filters,
+        animal
+    };
+    return fetch(`/api/products/by/Ansearch`, {
         method: "POST",
         headers: {
             Accept: "application/json",

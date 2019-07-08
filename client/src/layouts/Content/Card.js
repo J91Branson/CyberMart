@@ -121,12 +121,12 @@ const Card = ({
         <div className="card cardS">
             <div className="card-body">
                 {shouldRedirect(redirect)}
-                <img style = {imgStyle}src={product.image} alt="Product Image"></img>
+                <img style = {imgStyle}src={product.image} alt="Product" />
                 <h2>
                     {product.name}   
                 </h2>
                 {showDescription(showProductDescription)}             
-                <p className="black-10">Lowest Price: {product.price}</p>
+                <p className="black-10">Price: ${product.price}</p>
                 <p className="black-9">
                     Category: {product.category && product.category.name}
                 </p>

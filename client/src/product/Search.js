@@ -14,7 +14,7 @@ const Search = () => {
         searched: false
     });
 
-    const { categories, category, search, results, searched } = data;
+    const { categories, category, search, results, searched} = data;
 
     const loadCategories = () => {
         getCategories().then(data => {
@@ -31,9 +31,9 @@ const Search = () => {
     }, []);
 
     const searchData = () => {
-        // console.log(search, category);
+        console.log("search: " + search, "category: " + category);
         if (search) {
-            list({ search: search || undefined, category: category }).then(
+            list({ search: search || undefined, category: category }).then(                
                 response => {
                     if (response.error) {
                         console.log(response.error);
@@ -72,8 +72,8 @@ const Search = () => {
 
                 <div className="row">
                     {results.map((product, i) => (
-                        <div className="col-4 mb-3">
-                            <Card key={i} product={product} />
+                        <div className="col-4 mb-3" key={i}>
+                            <Card   product={product} />
                         </div>
                     ))}
                 </div>
@@ -92,9 +92,9 @@ const Search = () => {
                         >
                             <option value="All">All</option>
                             {categories.map((c, i) => (
-                                <option key={i} value={c._id}>
-                                    {c.name}
-                                </option>
+                                    <option key={i} value={c._id}>
+                                        {c.name}
+                                    </option>
                             ))}
                         </select>
                     </div>

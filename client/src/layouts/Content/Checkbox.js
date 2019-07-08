@@ -1,9 +1,8 @@
 // Import Packages
 import React, { useState} from "react";
 
-const Checkbox = ({ categories, handleFilters }) => {
-    const [checked, setCheked] = useState([]);
-
+const Checkbox = ({ categories, handleFilters}) => {
+    const [checked, setChecked] = useState([]);
     const handleToggle = c => () => {
         // return the first index or -1
         const currentCategoryId = checked.indexOf(c);
@@ -16,7 +15,7 @@ const Checkbox = ({ categories, handleFilters }) => {
             newCheckedCategoryId.splice(currentCategoryId, 1);
         }
         // console.log(newCheckedCategoryId);
-        setCheked(newCheckedCategoryId);
+        setChecked(newCheckedCategoryId);
         handleFilters(newCheckedCategoryId);
     };
 
