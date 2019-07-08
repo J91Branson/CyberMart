@@ -114,8 +114,8 @@ const Dashboard = () => {
     return (
         <Content className="container-fluid">
             <div className="row">
-                <div className="col-3">{userLinks()}</div>
-                <div className="col-9">
+                <div className="col-md-3 col-sm-3">{userLinks()}</div>
+                <div className="col-md-9 col-sm-9">
                     {userInfo()}
                     {purchaseHistory(history)}
                 </div>

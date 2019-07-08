@@ -7,13 +7,8 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 import './Contact.css';
 import { whileStatement } from '@babel/types';
 
-const divStyle = {
-  color: 'white',
-  backgroundImage: 'url("adventure-animal-day-1612847.jpg")',
-  height: '600px'
+const divStyle={maxWidth: '100%'};
 
-
-};
 
 const Contact = () => (
   <Content>
@@ -27,6 +22,7 @@ const Contact = () => (
 
           <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
           <Card className="contactC">
+          <img    src={process.env.PUBLIC_URL+"/assets/adventure-animal-day-1612847.jpg"}/>
             <Card.Body>
               <Card.Title as="h1">Contact Pets-buy</Card.Title>
               <Card.Text as="h2">

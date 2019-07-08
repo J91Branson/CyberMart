@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
 .card-container {
     width: 100%;
-    position: absolute;
-    top: 73%;
+    position: relative;
+    top: 62%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -44,7 +44,7 @@
 .card-container2 {
     width: 100%;
     position: relative;
-    top: 80%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -142,4 +142,39 @@
 
 .card2:hover {
     box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.2), 0px 19px 0px -10px #FFB6B6, 0px 25px 15px -15px rgba(0, 0, 0, 0.2), 0px 38px 0px -20px rgb(248, 189, 189), 0px 50px 15px -25px rgba(0, 0, 0, 0.2), 0px 55px 0px -30px rgb(247, 197, 197), 0px -40px 35px -20px rgba(0, 0, 0, 0.2);
+}
+
+/* This is the start of media queries. */
+/* This media querie will keep the website the same for slightly smaller screens */
+@media screen and (max-width: 980px) {
+
+}
+
+/* This media querie will alter the website for screens 641-768px wide. */
+@media screen and (max-width: 768px) {
+
+}
+
+/* This media querie will alter the website for screens 640px and below. */
+@media screen and (max-width: 640px) {
+/* User dashboard media queries */
+    .card-container3 {
+        top: 75%;
+    }
+    .card-container1 {
+        top: 40%;
+    }
+    .card-container4 {
+        top: 33%;
+        margin-bottom: 40%;
+    }
+
+    /* Admin dashboard media queries */
+    .card-container2 {
+        top: 75%;
+    }
+    .card-container {
+        margin-top: 20%;
+    }
+
 }

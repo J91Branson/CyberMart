@@ -1,11 +1,12 @@
 // Import React Packages
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
-import { Link, withRouter } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 // Import Files/Components
 import Content from "../layouts/Content/Content";
 import { signin, authenticate, isAuthenticated } from "../auth/apiAuth";
+import SocialLogin from "../auth/SocialLogin";
 import './signin.css';
 
 const Signin = () => {
@@ -44,7 +45,7 @@ const Signin = () => {
     const signInForm = () => (
         <div className="row signInF">
         <div className="col-md-6 col-sm-6">
-            <div className="cardA card2 signInC  swing-in-left-bck">
+            <div className="cardA card2 signInC signInc1 swing-in-left-bck">
                 <div className="signInH text-center">
                     <h3>Sign In</h3>
                 </div>
@@ -78,6 +79,7 @@ const Signin = () => {
                              </button>
                         </div>
                     </form>
+                    <SocialLogin />
                 </div>
             </div>
         </div>
@@ -95,6 +97,7 @@ const Signin = () => {
     </div>
 
     );
+
 
     const showError = () => (
         <div

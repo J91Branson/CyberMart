@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 import Content from "../layouts/Content/Content";
 import { getProductsbyAn } from "./apiProduct";
 import Card from "../layouts/Content/Card";
-
+const ImageStyle={maxWidth: '480px'};
 //Page that shows bestsellers for xxxx
 const Bestseller = (props) => {
 
@@ -35,11 +35,16 @@ const Bestseller = (props) => {
     // Page render
     return (
         <Content className="container-fluid">
-            <h2 className="mb-4">Most Popular {props.animal} Items</h2>
+            <img style={ImageStyle} src={process.env.PUBLIC_URL+"/assets/updatebestsellers.png"}/>
+            {/* <h2 className="mb-4">Most Popular {props.animal} Items</h2> */}
+            {/* <div className="row"><div className="col-md-12 col-sm-12" style={{zIndex: '-1'}}><img style={{maxWidth: '480px'}} src="https://playnstaypetcamp.com/wp-content/uploads/2017/05/iStock-dogs-hanging-over-edge.jpg"></img></div></div> */}
+            {/* <h2 className="mb-4 bestSellerH">Best Sellers</h2> */}
             <div className="row">
                 {productsBySell.map((product, i) => (
-                    <div key={i} className="col-3 mb-3">
+                    <div key={i} className="col-md-3 col-sm-3 mb-3">
+                        <hr className="shopHr" />
                         <Card product={product} />
+                        <hr className="shopHr" />
                     </div>
                 ))}
             </div>
