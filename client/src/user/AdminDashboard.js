@@ -16,7 +16,7 @@ const AdminDashboard = () => {
         return (
             <div className="card-container2">
                 <div className="cardA card1">
-                    <h4>Admin Links</h4>
+                    <h4>Links</h4>
                     <hr className="adminHr1" />
                     <ul className="list-group">
                         <li>
