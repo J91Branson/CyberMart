@@ -73,4 +73,4 @@ const About = () => (
   </Content>
 );
 
-export default About;S
+export default About;

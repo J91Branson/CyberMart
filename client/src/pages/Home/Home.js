@@ -7,15 +7,6 @@ import {Link} from "react-router-dom";
 import './Home.css';
 import Bestseller from "../../product/Bestseller";
 
-// const isActive = (history, path) => {
-//   if (window.history.location.pathname === path) {
-//     return { color: "#FFB6B6" };
-//   } else {
-//     return { color: "#000000" };
-//   }
-// };
-
-
 const styles = {
   fontFamily: "sans-serif",
   textAlign: "center"
@@ -41,7 +32,7 @@ const Home = () => (
           <div className="card-body dogHome">
             <h1 className="card-title">Shop for Dogs</h1>
             <p className="card-text">Need something for your good boy/girl?</p>            
-            <Link className="nav-link" to="/shop/dog">
+            <Link className="nav-link homelink" to="/shop/dog">
               <a className="btn btn-primary">Click Here</a>
             </Link>
           </div>
@@ -62,7 +53,7 @@ const Home = () => (
           <div className="card-body catHome">
             <h1 className="card-title">Shop for Cats</h1>
             <p className="card-text">Cats have it all – admiration, an endless sleep, and company only when they want it.</p>
-            <Link className="nav-link" to="/shop/dog">
+            <Link className="nav-link homelink" to="/shop/dog">
               <a className="btn btn-primary">Get Them More</a>
             </Link>
           </div>
@@ -85,7 +76,7 @@ const Home = () => (
           <div className="card-body dogHome">
             <h1 className="card-title">Something Else In Mind?</h1>
             <p className="card-text">See our entire shop.</p>
-            <Link className="nav-link" to="/shop">
+            <Link className="nav-link homelink" to="/shop">
               <a className="btn btn-primary">Go to Shop</a>
             </Link>
           </div>
