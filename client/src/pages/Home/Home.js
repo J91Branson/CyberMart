@@ -41,8 +41,8 @@ const Home = () => (
           <div className="card-body dogHome">
             <h1 className="card-title">Shop for Dogs</h1>
             <p className="card-text">Need something for your good boy/girl?</p>            
-            <Link className="nav-link" to="/shop/dog">
-              <a className="btn btn-primary">Click Here</a>
+            <Link className="nav-link text-light" to="/shop/dog">
+              <a className="btn btn-primary text-light">Click Here</a>
             </Link>
           </div>
         </div>
@@ -62,8 +62,8 @@ const Home = () => (
           <div className="card-body catHome">
             <h1 className="card-title">Shop for Cats</h1>
             <p className="card-text">Cats have it all – admiration, an endless sleep, and company only when they want it.</p>
-            <Link className="nav-link" to="/shop/dog">
-              <a className="btn btn-primary">Get Them More</a>
+            <Link className="nav-link text-light" to="/shop/dog">
+              <a className="btn btn-primary text-light">Get Them More</a>
             </Link>
           </div>
         </div>
@@ -85,8 +85,8 @@ const Home = () => (
           <div className="card-body dogHome">
             <h1 className="card-title">Something Else In Mind?</h1>
             <p className="card-text">See our entire shop.</p>
-            <Link className="nav-link" to="/shop">
-              <a className="btn btn-primary">Go to Shop</a>
+            <Link className="nav-link text-light" to="/shop">
+              <a className="btn btn-primary text-light">Go to Shop</a>
             </Link>
           </div>
         </div>
