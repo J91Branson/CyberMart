@@ -37,8 +37,6 @@ const Home = () => (
         </div>
       </div>
     </Parallax>
-    {/* wip - need to filter out dog bestsellers only */}
-    {/* Working as intended */}
     <div>
       <Bestseller animal="Dog" code="5d2186fd60c170bf8de79896"/>
     </div>
