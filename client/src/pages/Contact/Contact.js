@@ -9,7 +9,6 @@ import { whileStatement } from '@babel/types';
 
 const divStyle = {
   color: 'white',
-  backgroundImage: 'url("adventure-animal-day-1612847.jpg")',
   height: '600px'
 };
 
@@ -21,9 +20,8 @@ const Contact = () => (
 
       <Col xs={{ span: 12 }}>
         <div style={divStyle}>
+        <img  className="contactImg"  src={process.env.PUBLIC_URL+"/assets/adventure-animal-day-1612847.jpg"}/>
 
-
-          <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
           <Card className="contactC">
             <Card.Body>
               <Card.Title as="h1">Contact Pets-buy</Card.Title>
@@ -32,11 +30,6 @@ const Contact = () => (
               </Card.Text>
             </Card.Body>
           </Card>
-
-
-
-
-
         </div>
 
       </Col>
@@ -46,16 +39,19 @@ const Contact = () => (
 
       <Row>
         <Col xs={12} md={4}>
+        <br/><br/><br/><br/>
           <h1>Customer Service Team</h1>
           <h5>Monday-Friday</h5>
           <h5>8:00AM-4:00PM CST </h5>
           <h5>800-775-5555</h5>
         </Col>
         <Col xs={12} md={4}>
+        <br/><br/><br/><br/>
           <h1>Email</h1>
           <h5>petsbuy@gmail.com</h5>
         </Col>
         <Col xs={12} md={4}>
+        <br/><br/><br/><br/>
           <h1>Corporate Office</h1>
           <h5>1970 Disco Drive</h5>
           <h5>Grooveville Alaska</h5>
