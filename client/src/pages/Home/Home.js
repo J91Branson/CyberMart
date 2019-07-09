@@ -53,7 +53,7 @@ const Home = () => (
           <div className="card-body catHome">
             <h1 className="card-title">Shop for Cats</h1>
             <p className="card-text">Cats have it all – admiration, an endless sleep, and company only when they want it.</p>
-            <Link className="nav-link homelink" to="/shop/dog">
+            <Link className="nav-link homelink" to="/shop/cat">
               <a className="btn btn-primary">Get Them More</a>
             </Link>
           </div>
