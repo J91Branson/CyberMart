@@ -65,7 +65,7 @@ export const socialLogin = user => {
         body: JSON.stringify(user)
     })
         .then(response => {
-            console.log("signin response: ", response);
+            // console.log("signin response: ", response);
             return response.json();
         })
         .catch(err => console.log(err));

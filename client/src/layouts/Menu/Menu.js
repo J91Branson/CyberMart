@@ -1,6 +1,7 @@
 // Import React Packages
 import React, { Fragment } from "react";
 import { Link, withRouter } from "react-router-dom";
+// import Search from "../../product/Search";
 
 // Import Files/Components
 import { signout, isAuthenticated } from "../../auth/apiAuth";
@@ -52,6 +53,9 @@ const Menu = ({ history }) => (
       </ul>
 
       <ul className="navbar-nav ml-auto">
+        {/* <li>
+          <Search />
+        </li> */}
         {isAuthenticated() && isAuthenticated().user.role === 0 && (
           <li className="nav-item">
             <Link
