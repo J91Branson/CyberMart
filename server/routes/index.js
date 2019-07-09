@@ -10,7 +10,6 @@ const productRoutes = require("./product");
 const paymentRoutes = require("./payment");
 const orderRoutes = require("./order");
 const animalRoutes = require("./animals");
-const testRoutes = require("./test");
 
 //Routes
 router.use("/api", authRoutes);
@@ -20,7 +19,6 @@ router.use("/api", animalRoutes);
 router.use("/api", productRoutes);
 router.use("/api", paymentRoutes);
 router.use("/api", orderRoutes);
-router.use("/api", testRoutes);
 
 // If no API routes are hit, send the React app
 router.use(function(req, res) {

@@ -18,3 +18,4 @@ This full-stack app was created using React.js, Express, and MongoDB.
 
 JB and Caitlyn were responsible for the fron-end design, Nina created the back-end sign in authentication, category search, and payment get methods, Sean working on back-end webscraping, and Jackson worked on Google Authentication and Chatbot.
 
+![Screen Shot 2019-07-08 at 6 53 44 PM](https://user-images.githubusercontent.com/46974642/60849788-f8628400-a1b1-11e9-94f7-0725b4493ef0.png)
