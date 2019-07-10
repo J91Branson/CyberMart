@@ -8,3 +8,18 @@
     color: black;
     /* background: grey; */
 }
+
+.navbar-brand {
+    margin-left: 50px;
+}
+.navbar-nav {
+    margin-right: 100px;
+}
+
+.navbar {
+    background-color: #e7e9fc;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    box-shadow: 0 4px 4px -3px rgba(0,0,0,.3);
+}
