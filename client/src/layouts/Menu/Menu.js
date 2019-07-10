@@ -16,12 +16,11 @@ const isActive = (history, path) => {
   }
 };
 
-
-
+const ImageStyle={height:"50px"};
 
 const Menu = ({ history }) => (
   <nav className="navbar navbar-expand-lg navbar-light bg-light">
-    <a className="navbar-brand" href="/">CyberMart</a>
+    <a className="navbar-brand" href="/"><img style={ImageStyle} src={process.env.PUBLIC_URL+"/assets/PB_logo.png"}/></a>
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
