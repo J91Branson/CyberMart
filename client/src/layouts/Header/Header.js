@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Header = props => {
     const {
-        title = 'Cyber Mart',
+        title = 'Pets-buy',
     } = props;
 
     return (
