@@ -118,6 +118,10 @@ const Shop = () => {
     // Page render
     return (
         <Content className="container-fluid" >
+            <br/>
+            <br/>
+            <br/>
+            <br/>
             <Search />
             <div className="row">
                 <div className="col-3">
