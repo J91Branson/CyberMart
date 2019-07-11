@@ -20,27 +20,27 @@ const AdminDashboard = () => {
                     <hr className="adminHr1" />
                     <ul className="list-group">
                         <li>
-                            <Link className="nav-link" to="/create/category" style={{ color: "white" }}>
+                            <Link className="nav-link" to="/create/category" style={{ color: "black" }}>
                                 <u>Create Category</u>
                             </Link>
                         </li>
                         <li>
-                            <Link className="nav-link" to="/create/product" style={{ color: "white" }}>
+                            <Link className="nav-link" to="/create/product" style={{ color: "black" }}>
                                 <u>Create Product</u>
                             </Link>
                         </li>
                         <li>
-                            <Link className="nav-link" to="/admin/order" style={{ color: "white" }}>
+                            <Link className="nav-link" to="/admin/order" style={{ color: "black" }}>
                                 <u>View Orders</u>
                             </Link>
                         </li>
                         <li>
-                            <Link className="nav-link" to="/admin/products" style={{ color: "white" }}>
+                            <Link className="nav-link" to="/admin/products" style={{ color: "black" }}>
                                 <u>Manage Products</u>
                             </Link>
                         </li>
                         <li>
-                            <Link className="nav-link" to="/admin/J3LNkv3lXB" style={{ color: "white" }}>
+                            <Link className="nav-link" to="/admin/J3LNkv3lXB" style={{ color: "black" }}>
                                 <u>Scrape Products</u>
                             </Link>
                         </li>
@@ -54,7 +54,7 @@ const AdminDashboard = () => {
         return (
             <div className="card-container">
                 <div className="cardA card2">
-                    <h3 style={{ color: "white" }}>User Information</h3>
+                    <h3 style={{ color: "black" }}>User Information</h3>
                     <hr className="adminHr1" />
                     <ul className="list-group">
                         <li>{name}</li>

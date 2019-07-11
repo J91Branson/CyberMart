@@ -23,17 +23,17 @@ const Contact = () => (
     </div>
     <div className="row">
       <div className="col-md-4">
-        <br /><br /><br />
+        <br /><br />
         <h1>Customer Service Team</h1>
         <h5>Monday-Friday</h5>
         <h5>8:00AM-4:00PM CST </h5>
       </div>
       <div className="col-md-4">
-        <br /><br /><br />
+        <br /><br />
         <h1>Email</h1>
         <h5>petsbuy@gmail.com</h5></div>
       <div className="col-md-4">
-        <br /><br /><br />
+        <br /><br />
         <h1>Corporate Office</h1>
         <h5>1970 Disco Drive</h5>
         <h5>Grooveville Alaska</h5>

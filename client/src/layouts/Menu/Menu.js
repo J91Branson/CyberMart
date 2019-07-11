@@ -11,17 +11,17 @@ import Search from "../../product/Search";
 
 const isActive = (history, path) => {
   if (history.location.pathname === path) {
-    return { color: "#FFB6B6" };
+    return { color: "#00aeef" };
   } else {
     return { color: "#000000" };
   }
 };
 
-const ImageStyle={height:"50px"};
+const ImageStyle={height:"40px"};
 
 const Menu = ({ history }) => (
-  <nav className="navbar navbar-expand-lg nav-style">
-    <a className="navbar-brand" href="/"><img style={ImageStyle} src={process.env.PUBLIC_URL+"/assets/PB_logo.png"}/></a>
+  <nav className="navbar navbar-expand-lg navbar-light nav-style">
+    <a className="navbar-brand mt-n2" href="/"><img style={ImageStyle} src={process.env.PUBLIC_URL+"/assets/PB_logo.png"}/></a>
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>

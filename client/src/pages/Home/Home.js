@@ -20,7 +20,7 @@ const image3 =
   "http://starkovtattoo.spb.ru/images/700/DSC100766071.jpg";
 
 const Home = () => (
-  <div style={styles}>
+  <div style={styles} className="mt-0">
     <Parallax bgImage={image1} strength={500}>
       <div style={{ height: 500 }}>
         <div className="card homeC" style={{
@@ -33,7 +33,7 @@ const Home = () => (
             <h1 className="card-title">Shop for Dogs</h1>
             <p className="card-text">Need something for your good boy/girl?</p>            
             <Link className="nav-link homelink" to="/shop/dog">
-              <a className="btn btn-primary">Click Here</a>
+              <a className="btn btn-primary login_btn">Click Here</a>
             </Link>
           </div>
         </div>
@@ -54,7 +54,7 @@ const Home = () => (
             <h1 className="card-title">Shop for Cats</h1>
             <p className="card-text">Cats have it all – admiration, an endless sleep, and company only when they want it.</p>
             <Link className="nav-link homelink" to="/shop/cat">
-              <a className="btn btn-primary">Get Them More</a>
+              <a className="btn btn-primary login_btn">Get Them More</a>
             </Link>
           </div>
         </div>
@@ -77,7 +77,7 @@ const Home = () => (
             <h1 className="card-title">Something Else In Mind?</h1>
             <p className="card-text">See our entire shop.</p>
             <Link className="nav-link homelink" to="/shop">
-              <a className="btn btn-primary">Go to Shop</a>
+              <a className="btn btn-primary login_btn">Go to Shop</a>
             </Link>
           </div>
         </div>
