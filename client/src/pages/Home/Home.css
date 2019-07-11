@@ -1,5 +1,5 @@
 .btn-primary {
-    background-color: #00aeef;
+    color: black !important;
     border-color: white;
     padding-left: 20px;
     padding-right: 20px;
@@ -8,11 +8,10 @@
     font-weight: 400;
 }
 
-/* .btn-primary:hover {
-    background-color: #FFB6B6;
-    border-color: #F3F1E7;
-    color: black;
-} */
+.btn-primary:hover {
+    border-color: black;
+    color: white;
+}
 
 .homelink {
     color: #F3F1E7

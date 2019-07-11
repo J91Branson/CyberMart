@@ -8,6 +8,7 @@ import { isAuthenticated } from "../auth/apiAuth";
 import { getBraintreeClientToken, processPayment, createOrder } from "../cart/apiCheckout";
 import { emptyCart } from "../cart/cartStorage";
 
+
 //Checkout for items in cart
 
 const Checkout = ({ products }) => {
@@ -52,7 +53,7 @@ const Checkout = ({ products }) => {
             <div>{showDropIn()}</div>
         ) : (
             <Link to="/signin">
-                <button className="btn btn-primary">Sign in to checkout</button>
+                <button className="btn btn-warning">Sign in to checkout</button>
             </Link>
         );
     };

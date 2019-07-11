@@ -117,12 +117,7 @@ const Shop = () => {
 
     // Page render
     return (
-        <Content className="container-fluid" >
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <Search />
+        <Content className="container-fluid mt-3">
             <div className="row">
                 <div className="col-3">
                     <h4>Filter by Animal</h4>
@@ -156,7 +151,7 @@ const Shop = () => {
                 </div>
 
                 <div className="col-9">
-                    <h2 className="mb-4">Products</h2><hr />
+                    <h2 className="mb-4">Products</h2>
                     <div className="row">
                         {filteredResults.map((product, i) => (
                             <div key={i} className="col-md-3 col-sm-3 mb-3">

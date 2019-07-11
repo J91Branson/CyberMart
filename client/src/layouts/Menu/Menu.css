@@ -17,8 +17,7 @@
 }
 
 .nav-style {
-    background-color: #e7e9fc;
-    position: fixed;
+    background-color: white;
     z-index: 3;
     width: 100%;
     box-shadow: 0 4px 4px -3px rgba(0,0,0,.3);
