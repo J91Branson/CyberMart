@@ -7,6 +7,7 @@ import { Link, withRouter } from "react-router-dom";
 import { signout, isAuthenticated } from "../../auth/apiAuth";
 import { itemTotal } from "../../cart/cartStorage";
 import './Menu.css';
+import Search from "../../product/Search";
 
 const isActive = (history, path) => {
   if (history.location.pathname === path) {
@@ -19,7 +20,7 @@ const isActive = (history, path) => {
 const ImageStyle={height:"50px"};
 
 const Menu = ({ history }) => (
-  <nav className="navbar navbar-expand-lg navbar-light bg-light">
+  <nav className="navbar navbar-expand-lg nav-style">
     <a className="navbar-brand" href="/"><img style={ImageStyle} src={process.env.PUBLIC_URL+"/assets/PB_logo.png"}/></a>
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
@@ -36,7 +37,7 @@ const Menu = ({ history }) => (
         <li className="nav-item active">
           <Link className="nav-link" style={isActive(history, "/shop")} to="/shop">Shop</Link>
         </li>
-
+        {/* <Search/> */}
         {/* button links */}
         {isAuthenticated() && isAuthenticated().user.role === 0 && (
           <li className="nav-item active">
@@ -50,11 +51,8 @@ const Menu = ({ history }) => (
           </li>
         )}
       </ul>
-
+      {/* <li className="navbar-nav mx-auto"><Search /></li> */}
       <ul className="navbar-nav ml-auto">
-        {/* <li>
-          <Search />
-        </li> */}
         {isAuthenticated() && isAuthenticated().user.role === 0 && (
           <li className="nav-item">
             <Link

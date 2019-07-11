@@ -1,13 +1,18 @@
 .btn-primary {
-    background-color: #484E5D;
-    border-color: #F3F1E7;
+    background-color: #00aeef;
+    border-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 24px;
+    border-radius: 30px;
+    font-weight: 400;
 }
 
-.btn-primary:hover {
+/* .btn-primary:hover {
     background-color: #FFB6B6;
     border-color: #F3F1E7;
     color: black;
-}
+} */
 
 .homelink {
     color: #F3F1E7
