@@ -51,9 +51,7 @@ const Home = () => (
           <div className="card-body catHome col-md-12">
             <h1 className="card-title">Shop for Cats</h1>
             <p className="card-text">Cats have it all – admiration, an endless sleep, and company only when they want it.</p>
-            <LinkLinkButton className="nav-link homelink catBtn" to="/shop/cat">
-              <a className="btn btn-primary login_btn">Get Them More</a>
-            </LinkLinkButton>
+            <LinkButton className="btn btn-primary" to="/shop/cat">Get Them More</LinkButton>
           </div>
         </div>
       </div>
