@@ -32,7 +32,7 @@ const Home = () => (
           <div className="card-body dogHome">
             <h1 className="card-title">Shop for Dogs</h1>
             <p className="card-text">Need something for your good boy/girl?</p>
-            <LinkButton className="btn btn-primary" to="/shop/dog">Click Here</LinkButton>
+            <LinkButton className="btn btn-primary login_btn" to="/shop/dog">Click Here</LinkButton>
           </div>
         </div>
       </div>
@@ -51,7 +51,7 @@ const Home = () => (
           <div className="card-body catHome col-md-12">
             <h1 className="card-title">Shop for Cats</h1>
             <p className="card-text">Cats have it all – admiration, an endless sleep, and company only when they want it.</p>
-            <LinkButton className="btn btn-primary" to="/shop/cat">Get Them More</LinkButton>
+            <LinkButton className="btn btn-primary login_btn" to="/shop/cat">Get Them More</LinkButton>
           </div>
         </div>
       </div>
@@ -72,7 +72,7 @@ const Home = () => (
           <div className="card-body dogHome">
             <h1 className="card-title">Something Else In Mind?</h1>
             <p className="card-text">See our entire shop.</p>
-            <LinkButton className="btn btn-primary" to="/shop">Let's Go</LinkButton>
+            <LinkButton className="btn btn-primary login_btn" to="/shop">Let's Go</LinkButton>
           </div>
         </div>
       </div>
