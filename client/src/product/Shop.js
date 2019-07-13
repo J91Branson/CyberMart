@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 import Content from "../layouts/Content/Content";
 import { getCategories, getFilteredProducts } from "./apiProduct";
 import { prices } from "./priceRange";
-import Search from "./Search";
+// import Search from "./Search";
 import Card from "../layouts/Content/Card";
 import Checkbox from "../layouts/Content/Checkbox";
 import RadioBox from "../layouts/Content/RadioBox";

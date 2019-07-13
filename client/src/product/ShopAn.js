@@ -9,6 +9,7 @@ import Search from "./Search";
 import Card from "../layouts/Content/Card";
 import Checkbox from "../layouts/Content/Checkbox";
 import RadioBox from "../layouts/Content/RadioBox";
+import './shop.css';
 
 const Shop = (props) => {
      //State hooks
@@ -21,7 +22,6 @@ const Shop = (props) => {
     const [skip, setSkip] = useState(0);
     const [size, setSize] = useState(0);
     const [filteredResults, setFilteredResults] = useState([]);
-    const [searched, setSearched] = useState(false);
     const [animal, setAnimal] = useState(props.code);
 
     const init = () => {
@@ -77,7 +77,7 @@ const Shop = (props) => {
     //Mount hook
     useEffect(() => {
         init();
-        loadFilteredResults(animal, skip, limit, myFilters.filters);
+        loadFilteredResults(skip, limit, myFilters.filters);
     }, []);
 
 
