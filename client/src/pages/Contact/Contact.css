@@ -16,7 +16,10 @@
 
 @media screen and (max-width: 640px) {
     .card-img-overlay {
-        margin-top: 0%;
+        margin-top: -7%;
         background-color: rgba(72, 78, 93, 0.356);
+    }
+    .contactText {
+        font-size: 20px;
     }
 }

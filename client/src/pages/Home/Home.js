@@ -39,7 +39,7 @@ const Home = () => (
         </div>
       </div>
     </Parallax>
-    <div>
+    <div className="bestSell">
       <Bestseller animal="Dog" code="5d2186fd60c170bf8de79896"/>
     </div>
     <Parallax bgImage={image2} strength={500}>
@@ -50,10 +50,10 @@ const Home = () => (
           top: "29%",
           left: "50%",
         }}>
-          <div className="card-body catHome">
+          <div className="card-body catHome col-md-12">
             <h1 className="card-title">Shop for Cats</h1>
             <p className="card-text">Cats have it all – admiration, an endless sleep, and company only when they want it.</p>
-            <Link className="nav-link homelink" to="/shop/cat">
+            <Link className="nav-link homelink catBtn" to="/shop/cat">
               <a className="btn btn-primary login_btn">Get Them More</a>
             </Link>
           </div>
@@ -62,7 +62,7 @@ const Home = () => (
     </Parallax>
     {/* Cat one goes here */}
     {/* Working as intended */}
-    <div>
+    <div className="bestSell">
       <Bestseller animal="Cat" code="5d2186e860c170bf8de79881"/>   
     </div>
     <Parallax bgImage={image3} strength={500}>

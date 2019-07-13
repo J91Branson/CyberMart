@@ -56,7 +56,7 @@ const Menu = ({ history }) => (
         {isAuthenticated() && isAuthenticated().user.role === 0 && (
           <li className="nav-item">
             <Link
-              className="nav-link"
+              className="nav-link cartB"
               style={isActive(history, "/cart")}
               to="/cart"
             >
@@ -71,18 +71,18 @@ const Menu = ({ history }) => (
         {!isAuthenticated() && (
           <Fragment>
             <li className="nav-item active">
-              <Link className="nav-link" style={isActive(history, "/signin")} to="/signin"><button className="login_btn btn btn-primary">Log In</button></Link>
+              <Link className="nav-link loginBtnsM" style={isActive(history, "/signin")} to="/signin"><button className="login_btn btn btn-primary">Log In</button></Link>
             </li>
 
             <li className="nav-item active">
-              <Link className="nav-link" style={isActive(history, "/signup")} to="/signup"><button className="login_btn btn btn-primary">Sign Up</button></Link>
+              <Link className="nav-link loginBtnsM" style={isActive(history, "/signup")} to="/signup"><button className="login_btn btn btn-primary">Sign Up</button></Link>
             </li>
           </Fragment>
         )}
 
         {isAuthenticated() && (
           <li className="nav-item active ml-auto">
-            <button className="login_btn btn btn-primary"><span
+            <button className="login_btn btn btn-primary logOutB"><span
               style={{ cursor: "pointer", color: "#000000" }}
               onClick={() =>
                 signout(() => {

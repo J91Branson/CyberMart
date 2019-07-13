@@ -118,6 +118,7 @@ const Shop = () => {
     // Page render
     return (
         <Content className="container-fluid mt-3">
+            <Search />
             <div className="row">
                 <div className="col-3">
                     <h4>Filter by Animal</h4>

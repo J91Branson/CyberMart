@@ -122,9 +122,9 @@ const Card = ({
             <div className="card-body">
                 {shouldRedirect(redirect)}
                 <img style = {imgStyle}src={product.image} alt="Product" />
-                <h2>
+                <h3>
                     {product.name}   
-                </h2>
+                </h3>
                 {showDescription(showProductDescription)}             
                 <p className="black-10">Price: ${product.price}</p>
                 <p className="black-9">
