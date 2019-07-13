@@ -135,9 +135,9 @@ const Scraping = () => {
     };
 
     const newPostForm = () => (
+        
 
         <form className="mb-3" onSubmit={clickSubmit}>
-
             <div className="form-group">
                 <label className="text-muted">Url Code</label>
                 <input

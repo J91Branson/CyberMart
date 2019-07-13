@@ -1,7 +1,7 @@
 // Import React Packages
 import React from "react";
 import { Parallax } from "react-parallax";
-import {Link} from "react-router-dom";
+import LinkButton from "../../layouts/Content/WrapLink";
 
 // Import Files/Components
 import './Home.css';
@@ -31,10 +31,8 @@ const Home = () => (
         }}>
           <div className="card-body dogHome">
             <h1 className="card-title">Shop for Dogs</h1>
-            <p className="card-text">Need something for your good boy/girl?</p>            
-            <Link className="nav-link homelink" to="/shop/dog">
-              <a className="btn btn-primary login_btn">Click Here</a>
-            </Link>
+            <p className="card-text">Need something for your good boy/girl?</p>
+            <LinkButton className="btn btn-primary" to="/shop/dog">Click Here</LinkButton>
           </div>
         </div>
       </div>
@@ -53,9 +51,7 @@ const Home = () => (
           <div className="card-body catHome">
             <h1 className="card-title">Shop for Cats</h1>
             <p className="card-text">Cats have it all – admiration, an endless sleep, and company only when they want it.</p>
-            <Link className="nav-link homelink" to="/shop/cat">
-              <a className="btn btn-primary login_btn">Get Them More</a>
-            </Link>
+            <LinkButton className="btn btn-primary" to="/shop/cat">Get Them More</LinkButton>
           </div>
         </div>
       </div>
@@ -76,9 +72,7 @@ const Home = () => (
           <div className="card-body dogHome">
             <h1 className="card-title">Something Else In Mind?</h1>
             <p className="card-text">See our entire shop.</p>
-            <Link className="nav-link homelink" to="/shop">
-              <a className="btn btn-primary login_btn">Go to Shop</a>
-            </Link>
+            <LinkButton className="btn btn-primary" to="/shop">Let's Go</LinkButton>
           </div>
         </div>
       </div>
