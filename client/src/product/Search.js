@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 
 // Import Files/Components
-import { getCategories, list } from "./apiProduct";
+import { getCategories, list} from "./apiProduct";
 import Card from "../layouts/Content/Card";
 
 const Search = () => {
@@ -32,7 +32,6 @@ const Search = () => {
     }, []);
 
     const searchData = () => {
-        console.log("search: " + search, "category: " + category);
         if (search) {
             list({ search: search || undefined, category: category }).then(                
                 response => {
