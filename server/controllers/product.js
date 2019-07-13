@@ -218,7 +218,9 @@ exports.listBySearchAn = (req, res) => {
         }
     }
 
-    Product.find({animal: animal})
+    Product
+    .find({animal: animal})
+    .find(findArgs)
         .populate("category")
         .sort([[sortBy, order]])
         .skip(skip)
