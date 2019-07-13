@@ -24,7 +24,7 @@ const Card = ({
         return (
             showViewProductButton && (
                 <Link to={`/product/${product._id}`} className="mr-2">
-                    <button className="btn btn-primary mt-2 mb-2">
+                    <button className="btn btn-primary login_btn expandBtn mt-2 mb-2">
                         <i className="fas fa-expand-arrows-alt"></i>
                     </button>
                 </Link>

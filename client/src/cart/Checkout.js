@@ -59,7 +59,7 @@ const Checkout = ({ products }) => {
             <div>{showDropIn()}</div>
         ) : (
             <Link to="/signin">
-                <button className="btn btn-primary">Sign in to checkout</button>
+                <button className="btn btn-warning">Sign in to checkout</button>
             </Link>
         );
     };

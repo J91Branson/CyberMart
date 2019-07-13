@@ -20,7 +20,7 @@ const image3 =
   "http://starkovtattoo.spb.ru/images/700/DSC100766071.jpg";
 
 const Home = () => (
-  <div style={styles}>
+  <div style={styles} className="mt-0">
     <Parallax bgImage={image1} strength={500}>
       <div style={{ height: 500 }}>
         <div className="card homeC" style={{
