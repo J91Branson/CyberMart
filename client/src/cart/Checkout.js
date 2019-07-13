@@ -8,8 +8,11 @@ import { isAuthenticated } from "../auth/apiAuth";
 import { getBraintreeClientToken, processPayment, createOrder } from "../cart/apiCheckout";
 import { emptyCart } from "../cart/cartStorage";
 
-
 //Checkout for items in cart
+
+const Round = (value, decimals) => {
+    return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
+  }
 
 const Checkout = ({ products }) => {
     const [data, setData] = useState({
@@ -44,7 +47,10 @@ const Checkout = ({ products }) => {
 
     const getTotal = () => {
         return products.reduce((currentValue, nextValue) => {
-            return currentValue + nextValue.count * nextValue.price;
+            // return currentValue + nextValue.count * nextValue.price;
+            let numb1 = (currentValue + nextValue.count * nextValue.price)
+            let numb2 = (parseFloat(numb1).toFixed(2));
+            return numb2;
         }, 0);
     };
 

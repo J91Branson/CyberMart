@@ -7,7 +7,6 @@ import { Link, withRouter } from "react-router-dom";
 import { signout, isAuthenticated } from "../../auth/apiAuth";
 import { itemTotal } from "../../cart/cartStorage";
 import './Menu.css';
-import Search from "../../product/Search";
 
 const isActive = (history, path) => {
   if (history.location.pathname === path) {
@@ -51,7 +50,7 @@ const Menu = ({ history }) => (
           </li>
         )}
       </ul>
-      {/* <li className="navbar-nav mx-auto"><Search /></li> */}
+      
       <ul className="navbar-nav ml-auto">
         {isAuthenticated() && isAuthenticated().user.role === 0 && (
           <li className="nav-item">
