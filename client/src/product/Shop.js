@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 import Content from "../layouts/Content/Content";
 import { getCategories, getFilteredProducts } from "./apiProduct";
 import { prices } from "./priceRange";
-// import Search from "./Search";
+// import Search from "./search";
 import Card from "../layouts/Content/Card";
 import Checkbox from "../layouts/Content/Checkbox";
 import RadioBox from "../layouts/Content/RadioBox";
@@ -30,7 +30,6 @@ const Shop = () => {
     const [skip, setSkip] = useState(0);
     const [size, setSize] = useState(0);
     const [filteredResults, setFilteredResults] = useState([]);
-    const [searched, setSearched] = useState(false);
 
     const init = () => {
         getCategories()
