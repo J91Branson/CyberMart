@@ -2,7 +2,6 @@
 .cart-badge,
 .cart-badge:hover {
     /* border-radius: 20%; */
-    padding: 2px;
     font-size: 14px;
     font-style: bold;
     color: black;
@@ -21,4 +20,29 @@
     z-index: 3;
     width: 100%;
     box-shadow: 0 4px 4px -3px rgba(0,0,0,.3);
+}
+
+
+/* This is the start of media queries. */
+/* This media querie will keep the website the same for slightly smaller screens */
+@media screen and (max-width: 980px) {
+
+}
+
+/* This media querie will alter the website for screens 641-768px wide. */
+@media screen and (max-width: 768px) {
+
+}
+
+/* This media querie will alter the website for screens 640px and below. */
+@media screen and (max-width: 640px) {
+    .logOutB {
+        margin-left: -20%;
+    }
+    .cartB {
+        margin-right: -45%;
+    }
+    .loginBtnsM {
+        margin-right: -40%;
+    }
 }

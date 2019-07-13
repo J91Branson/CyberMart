@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 import Content from "../layouts/Content/Content";
 import { getProductsbyAn } from "./apiProduct";
 import Card from "../layouts/Content/Card";
-const ImageStyle={maxWidth: '480px'};
+const ImageStyle={maxWidth: '360px'};
 //Page that shows bestsellers for xxxx
 const Bestseller = (props) => {
 

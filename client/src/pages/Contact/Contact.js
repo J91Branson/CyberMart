@@ -12,11 +12,11 @@ const Contact = () => (
   <div className="container-fluid">
     <div className="row">
       <div className="col-md-12">
-        <div class="card bg-dark text-white">
+        <div className="card bg-dark text-white">
           <img className="card-img-top" src={process.env.PUBLIC_URL + "/assets/adventure-animal-day-1612847.jpg"} />
-          <div class="card-img-overlay">
-            <h1 class="card-title">Contact Pets-buy</h1>
-            <h3 class="card-text">We communicate well with pets, but we also speak human, contact us or talk to our bot.</h3>
+          <div className="card-img-overlay">
+            <h1 className="card-title">Contact Pets-buy</h1>
+            <h3 className="card-text contactText">We communicate well with pets, but we also speak human, contact us or talk to our bot.</h3>
           </div>
         </div>
       </div>
