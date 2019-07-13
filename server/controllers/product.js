@@ -71,25 +71,27 @@ exports.listAnimal = (req, res) => {
 
 //displays products searched
 exports.listSearch = (req, res) => {
+    // create query object to hold search value and category value
     const query = {};
-   // assign search value to query.name
-   if (req.query.search) {
-       query.name = { $regex: req.query.search};
-       // assigne category value to query.category
-       if (req.query.category && req.query.category != "All") {
-           query.category = req.query.category;
-       }
-       // find the product based on query object with 2 properties
-       // search and category
-       Product.find(query, (err, products) => {
-           if (err) {
-               return res.status(400).json({
-                   error: errorHandler(err)
-               });
-           }
-           res.json(products);
-       });
-   }    
+    // assign search value to query.name
+    if (req.query.search) {
+        query.name = { $regex: req.query.search};
+        // assigne category value to query.category
+        if (req.query.category && req.query.category != "All") {
+            query.category = req.query.category;
+        }
+        // find the product based on query object with 2 properties
+        // search and category
+        Product.find(query.category)
+        .find(query.name, (err, products) => {
+            if (err) {
+                return res.status(400).json({
+                    error: errorHandler(err)
+                });
+            }
+            res.json(products);
+        });
+    }  
 };
 
 //Displays all product related to this current product (excl. current product)
