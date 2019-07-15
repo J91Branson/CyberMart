@@ -10,3 +10,8 @@ footer {
 .footerL {
  padding-bottom: 1%;
 }
+
+.footer-size {
+    font-size: 20px;
+    margin: 5px;
+}

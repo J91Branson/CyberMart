@@ -42,7 +42,7 @@ const Orders = () => {
     const showOrdersLength = () => {
         if (orders.length > 0) {
             return (
-                <h1 className="text-danger display-2">
+                <h1 className="mt-5">
                     Total orders: {orders.length}
                 </h1>
             );
@@ -97,18 +97,19 @@ const Orders = () => {
     return (
         <Content>
              <div className="row">
-                <div className="col-md-8 offset-md-2">
+                <div className="col-md-6 offset-md-3">
+                    
                     {showOrdersLength()}
 
                     {orders.map((o, i) => {
                         return (
+                            <div className="card">
                             <div
                                 className="mt-5"
                                 key={i}
-                                style={{ borderBottom: "5px solid indigo" }}
                             >
                                 <h2 className="mb-5">
-                                    <span className="bg-primary">
+                                    <span className="bg-black" style={{ color: "#00aeef" }}>
                                         Order ID: {o._id}
                                     </span>
                                 </h2>
@@ -135,8 +136,8 @@ const Orders = () => {
                                     </li>
                                 </ul>
 
-                                <h3 className="mt-4 mb-4 font-italic">
-                                    Total products in the order:{" "}
+                                <h3 className="mt-4 mb-4"style={{ color: "#00aeef" }}>
+                                    Total Items In Order:{" "}
                                     {o.products.length}
                                 </h3>
 
@@ -145,8 +146,7 @@ const Orders = () => {
                                         className="mb-4"
                                         key={pIndex}
                                         style={{
-                                            padding: "20px",
-                                            border: "1px solid indigo"
+                                            padding: "15px",
                                         }}
                                     >
                                         {showInput("Product name", p.name)}
@@ -156,9 +156,12 @@ const Orders = () => {
                                     </div>
                                 ))}
                             </div>
+                            </div>
                         );
+                        
                     })}
-                </div>
+                    </div>
+              
             </div>
         </Content>
     );

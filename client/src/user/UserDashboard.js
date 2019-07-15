@@ -55,7 +55,7 @@ const Dashboard = () => {
     const userInfo = () => {
         return (
             <div className="card-container1">
-                <div className="cardA card2 mb-5">
+                <div className="cardA card2 ">
                     <h3>User Information</h3>
                     <hr className="adminHr1" />
                     <ul className="list-group">
@@ -74,16 +74,15 @@ const Dashboard = () => {
 
     const purchaseHistory = history => {
         return (
-            <div className="card-container4">
-                <div className=" mt-5">
-                    <h3 style={{ color: "#00aeef"}}><bold>Purchase History</bold></h3>
-                    <hr/>
+            <div className="card-container">
+                <div className="mt-0">
+                    <h3 style={{ color: "#00aeef" }}><bold>Purchase History</bold></h3>
+                    <hr />
                     <ul className="list-group">
                         <li>
                             {history.map((h, i) => {
                                 return (
                                     <div>
-                                       
                                         {h.products.map((p, i) => {
                                             return (
                                                 <div key={i}>
@@ -95,17 +94,15 @@ const Dashboard = () => {
                                                         Purchased date:{" "}
                                                         {moment(p.createdAt).fromNow()}
                                                     </h6>
-                                                        <br></br>
+                                                    <br></br>
                                                 </div>
                                             );
                                         })}
-                                        <hr/>
+                                        <hr />
                                     </div>
                                 );
                             })}
-                            
                         </li>
-                        
                     </ul>
                 </div>
             </div>
@@ -118,14 +115,14 @@ const Dashboard = () => {
             <div className="row mt-5">
                 <div className="col-md-3 col-sm-3">{userLinks()}</div>
                 <div className="col-md-9 col-sm-9">{userInfo()}</div>
-                </div>
-                <div className="row ">
+            </div>
+            <div className="row">
                 <div className="col-md-3 col-sm-3"></div>
                 <div className="col-md-9 col-sm-9">
-                {purchaseHistory(history)}
+                    {purchaseHistory(history)}
                 </div>
             </div>
-        </Content>
+        </Content >
     );
 };
 
