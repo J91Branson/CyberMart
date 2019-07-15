@@ -70,7 +70,7 @@ const Cart = () => {
                 </div>
             </div>
             {goBack()}
-        </Content >
+        </Content>
     );
 };
 

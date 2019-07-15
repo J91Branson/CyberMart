@@ -10,7 +10,7 @@ const CartItemSchema = new mongoose.Schema(
     price: Number,
     count: Number
   },
-  { timestamps: true }
+  { timestamps: {type: Date, default: Date.now} }
 );
 
 const CartItem = mongoose.model("CartItem", CartItemSchema);
@@ -29,7 +29,7 @@ const OrderSchema = new mongoose.Schema(
     updated: Date,
     user: { type: ObjectId, ref: "User" }
   },
-  { timestamps: true }
+  { timestamps: {type: Date, default: Date.now} }
 );
 
 const Order = mongoose.model("Order", OrderSchema);

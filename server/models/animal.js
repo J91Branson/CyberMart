@@ -9,7 +9,7 @@ const animalSchema = new mongoose.Schema(
             maxlength: 32
         }
     },
-    { timestamps: true }
+    { timestamps: {type: Date, default: Date.now} }
 );
 
 module.exports = mongoose.model("Animal", animalSchema);

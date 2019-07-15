@@ -35,7 +35,7 @@ const userSchema = new mongoose.Schema(
             default: []
         }
     },
-    { timestamps: true }
+    { timestamps: {type: Date, default: Date.now} }
 );
 
 // virtual field

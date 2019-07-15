@@ -47,10 +47,7 @@ const Checkout = ({ products }) => {
 
     const getTotal = () => {
         return products.reduce((currentValue, nextValue) => {
-            // return currentValue + nextValue.count * nextValue.price;
-            let numb1 = (currentValue + nextValue.count * nextValue.price)
-            let numb2 = (parseFloat(numb1).toFixed(2));
-            return numb2;
+            return currentValue + nextValue.count * nextValue.price;
         }, 0);
     };
 
@@ -174,7 +171,7 @@ const Checkout = ({ products }) => {
 
     return (
         <div>
-            <h2>Total: ${getTotal()}</h2>
+            <h2>Total: ${parseFloat(getTotal()).toFixed(2)}</h2>
             {showLoading(data.loading)}
             {showSuccess(data.success)}
             {showError(data.error)}
