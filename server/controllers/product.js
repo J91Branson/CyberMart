@@ -71,14 +71,19 @@ exports.listAnimal = (req, res) => {
 
 //displays products searched
 exports.listSearch = (req, res) => {
-    console.log(req);
+    // create query object to hold search value and category value
     const query = {};
+    // assign search value to query.name
     if (req.query.search) {
         query.name = { $regex: req.query.search};
+        // assigne category value to query.category
         if (req.query.category && req.query.category != "All") {
             query.category = req.query.category;
         }
-        Product.find(query, (err, products) => {
+        // find the product based on query object with 2 properties
+        // search and category
+        Product.find(query.category)
+        .find(query.name, (err, products) => {
             if (err) {
                 return res.status(400).json({
                     error: errorHandler(err)
@@ -86,11 +91,8 @@ exports.listSearch = (req, res) => {
             }
             res.json(products);
         });
-    }
-    
+    }  
 };
-
-
 
 //Displays all product related to this current product (excl. current product)
 exports.listRelated = (req, res) => {
@@ -218,7 +220,9 @@ exports.listBySearchAn = (req, res) => {
         }
     }
 
-    Product.find({animal: animal})
+    Product
+    .find({animal: animal})
+    .find(findArgs)
         .populate("category")
         .sort([[sortBy, order]])
         .skip(skip)

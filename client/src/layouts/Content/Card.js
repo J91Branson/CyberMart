@@ -24,7 +24,7 @@ const Card = ({
         return (
             showViewProductButton && (
                 <Link to={`/product/${product._id}`} className="mr-2">
-                    <button className="btn btn-primary mt-2 mb-2">
+                    <button className="btn btn-primary login_btn expandBtn mt-2 mb-2">
                         <i className="fas fa-expand-arrows-alt"></i>
                     </button>
                 </Link>
@@ -122,9 +122,9 @@ const Card = ({
             <div className="card-body">
                 {shouldRedirect(redirect)}
                 <img style = {imgStyle}src={product.image} alt="Product" />
-                <h2>
+                <h3>
                     {product.name}   
-                </h2>
+                </h3>
                 {showDescription(showProductDescription)}             
                 <p className="black-10">Price: ${product.price}</p>
                 <p className="black-9">

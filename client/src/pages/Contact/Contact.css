@@ -1,12 +1,5 @@
-.contactC {
-    top: -80%;
-    background-color: rgba(72, 78, 93, 0.5);
-}
-
-.contactImg {
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
+.card-img-overlay {
+    margin-top: 15%;
 }
 
 /* This is the start of media queries. */
@@ -22,7 +15,11 @@
 /* This media querie will alter the website for screens 640px and below. */
 
 @media screen and (max-width: 640px) {
-    .contactBg {
-        object-fit: contain;
+    .card-img-overlay {
+        margin-top: -7%;
+        background-color: rgba(72, 78, 93, 0.356);
+    }
+    .contactText {
+        font-size: 20px;
     }
 }

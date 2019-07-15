@@ -97,10 +97,10 @@ export const getFilteredProducts = (skip, limit, filters = {}) => {
 
 export const getFilteredAnProducts = (animal, skip, limit, filters = {}) => {
     const data = {
+        animal,
         limit,
         skip,
-        filters,
-        animal
+        filters
     };
     return fetch(`/api/products/by/Ansearch`, {
         method: "POST",

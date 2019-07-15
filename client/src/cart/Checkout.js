@@ -10,6 +10,10 @@ import { emptyCart } from "../cart/cartStorage";
 
 //Checkout for items in cart
 
+const Round = (value, decimals) => {
+    return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
+  }
+
 const Checkout = ({ products }) => {
     const [data, setData] = useState({
         loading: false,
@@ -43,7 +47,10 @@ const Checkout = ({ products }) => {
 
     const getTotal = () => {
         return products.reduce((currentValue, nextValue) => {
-            return currentValue + nextValue.count * nextValue.price;
+            // return currentValue + nextValue.count * nextValue.price;
+            let numb1 = (currentValue + nextValue.count * nextValue.price)
+            let numb2 = (parseFloat(numb1).toFixed(2));
+            return numb2;
         }, 0);
     };
 
@@ -52,7 +59,7 @@ const Checkout = ({ products }) => {
             <div>{showDropIn()}</div>
         ) : (
             <Link to="/signin">
-                <button className="btn btn-primary">Sign in to checkout</button>
+                <button className="btn btn-warning">Sign in to checkout</button>
             </Link>
         );
     };

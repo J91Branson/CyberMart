@@ -1,7 +1,7 @@
 // Import React Packages
 import React from "react";
 import { Parallax } from "react-parallax";
-import {Link} from "react-router-dom";
+import LinkButton from "../../layouts/Content/WrapLink";
 
 // Import Files/Components
 import './Home.css';
@@ -20,7 +20,7 @@ const image3 =
   "http://starkovtattoo.spb.ru/images/700/DSC100766071.jpg";
 
 const Home = () => (
-  <div style={styles}>
+  <div style={styles} className="mt-0">
     <Parallax bgImage={image1} strength={500}>
       <div style={{ height: 500 }}>
         <div className="card homeC" style={{
@@ -31,15 +31,13 @@ const Home = () => (
         }}>
           <div className="card-body dogHome">
             <h1 className="card-title">Shop for Dogs</h1>
-            <p className="card-text">Need something for your good boy/girl?</p>            
-            <Link className="nav-link homelink" to="/shop/dog">
-              <a className="btn btn-primary">Click Here</a>
-            </Link>
+            <p className="card-text">Need something for your good boy/girl?</p>
+            <LinkButton className="btn btn-primary login_btn" to="/shop/dog">Click Here</LinkButton>
           </div>
         </div>
       </div>
     </Parallax>
-    <div>
+    <div className="bestSell">
       <Bestseller animal="Dog" code="5d2186fd60c170bf8de79896"/>
     </div>
     <Parallax bgImage={image2} strength={500}>
@@ -50,19 +48,17 @@ const Home = () => (
           top: "29%",
           left: "50%",
         }}>
-          <div className="card-body catHome">
+          <div className="card-body catHome col-md-12">
             <h1 className="card-title">Shop for Cats</h1>
             <p className="card-text">Cats have it all – admiration, an endless sleep, and company only when they want it.</p>
-            <Link className="nav-link homelink" to="/shop/dog">
-              <a className="btn btn-primary">Get Them More</a>
-            </Link>
+            <LinkButton className="btn btn-primary login_btn" to="/shop/cat">Get Them More</LinkButton>
           </div>
         </div>
       </div>
     </Parallax>
     {/* Cat one goes here */}
     {/* Working as intended */}
-    <div>
+    <div className="bestSell">
       <Bestseller animal="Cat" code="5d2186e860c170bf8de79881"/>   
     </div>
     <Parallax bgImage={image3} strength={500}>
@@ -76,9 +72,7 @@ const Home = () => (
           <div className="card-body dogHome">
             <h1 className="card-title">Something Else In Mind?</h1>
             <p className="card-text">See our entire shop.</p>
-            <Link className="nav-link homelink" to="/shop">
-              <a className="btn btn-primary">Go to Shop</a>
-            </Link>
+            <LinkButton className="btn btn-primary login_btn" to="/shop">Let's Go</LinkButton>
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 
 // Import Files/Components
-import { getCategories, list } from "./apiProduct";
+import { getCategories, list} from "./apiProduct";
 import Card from "../layouts/Content/Card";
 
 const Search = () => {
@@ -18,6 +18,7 @@ const Search = () => {
 
     const loadCategories = () => {
         getCategories().then(data => {
+            console.log(data);
             if (data.error) {
                 console.log(data.error);
             } else {
@@ -31,7 +32,6 @@ const Search = () => {
     }, []);
 
     const searchData = () => {
-        console.log("search: " + search, "category: " + category);
         if (search) {
             list({ search: search || undefined, category: category }).then(                
                 response => {
@@ -118,8 +118,8 @@ const Search = () => {
 
     return (
         <div className="row">
-            <div className="container mb-3">{searchForm()}</div>
-            <div className="container-fluid mb-3">
+            <div className="container">{searchForm()}</div>
+            <div className="container-fluid">
                 {searchedProducts(results)}
             </div>
         </div>

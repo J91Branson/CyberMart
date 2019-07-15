@@ -1,17 +1,18 @@
 .btn-primary {
-    background-color: #484E5D;
-    border-color: #F3F1E7;
+    color: black !important;
+    border-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 24px;
+    border-radius: 30px;
+    font-weight: 400;
 }
 
 .btn-primary:hover {
-    background-color: #FFB6B6;
-    border-color: #F3F1E7;
-    color: black;
+    border-color: black;
+    color: white;
 }
 
-.homelink {
-    color: #F3F1E7
-}
 .homeC {
     background: transparent;
     border: none;
@@ -29,4 +30,25 @@
 }
 .thirdHome {
     color: rgb(0, 0, 0);
+}
+
+/* This is the start of media queries. */
+/* This media querie will keep the website the same for slightly smaller screens */
+@media screen and (max-width: 980px) {
+
+}
+
+/* This media querie will alter the website for screens 641-768px wide. */
+@media screen and (max-width: 768px) {
+
+}
+
+/* This media querie will alter the website for screens 640px and below. */
+@media screen and (max-width: 640px) {
+    .bestSell {
+        display: none;
+    }
+    .catHome {
+        left: -30%;
+    }
 }

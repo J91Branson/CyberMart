@@ -17,7 +17,7 @@ router.get("/products", list);
 router.get("/products/:animal", listAnimal);
 
 //route to display all products searched
-router.get("/products/search", listSearch);
+router.get("/products/search:params", listSearch);
 
 //route to display all products searched
 router.get("/products/search?category=:cat&q=:search", listSearch);
