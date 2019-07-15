@@ -36,8 +36,7 @@ const AddCategory = () => {
 
     const newCategoryForm = () => (
         <form onSubmit={clickSubmit}>
-            <div className="form-group">
-                <label className="text-muted">Please enter new Category Name</label>
+            <div className="form-group mt-5">
                 <input
                     type="text"
                     className="form-control"
@@ -47,7 +46,7 @@ const AddCategory = () => {
                     required
                 />
             </div>
-            <button className="btn btn-outline-primary">Create Category</button>
+            <button className="btn btn-primary login_btn">Submit</button>
         </form>
     );
 
@@ -65,7 +64,7 @@ const AddCategory = () => {
 
     const goBack = () => (
         <div className="mt-5">
-            <Link to="/admin/dashboard" className="text-warning">
+            <Link to="/admin/dashboard" className="text-primary">
                 Back to Dashboard
             </Link>
         </div>
@@ -74,9 +73,10 @@ const AddCategory = () => {
     return (
         <Content>
             <div className="row">
-                <div className="col-md-8 offset-md-2">
+                <div className="col-md-4 offset-md-4">
                     {showSuccess()}
                     {showError()}
+                    <h3 className="mt-5">Add New Animal Category</h3>
                     {newCategoryForm()}
                     {goBack()}
                 </div>

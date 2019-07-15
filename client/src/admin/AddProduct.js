@@ -114,10 +114,10 @@ const AddProduct = () => {
     };
 
     const newProductForm = () => (
-        <form className="mb-3" onSubmit={clickSubmit}>
+        <form className="mb-3 mt-5" onSubmit={clickSubmit}>
 
             <div className="form-group">
-                <label className="text-muted">Name</label>
+                <label className="text-muted">Product Name</label>
                 <input
                     onChange={handleChange("name")}
                     type="text"
@@ -191,7 +191,7 @@ const AddProduct = () => {
                 />
             </div>
 
-            <button className="btn btn-outline-primary">Create Product</button>
+            <button className="btn btn-outline-primary login_btn">Submit</button>
         </form>
     );
 
@@ -222,7 +222,7 @@ const AddProduct = () => {
 
     const goBack = () => (
         <div className="mt-5">
-            <Link to="/admin/dashboard" className="text-warning">
+            <Link to="/admin/dashboard" className="text-primary">
                 Back to Dashboard
             </Link>
         </div>
@@ -231,10 +231,11 @@ const AddProduct = () => {
     return (
         <Content>
             <div className="row">
-                <div className="col-md-8 offset-md-2">
+                <div className="col-md-6 offset-md-3">
                     {showLoading()}
                     {showSuccess()}
                     {showError()}
+                    <h3 className="mt-5">Add New Product</h3>
                     {newProductForm()}
                     {goBack()}
                 </div>

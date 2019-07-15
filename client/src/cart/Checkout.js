@@ -10,9 +10,9 @@ import { emptyCart } from "../cart/cartStorage";
 
 //Checkout for items in cart
 
-const Round = (value, decimals) => {
-    return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
-  }
+// const Round = (value, decimals) => {
+//     return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
+//   }
 
 const Checkout = ({ products }) => {
     const [data, setData] = useState({
@@ -76,13 +76,6 @@ const Checkout = ({ products }) => {
             .then(data => {
                 // console.log(data);
                 nonce = data.nonce;
-                // once you have nonce (card type, card number) send nonce as 'paymentMethodNonce'
-                // and also total to be charged
-                // console.log(
-                //     "send nonce and total to process: ",
-                //     nonce,
-                //     getTotal(products)
-                // );
                 const paymentData = {
                     paymentMethodNonce: nonce,
                     amount: getTotal(products)

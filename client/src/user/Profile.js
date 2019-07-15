@@ -67,7 +67,7 @@ const Profile = ({ match }) => {
 
     const profileUpdate = (name, email, password) => (
         <form>
-            <div className="form-group">
+            <div className="form-group mt-5">
                 <label className="text-muted">Name</label>
                 <input
                     type="text"
@@ -95,7 +95,7 @@ const Profile = ({ match }) => {
                 />
             </div>
 
-            <button onClick={clickSubmit} className="btn btn-primary">
+            <button onClick={clickSubmit} className="btn btn-primary login_btn">
                 Submit
             </button>
         </form>
@@ -103,9 +103,13 @@ const Profile = ({ match }) => {
 
     return (
         <Content className="container-fluid">
-            <h2 className="mb-4">Profile update</h2>
-            {profileUpdate(name, email, password)}
-            {redirectUser(success)}
+            <div className="row">
+                <div className="col-md-6 offset-md-3">
+                    <h3 className="mt-5">Profile update</h3>
+                    {profileUpdate(name, email, password)}
+                    {redirectUser(success)}
+                </div>
+            </div>
         </Content>
     );
 };

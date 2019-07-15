@@ -1,11 +1,11 @@
 // Import React Packages
 import React from "react";
 import { Parallax } from "react-parallax";
-import LinkButton from "../../layouts/Content/WrapLink";
 
 // Import Files/Components
 import './Home.css';
 import Bestseller from "../../product/Bestseller";
+import LinkButton from "../../layouts/Content/WrapLink";
 
 const styles = {
   fontFamily: "sans-serif",

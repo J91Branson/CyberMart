@@ -136,8 +136,8 @@ const Scraping = () => {
 
     const newPostForm = () => (
         
-
-        <form className="mb-3" onSubmit={clickSubmit}>
+        
+        <form className="mb-3 mt-5" onSubmit={clickSubmit}>
             <div className="form-group">
                 <label className="text-muted">Url Code</label>
                 <input
@@ -206,7 +206,7 @@ const Scraping = () => {
                 </select>
             </div>
 
-            <button className="btn btn-outline-primary">Scrape Product</button>
+            <button className="btn btn-outline-primary login_btn">Submit</button>
 
         </form>
     );
@@ -238,7 +238,7 @@ const Scraping = () => {
 
     const goBack = () => (
         <div className="mt-5">
-            <Link to="/admin/dashboard" className="text-warning">
+            <Link to="/admin/dashboard" className="text-primary">
                 Back to Dashboard
             </Link>
         </div>
@@ -251,6 +251,7 @@ const Scraping = () => {
                     {showLoading()}
                     {showSuccess()}
                     {showError()}
+                    <h3 className="mt-5">Scrape Products</h3>
                     {newPostForm()}
                     {goBack()}
                 </div>
