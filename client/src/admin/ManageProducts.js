@@ -9,7 +9,6 @@ import { getProducts, deleteProduct } from "./apiAdmin";
 
 const ManageProducts = () => {
     const [products, setProducts] = useState([]);
-
     const { user, token } = isAuthenticated();
 
     const loadProducts = () => {
@@ -36,29 +35,37 @@ const ManageProducts = () => {
         loadProducts();
     }, []);
 
+    const goBack = () => (
+        <div className="mt-5">
+            <Link to="/admin/dashboard" className="text-primary">
+                Back to Dashboard
+            </Link>
+        </div>
+    );
+
     return (
         <Content className="container-fluid">
-           <div className="row">
-                <div className="col-12">
-                    <h2 className="text-center">
-                        Total {products.length} products
-                    </h2>
+           <div className="row justify-content-center">
+                <div className="col-6" >
+                    <h3 className="text-center mt-5">
+                        Total {products.length} Products in Inventory
+                    </h3>
                     <hr />
                     <ul className="list-group">
                         {products.map((p, i) => (
                             <li
                                 key={i}
-                                className="list-group-item d-flex justify-content-between align-items-center"
+                                className="list-group-item d-flex"
                             >
                                 <strong>{p.name}</strong>
                                 <Link to={`/admin/product/update/${p._id}`}>
-                                    <span className="badge badge-warning badge-pill">
+                                    <span className="badge badge-primary badge-pill ml-3">
                                         Update
                                     </span>
                                 </Link>
                                 <span
                                     onClick={() => destroy(p._id)}
-                                    className="badge badge-danger badge-pill"
+                                    className="badge badge-danger badge-pill ml-3"
                                 >
                                     Delete
                                 </span>
@@ -66,6 +73,7 @@ const ManageProducts = () => {
                         ))}
                     </ul>
                     <br />
+                    {goBack()}
                 </div>
             </div>
         </Content>

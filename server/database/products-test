@@ -8,8 +8,7 @@
 "name" : "customer",
 "email" : "customer@g.com",
 
-
-//COPY & PASTE into CATEGORY
+//COPY & PASTE into ANIMALS
 
 {
     "_id" : ObjectId("5d1924bfdc6f443b8cb2ce81"),
@@ -21,67 +20,76 @@
     "name" : "Cat"
 }
 
+//COPY & PASTE into CATEGORY
+
+{
+    "_id": "5d1d3bdca118cc002aac5b7a",
+    "name": "Litter"
+}
+{
+    "_id": "5d1d3bcba118cc002aac5b79",
+    "name": "Accessories"
+}
+{
+    "_id": "5d1d2a88173cb9002a82efa3",
+    "name": "Wet Food"
+}
+{
+    "_id": "5d1d2a77173cb9002a82efa1",
+    "name": "Dry Food"
+}
+
 //COPY & PASTE into PRODUCTS
+
 {
-    "name" : "Blue Buffalo Life Protection Formula Small Breed Puppy Chicken & Oatmeal Recipe ",
-    "image" : "https://img.chewy.com/is/image/catalog/46906_MAIN._AC_SS55_V1529604388_.jpg",
-    "description" : "Blue Buffalo Life Protection Formula was created for the health and well-being of dogs. All formulas start with real meat, whole grains, garden veggies and fruit, plus added LifeSource Bits, a precise blend of nutrients that have been enhanced with a Super 7 package of antioxidant-rich ingredients. This Small Breed Puppy Chicken & Oatmeal Recipe features delicious, protein-rich deboned chicken. And because puppyhood is such an important stage, it features ingredients that support healthy growth and development.",
-    "price" : 19.99,
-    "quantity" : 100,
-    "sold" : 15,
-    "category" : ObjectId("5d1924bfdc6f443b8cb2ce81")
+    "_id" : "5d1d44afa118cc002aac5b8f",
+    "quantity" : 46,
+    "sold" : 5,
+    "url" : "18004486881589519327",
+    "image" : "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRgN-qvQdL50PoJdxXuAqHb0zDogT7y9AeUsDG9UiB44DV9Yr0ZwGL7AyrYQGKlOlOUAC7eWqJepAN8xpAo8pGwIY0vioV-_k6X2-hiGcw&usqp=CAY",
+    "size" : "4 lb",
+    "description" : "Provide your cat trusted, balanced nutrition with Hills Science Diet",
+    "category" : ObjectId("5d1d2a77173cb9002a82efa1"),
+    "price" : 24.99,
+    "animal" : ObjectId("5d2186e860c170bf8de79881"),
+    "name" : "Hill's Dry Science Diet Adult Optimal Care Chicken Recipe Cat Food, lb Bag"
 }
-
-
 {
-    "name" : "Blue Buffalo Life Protection Formula Toy Breed Adult Chicken & Brown Rice Recipe",
-    "image" : "https://img.chewy.com/is/image/catalog/84980_MAIN._AC_SS55_V1529604598_.jpg",
-    "description" : "Blue Buffalo Life Protection Formula was created for the health and well-being of dogs. All formulas start with real meat, whole grains, garden veggies and fruit, plus added LifeSource Bits, a precise blend of nutrients that have been enhanced with a Super 7 package of antioxidant-rich ingredients. This Toy Breed Adult Chicken & Brown Recipe features delicious, protein-rich deboned chicken and is made with increased protein and carbohydrates to support the special needs of smaller dogs.",
-    "price" : 19.99,
-    "quantity" : 50,
-    "sold" : 50,
-    "category" : ObjectId("5d1924bfdc6f443b8cb2ce81")
+    "_id" : "5d1d46c9a118cc002aac5b93",
+    "quantity" : 5,
+    "sold" : 12,
+    "url" : "6191349574146249842",
+    "description" : "Tear open a bag of Purina ALPO Prime Cuts Savory Beef Flavor adult dry dog food.",
+    "size" : "14 lb",
+    "image" : "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS1q8bt-WPeA83sSeWuq-wSxm4tA6XaUjzC2Z99E1aDhOepJ3QM9e-DU5kZvmpYWXr5iR4qsAvf4Kzr_9KARbGIHSe_9b-H-Lf5IueouRVS4XOfX-QrsyDi&usqp=CAY",
+    "category" : ObjectId("5d1d2a77173cb9002a82efa1"),
+    "price" : 7.99,
+    "animal" : ObjectId("5d2186fd60c170bf8de79896"),
+    "name" : "Purina ALPO Prime Cuts Savory Beef Flavor Adult Dry Dog Food - 14 Lb. Bag"
 }
-
-
 {
-    "name" : "Blue Buffalo Life Protection Formula Puppy Lamb & Oatmeal Recipe ",
-    "image" : "https://img.chewy.com/is/image/catalog/46902_MAIN._AC_SS55_V1529604240_.jpg",
-    "description" : "Blue Buffalo Life Protection Formula was created for the health and well-being of dogs. All formulas start with real meat, whole grains, garden veggies and fruit, plus added LifeSource Bits, a precise blend of nutrients that have been enhanced with a Super 7 package of antioxidant-rich ingredients. This Puppy Lamb & Oatmeal Recipe features delicious, protein-rich deboned lamb. And because puppyhood is such an important stage, it features ingredients that support healthy growth and development.",
-    "price" : 19.99,
-    "quantity" : 30,
-    "sold" : 10,
-    "category" : ObjectId("5d1924bfdc6f443b8cb2ce81")
+    "_id" : "5d1d4697a118cc002aac5b92",
+    "quantity" : 22,
+    "sold" : 1,
+    "url" : "2398273182063627652",
+    "description" : "Watch as your best friend dives into his next meal with tail-wagging enthusiasm",
+    "size" : "4 lb",
+    "image" : "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQz87dNsMWoU1Y3kcL5aJPsdY-52zwQGzaubGCEBDxMMKmc7Rv7iZyqhnbB3oFtDRVxQQJElJ5a2_efydz3GZvY4n2rMdaVLGSNDLJ7Sk3phDpUgMUEF0Yc&usqp=CAY",
+    "category" : ObjectId("5d1d2a77173cb9002a82efa1"),
+    "price" : 4.99,
+    "animal" : ObjectId("5d2186fd60c170bf8de79896"),
+    "name" : "Alpo Prime Cuts Dog Food, Adult, Savory Beef Flavor - 4 lb"
 }
-
-
 {
-    "name" : "Friskies Shreds Variety Pack Canned Cat Food, 5.5-oz, case of 32",
-    "image" : "https://img.chewy.com/is/image/catalog/76368_MAIN._AC_SS55_V1544036517_.jpg",
-    "description" : "Your kitty loves savory, so satisfy his cravings with the Friskies Savory Shreds Variety Pack Canned Cat Food. This variety pack features whisker-licking recipes with real meat like beef, turkey, tuna, chicken and salmon, and is packed with everything your cat needs to fuel all those furry adventures - like protein, antioxidants and healthy omegas. The formula is also enhanced with vitamins, minerals and essential taurine for nose-to-tail well-being in every bite. Plus, it provides plenty of moisture to help keep your pal hydrated and support urinary health. So open up the easy pull tab and turn mealtime into yum time.",
-    "price" : 2.99,
-    "quantity" : 100,
-    "sold" : 85,
-    "category" : ObjectId("5d1924c5dc6f443b8cb2ce82")
-}
-
-
-{
-    "name" : "Friskies Tasty Treasures with Cheese Variety Pack ",
-    "image" : "https://img.chewy.com/is/image/catalog/76350_MAIN._AC_SS55_V1560367951_.jpg",
-    "description" : "Your kitty loves cheese, so satisfy his cravings with the Friskies Tasty Treasures Variety Pack Canned Cat Food. This variety pack features whisker-licking cheesy recipes with real meat like chicken and tuna, and is packed with everything your cat needs to fuel all those furry adventures—like protein, antioxidants and healthy omegas. The formula is also enhanced with vitamins, minerals and essential taurine for nose-to-tail well-being in every bite. Plus, it provides plenty of moisture to help keep your pal hydrated and support urinary health. So open up the easy pull tab and turn mealtime into yum time.",
-    "price" : 2.99,
-    "quantity" : 50,
-    "sold" : 15,
-    "category" : ObjectId("5d1924c5dc6f443b8cb2ce82")
-}
-
-{
-    "name" : "Friskies Classic Pate Variety Pack Canned Cat Food, 5.5-oz, case of 24",
-    "image" : "https://img.chewy.com/is/image/catalog/76219_MAIN._AC_SS55_V1544036515_.jpg",
-    "description" : "Give your pal a bowlful of kitty-approved flavor and nutrition with the Friskies Classic Pate Variety Pack Canned Cat Food. This variety pack features a tasty assortment of pates that are packed with everything your cat needs to stay looking and feeling his best, like protein, antioxidants and healthy omegas. Plus, the formula is enhanced with vitamins, minerals and essential taurine for nose-to-tail well-being in every bite. Since it’s made with real broth, it also provides moisture to help keep your pal hydrated and support urinary health. So open up the easy pull tab and turn mealtime into yum time.",
-     "price" : 2.99,
-     "quantity" : 250,
-     "sold" : 115,
-    "category" : ObjectId("5d1924c5dc6f443b8cb2ce82")
+    "_id" : "5d1d3dc9a118cc002aac5b7d",
+    "quantity" : 27,
+    "sold" : 3,
+    "category" : ObjectId("5d1d3bdca118cc002aac5b7a"),
+    "url" : "17501599401939638920",
+    "image" : "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ7HwwGKSrbyssPGVjGKidwHxIsyFDgWEK_Q-1tWSscFV-6BLg3mVQDvJ3PKuH3Tc1BhZFN0T-JJMsJ8VOOILUUniOfdJTG19XYmpIejsp_&usqp=CAY",
+    "size" : "14 lb",
+    "description" : "We know you love many things about your cat- with the possible exception of the litter box.",
+    "price" : 6.99,
+    "name" : "Fresh Step Clay Cat Litter with Odor Eliminating Carbon - 14 lb bag",
+    "animal" : ObjectId("5d2186e860c170bf8de79881")
 }
