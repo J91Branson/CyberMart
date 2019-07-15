@@ -63,7 +63,7 @@ exports.socialLogin = async (req, res) => {
     try {
         const idToken = await req.body.tokenId;
         const ticket = await client.verifyIdToken({ idToken, audience: process.env.REACT_APP_GOOGLE_CLIENT_ID });
-        const { email_verified, email, name, picture, sub: googleid } = ticket.getPayload();
+        const { email_verified, email, name, sub: googleid } = ticket.getPayload();
  
         if (email_verified) {
             console.log(`email_verified > ${email_verified}`);

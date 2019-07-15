@@ -17,7 +17,7 @@ const Bestseller = (props) => {
     const loadProductsBySell = () => {
         getProductsbyAn(props.code, "sold")
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 if (data.error) {
                     setError(data.error);
                     console.log(error);
