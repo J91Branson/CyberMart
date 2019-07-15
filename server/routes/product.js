@@ -44,7 +44,7 @@ router.put("/product/:productId/:userId", requireSignin, isAuth, isAdmin, update
 
 //DELETE METHODS
 //route to delete new product if user is signed in as admin
-router.delete("/product/productId/:userId", requireSignin, isAuth, isAdmin, remove);
+router.delete("/product/:productId/:userId", requireSignin, isAuth, isAdmin, remove);
 
 //PARAMS pass on
 //To find profile for a specific param 
